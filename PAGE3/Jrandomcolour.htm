@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<!-- Paste this code into the HEAD of your document  -->
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function rnd(scale) {
+var dd=new Date();      
+return((Math.round(Math.abs(Math.sin(dd.getTime()))*1000000000)%scale)); 
+}
+function show() {       
+document.blah.bg.value=document.bgColor;        
+document.blah.fg.value=document.fgColor; 
+}
+document.fgColor=256*rnd(255)+16*rnd(255)+rnd(255);
+document.bgColor=256*rnd(255)+16*rnd(255)+rnd(255);
+// -->
+</SCRIPT>
+
+<!-- Paste this code into the BODY of your HTML document  -->
+
+<BODY>
+
+<CENTER>
+<a href="javascript:history.go(0)">Click here to get new colors</a>
+</center>
+<FORM name=blah>
+<table border=0 width=100%><tr><td align=left>Foreground color</td>
+<TD align=right>Background color</TD>
+</TR>
+<TR>
+<TD align=left>
+<input type=text name=fg>
+</TD>
+<TD align=right>
+<input type=text name=bg>
+</TD>
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT NAME="Alert Script" AUTHOR="Evan Zaker" LANGUAGE="JavaScript">
+
+
+set = null
+var timerID = null
+var timerRunning = false
+
+function stopclock() {
+    if(timerRunning)
+    clearTimeout(timerID)
+    timerRunning = false
+}
+function startclock() {
+    stopclock()
+    showtime()
+}
+function showtime(){
+    var now = new Date()
+    var hours = now.getHours()
+    var minutes = now.getMinutes()
+    var seconds = now.getSeconds()
+    var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+    timeValue  += ((minutes < 10) ? ":0" : ":") + minutes
+    timeValue  += ((seconds < 10) ? ":0" : ":") + seconds
+    timeValue  += (hours >= 12) ? " PM" : " AM"
+    document.alert.time.value = timeValue
+    if(timeValue == set) {alert(message);}
+    timerID = setTimeout("showtime()",1000)
+    timerRunning = true
+}
+function setalert() {
+    set = prompt("Setting Alert\nPlease set time in 0:00:00 ?M format.\nExample 11:01:00 AM","");
+    document.alert.set.value = set
+    setmess()
+}
+function setmess() {
+    message = prompt("Setting Alert\nPlease type in the message you want Alert to alert your with.","");
+    document.alert.message.value = message
+}
+function about() {
+    alert("Alert Version 1.5\nBy Evan Zaker\n  (ECZaker@AOL.com) [http://members.aol.com/eczaker]");
+}
+function quit() {
+    if(confirm("Quitting Alert...")) {
+         about()
+         close()
+    }
+}
+
+</SCRIPT>
+<CENTER>
+<FORM NAME="alert">
+<TABLE>
+<TR><TD>Current Time - </TD><TD><INPUT TYPE=TEXT NAME="time" VALUE="00:00 ?M" SIZE=10></TD></TR>
+<TR><TD>Set Time - </TD><TD><INPUT TYPE=TEXT NAME="set" VALUE="00:00 ?M" SIZE=10></TD></TR>
+<TR><TD>Alert Message - </TD><TD><INPUT TYPE=TEXT NAME="message" VALUE="None" SIZE=30></TD></TR>
+<TR><TD><INPUT TYPE=BUTTON VALUE="Set Time" ONCLICK="setalert()"></TD><TD><INPUT TYPE=BUTTON VALUE="Set Message" ONCLICK="setmess()"></TD></TR>
+<TR><TD><INPUT TYPE=BUTTON VALUE="About" ONCLICK="about()"></TD><TD><INPUT TYPE=BUTTON VALUE="Quit" ONCLICK="quit()"></TD></TR>
+</TABLE>
+</FORM>
+</center>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

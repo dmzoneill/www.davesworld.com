@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HEAD>
+<script language="JavaScript"><!--
+var startTime = new Date();
+startTime = startTime.getTime();
+var submissions = 0;
+
+function checkForDuplicate() {
+	if (formLoaded) {
+		document.form1.REFERRER.value = document.referrer;
+		document.form1.PLATFORM.value = navigator.appName
+		  + " " + navigator.appVersion;
+		submissions++
+		if (submissions > 1)
+			return false;
+		else
+			return true;
+	} // goes with first if
+} // goes with function
+
+function doneLoading() {
+	var stopTime = new Date();
+	stopTime = stopTime.getTime();
+	document.form1.LOADING_TIME.value = ((stopTime - startTime) / 1000)
+		+ " seconds";
+	document.form1.PAGE.value = document.title;
+	document.form1.SUBMITTER.click(); // triggers submission of form
+	// equivalent to form.submit(), but
+	// form.submit() is broken on many platforms
+	// this is a workaround for that problem
+}
+
+// --></script>
+<title>Visitor Monitor</title>
+</HEAD>
+<BODY BGCOLOR="ffffff" onLoad="doneLoading()">
+<font face="arial"><font size=2>
+This JavaScript will send the author of the page information
+on the visitor. This information includes the visitor's 
+email, the referring page, the platform of the visitor, and
+how long it took for the page to load. Please remember
+to change the email address from javascript@mydesktop.com
+to your emil address if you decide to use the script. <p>
+<center>
+
+<FORM name="form1"
+	METHOD=post 
+	action="mailto:javascript@mydesktop.com ?SUBJECT=Devious Visitor Monitor"
+	enctype="text/plain" onSubmit="return checkForDuplicate()">
+<input type="hidden" name="PAGE" value="none">
+<input type="hidden" name="REFERRER" value="none">
+<input type="hidden" name="PLATFORM" value="none">
+<input type="hidden" name="LOADING_TIME" value="none">
+<input type="submit"
+	name="SUBMITTER"
+	value="Click me to let me know you were here"
+	onClick="return checkForDuplicate()">
+</form>
+
+<script language="JavaScript"><!--
+var formLoaded = true;
+// --></script>
+</BODY></HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

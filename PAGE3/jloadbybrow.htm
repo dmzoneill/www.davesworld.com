@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+<TITLE>Restrictor I Example</TITLE>
+<Script>
+<!-- Activate Cloaking 
+//***************************************************************
+//
+//                        Restrictor I Example
+//
+//  Load a particular page  based on browser detection
+//
+//        by Tim Wallace   (timothy@essex1.com)
+//
+//***************************************************************
+
+var browser=navigator.appName + " " + navigator.appVersion;
+var getkey=browser.substring(0, 12);
+
+// Load page according to browser
+function loadPage(){
+	if (browser.substring(0, 8)=="Netscape"){      
+		if (getkey=="Netscape 3.0")
+         		window.location="brw3a.html";
+      		if (getkey=="Netscape 2.0")
+	        	window.location="brw3b.html";
+	}
+	if (browser.substring(0, 9)=="Microsoft")
+		window.location="brw3c.html";
+   	if ( (browser.substring(0, 8)!="Netscape") && (browser.substring(0, 9)!="Microsoft") )
+		window.location="brw3d.html";
+	}
+	
+
+// De-activate Cloaking -->
+</Script>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<BR>
+<hr>
+<CENTER><STRONG><EM>
+<FONT COLOR=0000FF SIZE=+3>L</FONT><FONT COLOR=0000FF SIZE=+2>OAD </FONT>
+<FONT COLOR=0000FF SIZE=+3>P</FONT><FONT COLOR=0000FF SIZE=+2>AGE </FONT>
+<FONT COLOR=0000FF SIZE=+3>B</FONT><FONT COLOR=0000FF SIZE=+2>ASED </FONT>
+<FONT COLOR=0000FF SIZE=+3>O</FONT><FONT COLOR=0000FF SIZE=+2>N </FONT>
+<FONT COLOR=0000FF SIZE=+3>V</FONT><FONT COLOR=0000FF SIZE=+2>ISITOR'S </FONT>
+<FONT COLOR=0000FF SIZE=+3>B</FONT><FONT COLOR=0000FF SIZE=+2>ROWSER</FONT>
+</EM></STRONG></CENTER>
+<HR WIDTH=540 ALIGN=center SIZE=2>
+<CENTER><STRONG><EM>
+<FONT COLOR=800000 SIZE=+1>
+Display a particular page, based on a browser detection script.
+</FONT>
+</EM></STRONG></CENTER>
+<BR><BR><BR>
+<CENTER>
+<FORM NAME="detect">
+<TABLE BORDER=3 WIDTH=150>
+<TR><TD  align="center"><STRONG>Browser  Key</STRONG></TR>
+<TR></TR>
+<TR><TD  align="center"><INPUT TYPE="text" SIZE=15 VALUE=" detecting..."></TR>
+</TABLE>
+<BR><BR>
+<INPUT TYPE="button" VALUE="Load Appropriate Page" onClick="loadPage()">
+</FORM>
+</CENTER>
+
+<Script>
+<!-- Activate Cloaking 
+	var browser=navigator.appName + " " + navigator.appVersion;
+	var getkey=browser.substring(0, 12);
+	if (browser.substring(0, 8)=="Netscape")   {
+		if (getkey=="Netscape 3.0")
+			document.forms[0].elements[0].value="    "+getkey;
+		if (getkey=="Netscape 2.0")
+			document.forms[0].elements[0].value=getkey;
+   		}
+	if (browser.substring(0, 9)=="Microsoft")
+		document.forms[0].elements[0].value="        Microsoft   IE";
+	if ( (browser.substring(0, 8)!="Netscape") && (browser.substring(0, 9)!="Microsoft") )
+		document.forms[0].elements[0].value="undetermined";
+// De-activate Cloaking -->
+</Script>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

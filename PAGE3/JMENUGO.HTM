@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+
+  <TITLE>Site of the Day!</TITLE>
+  <META NAME="KEYWORDS" CONTENT="">
+  <META NAME="GENERATOR" CONTENT="HTMLpad">
+
+</HEAD>
+<BODY bgcolor=#FFFFFF onLoad="choosepage()">
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+// Page of the Day JavaScript
+// Written and Copyright by Frank Bannon, 1997
+// contact me at frankbannon@usa.net
+
+// Things you must change for this to work on your site:
+// numpages, urlbase, and array of pagedsc and pageurl.
+
+var numpages = 12;  // Total number of links in array; max of 31
+
+// Create the arrays to hold page descriptions and urls
+pagedsc = new MakeArray(numpages);
+pageurl = new MakeArray(numpages);
+
+// Set the base url to insert before each page url; keeps urls short
+// Change this to match your highest level web page
+urlbase = "http://www.cwu.edu/~bannonf/";
+
+// Listing of page descriptions and urls
+// Change these to match your best pages
+pagedsc[1] = "Yahoo!";
+pageurl[1] = "http://www.yahoo.com";
+pagedsc[2] = "JavaScript World";
+pageurl[2] = "http://www.jsworld.com";
+pagedsc[3] = "PC Gaming";
+pageurl[3] = "http://www.pcgaming.com";
+pagedsc[4] = "Ambient Technologies";
+pageurl[4] = "http://www.ambient.net";
+pagedsc[5] = "CCS Network";
+pageurl[5] = "http://www.ccs.net";
+pagedsc[6] = "Lycos";
+pageurl[6] = "http://www.lycos.com";
+pagedsc[7] = "MDN";
+pageurl[7] = "http://www.mydesktop.com";
+pagedsc[8] = "Offspring Online";
+pageurl[8] = "http://www.offspring.com";
+pagedsc[9] = "Silverchair NET";
+pageurl[9] = "http://www.silverchair.net";
+pagedsc[10] = "Benny's World";
+pageurl[10] = "http://idt.net/~benny3/";
+pagedsc[11] = "Developer's Info";
+pageurl[11] = "http://www.devinfo.com";
+pagedsc[12] = "Yippi";
+pageurl[12] = "http://www.yippi.com";
+
+// Initialize variables
+var todaydsc = "";
+var todayurl = "";
+var today = new Date();
+var currday = today.getDate();
+
+function choosepage () {
+currday = today.getDate();
+while (currday > numpages) { currday = currday - numpages };
+setinfo();
+}
+
+function setinfo () {
+todaydsc = pagedsc[currday];
+todayurl = urlbase+pageurl[currday];
+document.form1.daynum.value  = currday;
+document.form1.pagedsc.value = todaydsc;
+//document.form1.pageurl.value = urlbase+todayurl;
+//document.form1.go.value = todaydsc;
+}
+
+function nextpage () {
+currday = currday + 1;
+if (currday > numpages) { currday = 1 };
+if (currday < 1) { currday = numpages };
+setinfo();
+}
+
+function prevpage () {
+currday = currday - 1;
+if (currday > numpages) { currday = 1 };
+if (currday < 1) { currday = numpages };
+setinfo();
+}
+
+function randompage() {
+while (((rand=Math.round(Math.random()*numpages)) < 1) || (rand==currday))
+{ };
+currday=rand;
+setinfo();
+}
+
+function loadpage () {
+window.location.href=todayurl;
+}
+
+function MakeArray(n) {
+ this.length = n;
+ for (var i=1; i<=n; i++) {
+  this[i]=0 }
+  return this
+}
+//-->
+</SCRIPT>
+<H2>The Page of the Day is:</H2>
+<NOSCRIPT>
+<p>Since your browser doesn't support JavaScript, you can use my index of
+web pages to choose your Page of the Day.
+<p>
+<p>
+</NOSCRIPT>
+<p>
+<center>
+<form name="form1">
+<input type="button" name="calc" value="Calculate the Page of the Day" onClick="choosepage()"> 
+<input type="button" name="random" value="Random Page" onClick="randompage()">
+<p>
+Page # <input type="text" name="daynum" value="" size=4>
+<br>
+Description: <input type="text" name="pagedsc" value="" size=50 maxsize=80>
+<p>
+<input type="button" name="prev" value="Previous Page" onClick="prevpage()">
+<input type="button" name="next" value="Next Page" onClick="nextpage()">
+<br>
+<input type="button" name="go" value="  Let's Go!  "onClick="loadpage()">
+</form>
+<P><br>
+
+<P><br>
+<P><HR WIDTH=60%><P>
+<center>
+
+
+This is actually a url generator dressed up like a page of the day.  Great script.
+You can have up to 31 different pages - obviously because the most days in
+a month is 31.<P>
+
+
+
+
+</BODY>
+</HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

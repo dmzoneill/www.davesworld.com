@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body onload="myScroll();" background="firestorma.jpg" text="#FFFFFF" link="#FFFF00" vlink="#FF0000" alink="#CCFF33">
+
+<table width="1500">
+<td>&nbsp;</td>
+</table>
+
+<script>
+var y = 0;
+var logosize = 250;
+function myScroll() {
+	if (y <=logosize) {y = y + 1;}
+	else{y=0}
+	window.scroll(y,0);
+	setTimeout('myScroll();', 20);
+}
+
+</script>
+</body>
+</html>

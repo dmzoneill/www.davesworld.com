@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<!-- Paste this code into HEAD of your document  -->
+ 
+<HEAD>
+
+<SCRIPT LANGUAGE="Javascript">
+
+<!-- Begin
+var COLOR = 999999
+var woot = 0
+function stoploop() {
+document.bgColor = '#000000';
+clearTimeout(loopID);
+}
+function loopBackground() {
+if (COLOR > 0) {
+document.bgColor = '#' + COLOR
+COLOR -= 111111
+loopID = setTimeout("loopBackground()",1)
+} else {
+document.bgColor = '#000000'
+woot += 10
+COLOR = 999999
+COLOR -= woot
+loopID = setTimeout("loopBackground()",1)
+   }
+}
+// End -->
+</SCRIPT>
+</HEAD>
+
+<!-- Add this form to the body of the HTML document  -->
+
+<BODY>
+
+<CENTER>
+<FORM NAME="background">
+<INPUT TYPE="button" VALUE="Start bgColor WARP"
+onClick="loopBackground()">
+<br>
+<input type="button" value="Stop bgColor WARP" onClick="stoploop()">
+</FORM>
+</CENTER>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+<TITLE>Checkboxes</TITLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<h2>Checkboxes</h2><p>
+<font size=2><b>
+The object of the game is to check as many checkboxes as possible in 20 seconds.</b> 
+<hr>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--// Copyright (c) 1996 Tomer Shiran. All rights reserved.
+// Permission given to use this script provided that the copyright
+// notice remains as is. Additional scripts and information are 
+// available at http://www.geocities.com/SiliconValley/9000/
+// assign initial values to global variables
+var total = 0
+var play = false
+// react to a click in a checkbox (element == clicked checkbox object)
+
+function display(element) {	
+	// assign instance of Date object representing current time	
+		var now = new Date()	
+	// if the game has not started yet	
+		if (!play) {		
+	// game starts now		
+		play = true		
+	// milliseconds since 1970 for time at beginning 		
+		startTime = now.getTime()	
+	}	
+	// if more than 20 seconds have passed since startTime was last set	
+		if (now.getTime() - startTime > 20000) {		
+			// reject modification (make "read-only")		
+				element.checked = !element.checked		
+			// terminate function		
+			return	
+		}	
+	// if the clicked checkbox is now checked	
+		if (element.checked)		
+			// increment total		
+				total++
+		else		
+			// decrement total		
+				total--	
+			// display total in text object	
+				element.form.num.value = total
+}
+
+function restart(form) {	
+	// set global variables back to initial values	
+		total = 0	
+		play = false	
+	// uncheck all 100 checkboxes	
+		for (var i = 1; i <= 100; ++i) {		
+			// uncheck current checkbox		
+				form.elements[i].checked = false	
+		}
+}
+// -->
+</SCRIPT>
+</HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--// immediate script (executed before the other script because it is deferred)
+	document.write("<FORM><CENTER>")
+	document.write('<INPUT TYPE="text" VALUE="0" NAME="num" SIZE=10 onFocus="this.blur()"><BR>')
+	document.write("<HR SIZE=1 WIDTH=40%>")
+// use loop to create a 10 x 10 square of checkboxes
+	for (var i = 0; i < 10; ++i) {	
+		for (var j = 0; j < 10; ++j) {		
+			// write checkbox with "display(this)" as event handler script		
+				document.write('<INPUT TYPE="checkbox" onClick="display(this)">')	
+		}	
+		document.write("<BR>")
+	}
+	document.write("<HR SIZE=1 WIDTH=40%>")
+	// create button to call restart function to restart game
+		document.write('<INPUT TYPE="button" VALUE="restart" onClick="restart(this.form)">')
+		document.write("</CENTER></FORM>")
+// -->
+</SCRIPT>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<BODY>
+<HEAD>
+<TITLE>Mind Reader - ESP</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+// "Copyright 1996-97 (C) Tatsuya Takemura. All rights reserved." 
+
+function es() {
+    alert("Please mind a number.")     
+    x=0
+    var today=new Date()
+    sec=0
+    for (i=1;i<=5;i++) {     
+        sec=today.getSeconds()
+        rand1 = 31
+        while ( rand1 > 30 ) {
+            rand1 = Math.random()*sec*100
+            rand1 = Math.ceil(rand1)
+        }
+        rand2 = Math.random()
+        if (rand2>0.5) { mes="add "; mes1=" to "; y=rand1 }
+                  else{ mes="substract " ; mes1=" from "; y=-rand1}
+    x1=x
+    x=x+y
+    if (x<0) { mes="add "; mes1=" to "; x=x1+rand1 }
+    alert("Please "+mes+rand1+mes1+"it. ")     
+       
+    }
+    alert("Please substruct a number that you mind first from it.")
+    alert("Now you mind a number of "+x+" , don`t you ?")
+}
+
+
+
+ 
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<H1 ALIGN="CENTER">ESP</H1>
+<CENTER>
+<P><P>Extrasensory Perception
+<BR><BR><BR><BR>
+My page have ESP.
+<br>
+My page is a mind reader.
+
+<FORM NAME="f">
+<INPUT TYPE="button" VALUE="CLICK HERE" onClick="es()">
+</FORM>
+</center>
+</BODY>
+</HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

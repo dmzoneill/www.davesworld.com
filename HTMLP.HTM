@@ -1,0 +1,1676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=5)">
+<meta name="GENERATOR" content="DAVID O'NEILL">
+<meta name="description" content="This site contains all sorts of complete bullshit">
+<meta name="keywords" content="Java, Java scripts, htm, html, learning html, software">
+<link rel=stylesheet type="text/css" href="style1.css" title="syle1">
+<title>Dhtml Scripts + Java + CSS</title>
+</head>
+<body background="white.jpg" leftmargin="5" topmargin="15">
+
+
+<div align="center">
+<iframe src="menu.htm" width="745" height="140" scrolling="no" frameborder="0" hspace="0" vspace="0" name="top"></iframe>
+
+<table width="745"><tr>
+<td width="220"><div align="center"><img src="logo.gif" alt="Davesworld"></div></td>
+
+<td width="305"><div align="center">
+<img src="back.gif" alt="BACK" onClick="history.back(-1)">
+<img src="home.gif" alt="HOME" onClick="window.location.href='index.htm'">
+<img src="foward.gif" alt="FOWARD" onClick="history.back(+1)">
+</div></td>
+
+<td width="75"></td>
+<td width="145">
+</td></tr></table></div>
+
+<script language="JavaScript1.2">
+/********************************************************************************
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts. 
+This may be used freely as long as this msg is intact!
+********************************************************************************
+Browsercheck:*/
+ie=document.all?1:0
+n=document.layers?1:0
+
+/********************************************************************************
+Here are the variables you must set: (this is the only part you have to change)
+
+Remember tho, if you wan't different size for the layers, different clip or anything
+change that in the stylesheet.
+*/
+
+//The delay between the fades (in milliseconds) smaller value gives less time:
+betweendelay=600
+
+//Do you wan't it to start over on the first one when it's gone trought all the news?
+//(set to 0 if not)
+var loop=1
+
+//What font do you wan't it use?
+FontFace='times new roman,helvetiva'
+
+//What font-size (in pixel)?
+FontSize=12
+
+//Do you wan't it to fade out aswell? 1 for on, 0 for off
+fadeback=1
+
+//Set the colors, first color is same as background, last color is the color it stops at:
+//You can have upto 7 colors, set the ones you wan't use to 0
+colors=new Array()
+colors[0]='#000000'
+colors[1]='#333333'
+colors[2]='#666666'
+colors[3]='#999999'
+colors[4]='#CCCCCC'
+colors[5]='#EEEEEE'
+colors[6]='#FFFFFF'
+
+//This is the news you wanna have, set the link and the text. If you don't wan't it to link anywhere
+//use a # as the link
+news=new Array()
+//Copy there three lines and change the info and numbers to get more news.
+news[0]=new Array()
+news[0]["text"]="New scripts www.bratta.com/dhtml is updated with more scripts then ever!.."
+news[0]["link"]="http://www.bratta.com/dhtml"
+
+news[1]=new Array()
+news[1]["text"]="Dynamic HTML scripts can be found here! ZoomText, FadeNews, TextChange and lot's lot's more..."
+news[1]["link"]="#l"
+
+news[2]=new Array()
+news[2]["text"]="Be sure to test them out on your site, I will not take any responcibility though for any faults..."
+news[2]["link"]="#l"
+
+news[3]=new Array()
+news[3]["text"]="As far as i can make out, they work fine, as this script illustrates."
+news[3]["link"]="#l"
+
+/*Dont change anything below this!
+*********************************************************************************/
+fadeInit=new Function("oNews=new makeObj('divNews','divCont'); fadeNews(0)")
+function makeObj(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+    this.css=(n) ? eval(nest+'document.'+obj):eval(obj+'.style')
+    this.writeref=(n) ? eval(nest+'document.'+obj+'.document'):eval(obj);		
+	this.fadeIt=b_fadeIt
+    this.obj = obj + "Object"; 	eval(this.obj + "=this")	
+}
+function b_fadeIt(text,link,font,size,speed,fn,num,c0,c1,c2,c3,c4,c5,c6){
+	if(num<arguments.length && arguments[num]!=0){
+		writetext='<a href="'+link+'" style="text-decoration:none; font-size:'+size+'px">'
+		+'<font face="'+font+'" color="'+arguments[num]+'">'+text+'</font></a>'
+		if(n){this.writeref.write(writetext); this.writeref.close()}
+		if(ie) this.writeref.innerHTML=writetext		
+		num++
+		setTimeout(this.obj+'.fadeIt("'+text+'","'+link+'","'+font+'",'+size+','+speed+',"'
+		+fn+'",'+num+',"'+c0+'","'+c1+'","'+c2+'","'+c3+'","'+c4+'","'+c5+'","'+c6+'")',speed)
+	}else setTimeout('eval('+fn+')',betweendelay)
+}
+function fadeNews(num){
+	if(num<news.length){
+		fn=fadeback?'fadeBack('+num+')':'fadeNews('+(num+1)+')';
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,fn,7,
+		colors[0],colors[1],colors[2],colors[3],colors[4],colors[5],colors[6])
+	}else if(loop)fadeNews(0)
+}
+function fadeBack(num){
+	if(num>=0){
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,'fadeNews('+(num+1)
+		+')',7,colors[6],colors[5],colors[4],colors[3],colors[2],colors[1],colors[0])
+	}
+}
+onload=fadeInit;
+/*End of fadescript
+**********************************************************************************/
+</script>
+<div id="divCont" style="position:absolute; width:370; height:200; left:300; top:240">
+<div id="divNews" style="position:absolute"><script>
+		if(document.all || document.layers) document.write(""
+		+"YOU ARE SEEING THIS, IF YOUR BROWSER DOES NOT SUPPORT DHTML")
+		</script>
+	</div>
+</div>
+
+
+<!-----THIS IS A TABLE WIDTH 3 COLS + 3 TABLES WITHIN THEM------->
+<div align="center">
+<table width="745">
+<!---td 1 left of the screen--->
+<!--sub1--->
+<tr><td width="220" valign="top">
+<img src="search.gif" alt="search"><br>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<!-- Search Google -->
+<center>
+<FORM method=GET action=http://www.google.com/custom>
+<A HREF=http://www.google.com/search>
+<IMG SRC=http://www.google.com/logos/Logo_40wht.gif border=0></A><br>
+SEARCH:
+<INPUT TYPE=text name=q size=25 maxlength=255 value="">
+<INPUT type=submit name=sa VALUE="Google Search">
+</FORM>
+</center>
+<!-- Search Google -->
+
+</td></tr></table>
+
+<img src="browse.gif" alt="browse"><br>
+
+<!---td 1 left of the screen--->
+<!--sub2--->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<img src="arrow.gif"><b class="my1">IN THIS SITE</b>
+
+<br><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="homepage.htm"  onMouseOver="window.status='YOUR ON IT!!!'; return true;" onMouseOut="window.status=''; return true;">Homepage</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="java.htm"  onMouseOver="window.status='Java Scripts'; return true;" onMouseOut="window.status=''; return true;">Java Scripts</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="htmlp.htm" onMouseOver="window.status='programming'; return true;" onMouseOut="window.status=''; return true;">HTML programming</a>
+		
+<BR>
+		           
+<img src="lbball1.gif">&nbsp;<a href="htmll.htm" onMouseOver="window.status='Learning HTML'; return true;" onMouseOut="window.status=''; return true;">Learning HTML</a>
+
+<BR>
+          
+<img src="lbball1.gif">&nbsp;<a href="software.htm" onMouseOver="window.status='Software'; return true;" onMouseOut="window.status=''; return true;">Software</a>
+
+<BR>
+          
+ <img src="lbball1.gif">&nbsp;<a href="other.htm" onMouseOver="window.status='Other Stuff'; return true;" onMouseOut="window.status=''; return true;">Other stuff</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="photos.htm" onMouseOver="window.status='photos'; return true;" onMouseOut="window.status=''; return true;">Photos</a>
+		
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="sites.htm" onMouseOver="window.status='Recommended sites'; return true;" onMouseOut="window.status=''; return true;">Recommended sites</a>
+		
+<BR>
+<BR>
+</td></tr></table>
+
+<img src="contact.gif" alt="contact me + sign guestbook"><br>
+
+<!---td 1 left of the screen--->
+<!--sub3--->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+<img src="arrow.gif"><b class="my1">SIGN THE GUESTBOOK</b>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="contact.htm" onMouseOver="window.status='E-mail Me'; return true;" onMouseOut="window.status=''; return true;">Forum + Contact a Friend</a>
+		
+<BR>
+
+<img src="lbball1.gif">&nbsp;
+<A HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?view=aforfucksake" onMouseOver="window.status='View guestbook'; return true;" onMouseOut="window.status=''; return true;">Read My Guestbook!</A>
+
+<BR>
+
+<img src="lbball1.gif">&nbsp;
+<A HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?sign=aforfucksake"  onMouseOver="window.status='Add to the guestbook'; return true;" onMouseOut="window.status=''; return true;">Sign Guestbook!</A>
+
+<br>
+<br>
+</td></tr></table>
+
+<!------td 1---->
+<!---sub4---->
+<img src="something.gif" alt="looking for something"><br>
+
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<img src="arrow.gif"><b class="my1">SEARCH</b>
+
+<br><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.yahoo.com"  onMouseOver="window.status='www.yahoo.com'; return true;" onMouseOut="window.status=''; return true;">Yahoo.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.webcrawler.com"  onMouseOver="window.status='www.webcrawler.com'; return true;" onMouseOut="window.status=''; return true;">Webcrawler.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.lycos.com"  onMouseOver="window.status='www.lycos.com'; return true;" onMouseOut="window.status=''; return true;">Lycos.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.google.com"  onMouseOver="window.status='www.google.com'; return true;" onMouseOut="window.status=''; return true;">Google.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.altavista.com" onMouseOver="window.status='www.altavista.com'; return true;" onMouseOut="window.status=''; return true;">Altavista.com</a><br>
+		        
+<img src="lbball1.gif">&nbsp;<a href="http://www.alltheweb.com" onMouseOver="window.status='www.alltheweb.com'; return true;" onMouseOut="window.status=''; return true;">Alltheweb.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.bigbot.com" onMouseOver="window.status='www.bigbot.com'; return true;" onMouseOut="window.status=''; return true;">Bigbot.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.askjeeves.co.uk/" onMouseOver="window.status='www.askjeeves.co.uk/'; return true;" onMouseOut="window.status=''; return true;">Ask Jeeves.co.uk</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mamma.com/"  onMouseOver="window.status='www.mamma.com/'; return true;" onMouseOut="window.status=''; return true;">Mamma.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.oingo.com/" onMouseOver="window.status='www.oingo.com/'; return true;" onMouseOut="window.status=''; return true;">Oingo.com</a><br>
+
+<br>
+</td></tr></table>
+
+<img src="sites.gif" alt="sites"><br>
+<table cellspacing="1" cellpadding="5" width="220" bgcolor="#000099">
+<tr><td valign="top" bgcolor="#F5FCDC" width="220">
+
+<p>FOR MORE COMPREHENSIVE GUIDE TO THE BEST SITES ON THE WEB GO 
+<A HREF="SITES.HTM">HERE</A><BR><BR></P>
+
+<img src="arrow.gif"><B class="my1">Hacking Sites</B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.hackology.com" onMouseOver="window.status='www.hackology.com'; return true;" onMouseOut="window.status=''; return true;">Hackology.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.haquerz.com" onMouseOver="window.status='www.haquerz.com'; return true;" onMouseOut="window.status=''; return true;">Haquerz.com</a><BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.elitehackers.com/" onMouseOver="window.status='www.elitehackers.com/'; return true;" onMouseOut="window.status=''; return true;">Elitehackers.com</a><BR>
+				
+<img src="lbball1.gif">&nbsp;<a href="http://www.cyberarmy.com" onMouseOver="window.status='www.cyberarmy.com'; return true;" onMouseOut="window.status=''; return true;">Cyberarmy.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.hackersclub.com" onMouseOver="window.status='www.hackersclub.com'; return true;" onMouseOut="window.status=''; return true;">Hackersclub.com</a><BR><br>
+
+<img src="arrow.gif"><B class="my1">WEB SITE STUFF</B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.flamingtext.com" onMouseOver="window.status='www.flamingtext.com'; return true;" onMouseOut="window.status=''; return true;">Flamingtext.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.bseen.com" onMouseOver="window.status='www.bseen.com'; return true;" onMouseOut="window.status=''; return true;">Bseen.com</a><BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.ultimatecounter.com" onMouseOver="window.status='www.ultimatecounter.com'; return true;" onMouseOut="window.status=''; return true;">Ultimatecounter.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.shockwave.com" onMouseOver="window.status='www..shockwave.com'; return true;" onMouseOut="window.status=''; return true;">Shockwave.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.macromedia.com" onMouseOver="window.status='www..macromedia.com'; return true;" onMouseOut="window.status=''; return true;">Macromedia.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://scriptsearch.internet.com" onMouseOver="window.status='http://scriptsearch.internet.com';return true;" onMouseOut="window.status=''; return true;">Scriptsearch.com</a><BR><br>
+
+<img src="arrow.gif"><B class="my1">MUSIC + MP3 SOFTWARE </B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mtv.co.uk/" onMouseOver="window.status='http://www.mtv.co.uk/';return true;" onMouseOut="window.status=''; return true;">Mtv.co.uk</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mp3.com/" onMouseOver="window.status='http://www.mp3.com/';return true;" onMouseOut="window.status=''; return true;">Mp3.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.audiofind.com/" onMouseOver="window.status='http://www.audiofind.com/';return true;" onMouseOut="window.status=''; return true;">Audiofind.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.napster.com/" onMouseOver="window.status='http://www.napster.com/';return true;" onMouseOut="window.status=''; return true;">Napster.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.real.com/" onMouseOver="window.status='http://www.real.com/';return true;" onMouseOut="window.status=''; return true;">Real.com</a><br><br>
+</td></tr></table>
+<img src="end.gif"><br><br><div align="center">
+<img src="bum.gif" alt="will design web pages for money">
+</div>
+</td>
+
+<!----td2-middle of the screen---->
+<td width="510" valign="top">
+
+<div align="center"><h2>HTML + JAVA SCRIPTS</h2>
+	
+	
+<!-------------------------------textarea 1 ------------------------------------------->
+
+<BR><img src="logo.gif" alt="Davesworld"><BR>
+<br>
+<b>SEARCH ENGINE</B><BR><BR>
+
+<TEXTAREA NAME="SEARCH ENGINE" ROWS=10 COLS=50>
+
+<!---Start of search engine. Note: copyright must remain intact.  Simply paste this into your html source---->
+		
+		<!-- START OF SCRIPT --><!-- For more scripts visit http://www.netpedia.com -->
+<font color="#FF0000"
+face="georgia, times new roman, times, serif">
+<!------------  CUT HERE: BEGINNING OF SNARK  ------------></font><font
+color="#FF0000" face="georgia, times new roman, times, serif"><script>
+<!-- hide this script from non-JavaScript browsers
+
+// All code in this script is Copyright(C) 1996, Justin Boyan, jab+j@cs.cmu.edu
+// For documentation and more info, see:  http://www.cs.cmu.edu/~jab/snark/
+// This is SNARK Version 1.0, 18 May 1996
+
+var MAX_ENGINES = 30;
+var SNARK_STRING = "hunting+the+snark";
+
+function MakeArray(n) {
+   for (var i = 1; i <= n; i++) {
+     this[i] = 0;
+   }
+   this.maxlen = n;
+   this.len = 0;
+   return this;
+}
+
+var engs = new MakeArray(MAX_ENGINES);
+
+function find_substring(needle, haystack) {
+   var i, needlen = needle.length, haylen = haystack.length;
+   for (i=0; i<=haylen-needlen; i++) {
+      if (needle == haystack.substring(i,i+needlen))
+        return i;
+   }
+   return false;
+}
+
+function Engine(name, opts, home, search) {
+  var snark = find_substring(SNARK_STRING, search);
+  this.name = name;
+  this.opts = opts;
+  this.home = home;
+  this.pre_snark = search.substring(0,snark);
+  this.post_snark= search.substring(snark+SNARK_STRING.length, search.length);
+}
+
+function Add(name, opts, home, search) {
+  engs.len++;
+  if (engs.len <= engs.maxlen) {
+    engs[engs.len] = new Engine(name, opts, home, search)
+  }
+  else {
+    alert("Better increase MAX_ENGINES: " + engs.len + ">" + engs.maxlen)
+  }
+}
+
+// ADD YOUR OWN SEARCH ENGINES BELOW.  (See http://www.cs.cmu.edu/~jab/snark/ )
+
+
+Add("Netnews: AltaVista", "",
+   "http://altavista.digital.com/",
+   "http://altavista.digital.com/cgi-bin/query?pg=q&what=news&fmt=d&q=hunting+the+snark" );
+
+Add("Shareware/Windows", "",
+   "http://vsl.cnet.com/",
+   "http://vsl.cnet.com/cgi-bin/vsl-master/Find?category=MS-Windows%28all%29&search=hunting+the+snark&logop=and&and=&orfile=++&hits=200" );
+
+Add("Shareware/Unix", "",
+   "http://vsl.cnet.com/",
+   "http://vsl.cnet.com/cgi-bin/vsl-master/Find?category=UNIX&search=hunting+the+snark&logop=and&and=&orfile=++&hits=200" );
+
+Add("the Web: AltaVista", "SELECTED",
+   "http://altavista.digital.com/",
+   "http://altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=d&q=hunting+the+snark" );
+
+Add("the Web: Lycos", "",
+   "http://www.lycos.com/",
+   "http://twelve.srv.lycos.com/cgi-bin/pursuit?query=hunting+the+snark" );
+
+Add("the Web: Yahoo!", "",
+   "http://www.yahoo.com/",
+   "http://search.yahoo.com/bin/search?p=hunting+the+snark" );
+
+Add("Weather (City, ST)", "",
+   "http://www.nnic.noaa.gov/cgi-bin/page?pg=netcast",
+   "http://www.nnic.noaa.gov/cgi-bin/netcast.do-it?state=hunting+the+snark&area=Local+Forecast&html=yes&match=strong");
+
+
+// ADD YOUR OWN SEARCH ENGINES ABOVE.  (See http://www.cs.cmu.edu/~jab/snark/ )
+
+function HandleForm(form) {
+  form.submit();  // This fixes a mysterious Netscape bug.  Without this line,
+                  // you can't use <enter> to start the search the first time.
+  var i, oldq=form.query.value, newq="";
+  for (i=0; i<oldq.length; i++) {  // compress [ ]+ into \+
+    var thischar = oldq.charAt(i);
+    if (thischar != ' ')
+      newq += thischar;
+    else if (lastchar != ' ')
+      newq += '+';
+    lastchar = thischar;
+  }
+  var eng = engs[1+form.service.selectedIndex];
+  location.href = newq ? eng.pre_snark + newq + eng.post_snark : eng.home;
+}
+
+function DisplayForm() {
+  document.writeln('<CENTER><FORM OnSubmit="HandleForm(this); return false">');
+  document.writeln('Search <SELECT name="service">');
+  for (i=1; i <= engs.len; i++) {
+    document.writeln("<OPTION " + engs[i].opts + "> " + engs[i].name);
+  }
+  document.writeln('</SELECT><br><br> for <INPUT size=26 name="query">');
+  document.writeln('<input type=submit value=" GO!">');
+  document.writeln('</FORM> </CENTER>');
+}
+
+DisplayForm();
+
+// done hiding from old browsers -->
+
+</script></font><font
+color="#FF0000" face="georgia, times new roman, times, serif">
+<!------------  CUT HERE: END OF SNARK  ------------></font>
+
+<font color="#FF0000"
+face="georgia, times new roman, times, serif">
+<!-- END OF SCRIPT -->
+</TEXTAREA>
+
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><br>
+<b>FRAME BUSTER</B></font><BR><BR><TEXTAREA NAME="FRAME BUSTER" ROWS=10 COLS=50>
+
+<!----------THIS IS THE FRAME BUSTER, COPY AND PASTE INTO YOUR HTML DOCUMENT-------->
+
+<!-- frame buster - code by Gordon McComb -->
+<script language="JavaScript" type="text/javascript"> 
+	<!-- Hide script from older browsers 
+	setTimeout ("changePage()", 3000);
+
+	function changePage() {
+		if (self.parent.frames.length != 0)
+			self.parent.location=document.location;
+		}
+
+	// end hiding contents -->
+</script>
+
+<!-----------------THIS IS THE END OF THE FRAME BUSTER-------------------->
+</TEXTAREA>
+		
+
+
+
+
+
+<!-------------------------------textarea 3 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><BR>
+<b>RANDOM IMAGE VIEWER</B><BR><BR><TEXTAREA NAME="image" ROWS=10 COLS=50>
+		
+<!-----------this is the random image viewer-----copy and paste------->		
+
+		
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT LANGUAGE="JavaScript">
+
+today=new Date();
+jran=today.getTime();
+
+function rnd() {
+
+	ia=9301;
+	ic=49297;
+	im=233280;
+
+	jran = (jran*ia+ic) % im;
+	return jran/(im*1.0);
+};
+
+function rand(number) {
+
+	return Math.ceil(rnd()*number);
+};
+
+document.write("<CENTER>");
+for(i=1;i<=1;i++) {
+	myNum=(rand(25));
+	if(myNum == 1) document.write("<img src='EXAMPLE.GIF'>"); 
+	if(myNum == 2) document.write("<img src='here'>");
+	if(myNum == 3) document.write("<img src='here'>");
+	if(myNum == 4) document.write("<img src='here'>");
+	if(myNum == 5) document.write("<img src='here'>");
+	if(myNum == 6) document.write("<img src='here'>");
+	if(myNum == 7) document.write("<img src='here'>");
+	if(myNum == 8) document.write("<img src='here'>");
+	if(myNum == 9) document.write("<img src='here'>");
+	if(myNum == 10) document.write("<img src='here'>");
+	if(myNum == 11) document.write("<img src='light rotating.gif'>");
+	if(myNum == 12) document.write("<img src='onlinelogo.gif'>");
+	if(myNum == 13) document.write("<img src='onlinelogo.gif'>");
+	if(myNum == 14) document.write("<img src='img12.gif'>"); 
+	if(myNum == 15) document.write("<img src='img13.gif'>");
+	if(myNum == 16) document.write("<img src='img14.gif'>");
+	if(myNum == 17) document.write("<img src='img15.gif'>");
+	if(myNum == 18) document.write("<img src='img16.gif'>");
+	if(myNum == 19) document.write("<img src='img19.gif'>");
+	if(myNum == 20) document.write("<img src='img25.gif'>");
+	if(myNum == 21) document.write("<img src='img23.gif'>");
+	if(myNum == 22) document.write("<img src='img22.gif'>");
+	if(myNum == 23) document.write("<img src='img32.gif'>");
+	if(myNum == 24) document.write("<img src='img33.gif'>");
+	if(myNum == 25) document.write("<img src='img34.gif'>");
+else {
+document.write();
+}
+
+};
+
+document.write("</CENTER>");
+
+</SCRIPT>
+<!-- END OF SCRIPT -->
+</TEXTAREA>
+
+
+<!-------------------------------textarea 4 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><BR>
+<b>BROWSER IDENTIFIER </B><BR><BR><TEXTAREA NAME="browser identifier" ROWS=10 COLS=50 >
+
+<!----------------------------------THIS IS THE BROWSER IDENTIFYER----------------------------------------->
+
+<font size="2"><script language="JavaScript" type="text/javascript">
+<!--
+	document.write("You are using " + navigator.appName
+	+ " " + navigator.appVersion);
+// -->
+</script>
+<!------------END OF THE BROWSER IDENTIFYER----->
+</TEXTAREA>
+
+<!-------------------------------textarea 5 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><BR>
+<b>HIT COUNTER</B><BR><BR><TEXTAREA NAME="hit counter" ROWS= 10 COLS=50>
+		
+		<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+/*
+
+   This script was created by the administration
+   from www.jsworld.com.  Permission is hereby
+   granted to use this script freely for any
+   commercial or non commercial use, as long as
+   this message remains in tact.
+
+   © 1998 JavaScript World
+   All Rights Reserved
+   http://www.jsworld.com/
+
+*/
+
+document.write("<FORM><INPUT TYPE=HIDDEN NAME='saved' value='1'></FORM>")
+function welcome()
+	{
+if(document.cookie == "")
+	{
+var counting = "1";
+var when = new Date()
+document.cookie = "counting=; expires=" + when.toGMTString();
+when.setMonth(when.getMonth() + 1)
+var counting = document.forms[0].saved.value;
+document.cookie = "counting="+counting+" `; expires=" + when.toGMTString()
+document.write("COUNTER");
+	}
+else
+	{
+var get = document.cookie;
+get = get.substring((get.indexOf("=")+1),get.length);
+var count = get.split(" ");
+count[0]++
+document.write("COUNTER "+count[0]+"");
+document.forms[0].saved.value=count[0];
+saveit()
+	}
+	}
+
+
+function saveit()
+	{
+var when = new Date()
+document.cookie = "counting=; expires=" + when.toGMTString();
+when.setMonth(when.getMonth() + 1)
+var counting = document.forms[0].saved.value;
+document.cookie = "counting="+counting+"; expires=" + when.toGMTString()
+	}
+welcome()
+
+// -->
+</SCRIPT>
+<!-- END OF SCRIPT -->
+</TEXTAREA>
+	
+	
+	
+	
+<!-------------------------------textarea 5 ------------------------------------------->	
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><BR>
+<b>DISSAPEARING TEXT</B><BR><BR><TEXTAREA NAME="dissapearing text" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<script language="JavaScript1.2">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/*If you want the text to appear differently on another place on the page
+or anything set that in the style tag of the zoom layer. 
+
+Here are the variables you have to set:                                                                 
+First the text:*/
+	text="www.evrsoft.com"
+
+//set the fontsize you want:
+	var fontsize=35
+
+//The color of the text
+	var color="#003300"
+	
+//the alignment of the text, you can choose center, right or left.
+	var align="left"
+
+//Set the speed you want it to write in (in milliseconds between each letter)
+	var Wspeed=100
+
+//Set font
+	var font='Arial Black,Arial,Helvetica'
+  
+//Set the time you want it to wait before it starts after pageload:
+	var timetowait=1000
+        
+/*You can remove this if you don't wan't it to start right away.
+You can have it start if someone clicks a link (make a link like this:
+<a href="#" onclick="writeInit()">Click to writetext</a>)*/
+	onload=writeInit;
+
+/*You shouldn't really have to set anything below this point
+****************************************************************************
+****************************************************************************
+*****************************************************************************/
+/*Browsercheck and settings vars
+****************************************************************************/
+var ie, n;
+if (document.all) {
+	n=0; ie=1
+	writeText='document.all.divZoom.innerHTML=\'<p align=\"\'+align+\'\" style=\"font-family:\'+font+\'; font-size:\'+fontsize+\'px; color:\'+color+\'">\'+text+\'</p>\''
+	closeIt=""
+}
+if (document.layers) {
+	n=1;ie=0
+	writeText="document.divZoom.document.write('<p align=\"'+align+'\" style=\"font-family:'+font+'; font-size:'+fontsize+'px; color:'+color+'\">'+text+'</p>')"
+	closeIt="document.divZoom.document.close()"
+}
+
+/*The functions for writing text.
+****************************************************************************/
+function writeIt(){
+	if(text.length>0){
+		text=text.slice(0,text.length-1)
+		eval(writeText)
+		eval(closeIt)
+		setTimeout("writeIt()",Wspeed)
+	}
+}
+/*This is the functions that calls the right function...or something :}
+****************************************************************************/
+function writeInit(){
+	eval(writeText)
+	eval(closeIt)
+	if(ie || n) setTimeout("writeIt(0)",timetowait)       
+}
+//***************************************************************************
+</script>
+</head>
+<body bgcolor="White">
+<div id="divZoom" style="position:absolute; top:1; left:1"></div>
+<!----------------------end--------------->		
+</TEXTAREA>
+		
+		
+		
+<!-------------------------------textarea 6 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+Drag N' Drop</B><BR><BR><TEXTAREA NAME="drag n' drop" ROWS=10 COLS=50>
+		
+<!---------------------start--------------->
+
+<style>
+#divDrag0{position:absolute; left:0; top:0; height:200; width:200; clip:rect(0,200,200,0); background-color:silver; layer-background-color:silver}
+#divDrag1{position:absolute; left:0; top:0; height:200; width:200; clip:rect(0,200,200,0); background-color:blue; layer-background-color:blue}
+#divDrag2{position:absolute; left:0; top:0; height:100; width:100; clip:rect(0,100,100,0); background-color:green; layer-background-color:green}
+</style>
+
+<script language="JavaScript1.2">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+//Browsercheck, and sets <div> for ie, and <layer> for ns
+	var n = (document.layers) ? 1:0;
+	var ie = (document.all) ? 1:0;
+	var layer=(n)?'layer':'div'
+
+/********************************************************************************
+Object constructor part.
+Setting the objects methods and properties
+********************************************************************************/
+function dragObj(obj,nest){
+	nest=(!nest) ? '':'document.'+nest+'.'										
+    this.css=(n) ? eval(nest+'document.'+obj):eval('document.all.'+obj+'.style')		
+    this.evnt=(n)? eval(nest+'document.'+obj):eval(obj);
+	this.getLeft=b_getLeft;
+	this.getTop=b_getTop;
+	this.moveIt=b_moveIt;
+	this.name=obj				
+	return this
+}
+function b_moveIt(x,y){
+	this.css.left=x
+	this.css.top=y
+}
+function b_getLeft(){
+  	x=(n)? this.css.left:this.css.pixelLeft
+	return x
+}
+function b_getTop(){
+  	y=(n)? this.css.top:this.css.pixelTop
+	return y
+}
+/********************************************************************************
+Capturing events, when the user mouseovers a layer
+the variable/property of that layer names .isOver will
+be true, and that means if the user clicks
+when he is on top of that layer it becomes draggable
+********************************************************************************/
+function dragInit(){
+	if(n) document.captureEvents(Event.MOUSEMOVE | Event.MOUSEDOWN | Event.MOUSEUP)
+	document.onmousedown=mdown
+	document.onmouseup=mup
+	document.onmousemove=mmove;
+}
+function mmover(num){
+	if(loaded) oDrag[num].isOver=true
+}
+function mmout(num){
+	if(loaded) oDrag[num].isOver=false
+}
+function mup(){
+	for(var i=0; i<oDrag.length;i++){
+		if(oDrag[i].isOver) {
+			oDrag[i].drag=false
+		}	
+	}
+}
+function mdown(num){
+	x=(n)?num.pageX:event.x
+    y=(n)?num.pageY:event.y
+	for(var i=0; i<oDrag.length;i++){
+		if(oDrag[i].isOver) {
+			oDrag[i].drag=true
+			oDrag[i].clickedX=x-oDrag[i].getLeft()
+			oDrag[i].clickedY=y-oDrag[i].getTop()
+			cZIndex++
+			oDrag[i].css.zIndex=cZIndex
+		}
+	}
+}
+function mmove(e){
+	x=(n)?e.pageX:event.x
+    y=(n)?e.pageY:event.y
+	for(var i=0; i<oDrag.length;i++){
+	if(oDrag[i].drag)
+		oDrag[i].moveIt(x-oDrag[i].clickedX,y-oDrag[i].clickedY)
+	}
+}
+
+/********************************************************************************
+Init, here's where you set how many draggable layers you want.
+Make one more "Drag[3]=new dragObj('divDrag3')" and as i did here, ++ the number
+to add draggable layers. You also have to add them in the stylesheet (in the <style></style>)
+To make another one that's sized 100*200 and with a background-color of red add this:
+#divDrag3{position:absolute; height:100; width:200; clip:rect(0,200,100,0); background-color:red; layer-background-color:red}
+Get the picture?
+There's one more thing you have to do to add layers, look further down for explanation.
+********************************************************************************/
+var loaded; 
+function init(){
+	dragInit()
+	oDrag=new Array()
+	oDrag[0]=new dragObj('divDrag0')
+	oDrag[1]=new dragObj('divDrag1')
+	oDrag[2]=new dragObj('divDrag2')
+	loaded=true;
+}
+/********************************************************************************
+Set this variable to the zIndex you want it to start at, (if you have several
+layers and want it to start on the top, change to somthing higher then the uppermost layer
+********************************************************************************/
+cZIndex=10
+
+//Inits the page on page load
+if(n || ie) onload=init;
+</script>
+</HEAD>
+<BODY>
+<script language="JavaScript1.2">document.write('<'+layer+' id="divDrag0" onmouseover="mmover(0)" onmouseout="mmout(0)">')</script>
+	<!--Content of draglayer 0 --> Drag me!
+<script language="JavaScript1.2">document.write('</'+layer+'>')</script>
+<script language="JavaScript1.2">document.writeln('<'+layer+' id="divDrag1" onmouseover="mmover(1)" onmouseout="mmout(1)">')</script>
+	<!--Content of draglayer 1 --> Drag me too!
+<script language="JavaScript1.2">document.writeln('</'+layer+'>')</script>
+<script language="JavaScript1.2">document.writeln('<'+layer+' id="divDrag2" onmouseover="mmover(2)" onmouseout="mmout(2)">')</script>
+	<!--Content of draglayer 2 -->Drag me as well, come on!!
+<script language="JavaScript1.2">document.writeln('</'+layer+'>')</script>
+<!--
+As you can see I write in a <layer> tag for netscape and a <div> tag for explorer
+the reason i do this is because Netscape doesn't understand
+mouseover's directly in a <div>, but it does in a <layer>.
+You can make Netscape do mouseovers on divs but you can't send parameters to the
+function if you do. So to add content in a layer here you just remove the
+line that says: "Content of draglayer x" and put's in whatever you want, images,
+text, whatever. If you do wanna use images i suggest you make them background-image
+in the layers/divs as that make the dragging work better. (use layer-background-image
+for netscape)
+To add a layer simply copy on of the ones that are there and change the numbers:
+id="divDrag2" to id="divDrag3", onmouseover="mmover(2)" onmouseout="mmout(2)" to
+onmouseover="mmover(3)" onmouseout="mmout(3)" and so on.
+Hope you enjoy the script and if you have any questions or problems with it
+you can reach me at dhtml@bratta.com.
+This is script is btw, backwardscompatibel, the content will just show static
+whereever you place it in non-dhtml browsers.
+-->
+
+
+<!----------------------end--------------->		
+</TEXTAREA>
+
+
+
+
+<!-------------------------------textarea 7 ------------------------------------------->
+		
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+ZOOM TEXT</B><BR><BR><TEXTAREA NAME="zoom text" ROWS=10 COLS=50>
+		
+<!---------------------start--------------->
+
+<script language="JavaScript1.2">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/*If you want the text to appear differently on another place on the page
+or anything set that in the style tag of the zoom layer. 
+
+Here are the variables you have to set:                                                                 
+First the text:*/
+	text=new Array('www','evrsoft','com','www.evrsoft.com')
+	
+//the color of the text:
+	color="#000000"
+	
+//set the size you want the zoom to start at:
+	var startSize=70
+	
+//set the size you want the zoom to end at:
+	var endSize=5
+
+//Set the speed you want it to zoom in (in milliseconds)
+	var Zspeed=30
+
+//Set font
+	var font='Arial Black'
+	
+//do you want it to hide when its done? (true or false)
+	var hide=true
+
+/*You can remove this if you don't wan't it to start right away.
+You can have it start if someone clicks a link (make a link like this:
+<a href="#" onclick="fadeInit()">Click to Zoomtext</a>)*/
+	onload=zoomInit;
+	
+/*You shouldn't really have to set anything below this point
+****************************************************************************
+****************************************************************************
+*****************************************************************************/
+var size=startSize
+var gonum=0
+/*Browsercheck and settings vars
+****************************************************************************/
+var ie, n;
+if (document.all) {
+		n=0
+		ie=1
+		zoomText='document.all.divZoom.innerText=text[num]'
+		zoomSize='document.all.divZoom.style.fontSize=size'
+		closeIt=""
+		fadeColor="document.all.divZoom.style.color=color[num]"
+	}
+if (document.layers) {
+		n=1;ie=0
+		zoomText=""
+		zoomSize="document.divZoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+size+'px; color:'+color+'\">'+text[num]+'</p>')"
+		closeIt="document.divZoom.document.close()"
+		fadeColor="document.divZoom.document.write('<p align=\"center\" style=\"font-family:'+font+'; font-size:'+endSize+'px; color:'+color+'\">'+text[numText-1]+'</p>')"
+	}
+
+/*The functions for zooming text.
+****************************************************************************/
+function zoom(num,fn){
+	if (size>endSize){
+		eval(zoomText)
+		eval(zoomSize)
+		eval(closeIt)
+   		size-=10;
+		setTimeout("zoom("+num+",'"+fn+"')",Zspeed)
+	}else{
+		eval(fn)
+	}
+}
+
+/*This is the function that hides the layer after the zoom/color change
+****************************************************************************/
+function hideIt(){
+	if(hide){
+		if(ie)document.all.divZoom.style.visibility="hidden"
+		if(n)document.layers.divZoom.visibility="hidden"
+	}
+}
+/*This is the functions that calls the right function...or something :}
+****************************************************************************/
+function zoomInit(){
+	if(ie){
+		//Added to make it center in ie5
+		document.all.divZoom.style.width=document.body.offsetWidth-50
+		document.all.divZoom.style.color=color
+		document.all.divZoom.style.fontFamily=font
+	}
+	if(ie || n) go(0)	
+}
+function go(num){
+	gonum+=1
+	size=startSize
+	if(num<text.length){
+		zoom(num,'go('+gonum+')')
+	}else{
+		hideIt()
+	}
+}
+
+function playAgain(){
+	size=startSize
+	gonum=0
+	if(ie) document.all.divZoom.style.visibility='visible'
+	else if(n) document.layers.divZoom.visibility='visible'
+	zoomInit()
+}
+//***************************************************************************
+</script>
+</head>
+<body bgcolor="#ffffff"> <!-- Ensure that the color is changed, e.g if zoom text is Black, the bgcolor should be white -->
+
+<!--This is the zoom div/layer, to change the appearans of this just change the stuff you want in the style tag.
+But remeber you can only change width, top, height, left and that sorta stuff, if not you
+have to set them in the ns write thing as well.-->
+<div id="divZoom" align="center" style="position:absolute; top:1"></div>
+<!----------------------end--------------->		
+</TEXTAREA>
+
+
+
+
+<!-------------------------------textarea 8 ------------------------------------------->
+		
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+CHANGING TEXT</b><BR><BR><TEXTAREA NAME="news slide fade" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<style>
+body{background-color:#FFFFFF}
+A{color:Navy; text-decoration:none}
+A:hover{color:red}
+A:visited:{color:#808080}
+TD{font-family:arial,helvetica; font-size:10pt}
+</style>
+<script language="JavaScript1.2">
+/********************************************************************************
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts. 
+This may be used freely as long as this msg is intact!
+********************************************************************************
+Browsercheck:*/
+ie=document.all?1:0
+n=document.layers?1:0
+
+/********************************************************************************
+Here are the variables you must set: (this is the only part you have to change)
+
+Remember tho, if you wan't different size for the layers, different clip or anything
+change that in the stylesheet.
+*/
+
+//The delay between the fades (in milliseconds) smaller value gives less time:
+betweendelay=1000
+
+//Do you wan't it to start over on the first one when it's gone trought all the news?
+//(set to 0 if not)
+var loop=1
+
+//What font do you wan't it use?
+FontFace='arial,helvetiva'
+
+//What font-size (in pixel)?
+FontSize=12
+
+//Do you wan't it to fade out aswell? 1 for on, 0 for off
+fadeback=1
+
+//Set the colors, first color is same as background, last color is the color it stops at:
+//You can have upto 7 colors, set the ones you wan't use to 0
+colors=new Array()
+colors[0]='#FFFFFF'
+colors[1]='#EEEEEE'
+colors[2]='#CCCCCC'
+colors[3]='#999999'
+colors[4]='#666666'
+colors[5]='#333333'
+colors[6]='#000000'
+
+//This is the news you wanna have, set the link and the text. If you don't wan't it to link anywhere
+//use a # as the link
+news=new Array()
+//Copy there three lines and change the info and numbers to get more news.
+news[0]=new Array()
+news[0]["text"]="New scripts www.bratta.com/dhtml is updated with more scripts then ever!"
+news[0]["link"]="http://www.bratta.com/dhtml"
+
+news[1]=new Array()
+news[1]["text"]="Dynamic HTML scripts can be found here! ZoomText, FadeNews, TextChange and lot's lot's more.."
+news[1]["link"]="http://www.bratta.com/dhtml"
+
+/*Dont change anything below this!
+*********************************************************************************/
+fadeInit=new Function("oNews=new makeObj('divNews','divCont'); fadeNews(0)")
+function makeObj(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+    this.css=(n) ? eval(nest+'document.'+obj):eval(obj+'.style')
+    this.writeref=(n) ? eval(nest+'document.'+obj+'.document'):eval(obj);		
+	this.fadeIt=b_fadeIt
+    this.obj = obj + "Object"; 	eval(this.obj + "=this")	
+}
+function b_fadeIt(text,link,font,size,speed,fn,num,c0,c1,c2,c3,c4,c5,c6){
+	if(num<arguments.length && arguments[num]!=0){
+		writetext='<a href="'+link+'" style="text-decoration:none; font-size:'+size+'px">'
+		+'<font face="'+font+'" color="'+arguments[num]+'">'+text+'</font></a>'
+		if(n){this.writeref.write(writetext); this.writeref.close()}
+		if(ie) this.writeref.innerHTML=writetext		
+		num++
+		setTimeout(this.obj+'.fadeIt("'+text+'","'+link+'","'+font+'",'+size+','+speed+',"'
+		+fn+'",'+num+',"'+c0+'","'+c1+'","'+c2+'","'+c3+'","'+c4+'","'+c5+'","'+c6+'")',speed)
+	}else setTimeout('eval('+fn+')',betweendelay)
+}
+function fadeNews(num){
+	if(num<news.length){
+		fn=fadeback?'fadeBack('+num+')':'fadeNews('+(num+1)+')';
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,fn,7,
+		colors[0],colors[1],colors[2],colors[3],colors[4],colors[5],colors[6])
+	}else if(loop)fadeNews(0)
+}
+function fadeBack(num){
+	if(num>=0){
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,'fadeNews('+(num+1)
+		+')',7,colors[6],colors[5],colors[4],colors[3],colors[2],colors[1],colors[0])
+	}
+}
+onload=fadeInit;
+/*End of fadescript
+**********************************************************************************/
+</script>
+</HEAD>
+<BODY bgcolor="white">
+<div id="divCont" style="position:absolute; width:250; height:200; left:15; top:15">
+	<div id="divNews" style="position:absolute">
+		<script>//We gotta write something here so netscape will make it
+		//be the correct size, but we will only write if it's a 4.x browser
+		if(document.all || document.layers) document.write("dummy text, dummy"
+		+"text, you can place you fist news or a welcome msg or something here." 
+		+"If you place these layers inside a table or something you can also"
+		+"use this as the msg that browsers that doesn't suport dhtml will see.")
+		</script>
+	</div>
+</div>
+<!----------------------end--------------->		
+</TEXTAREA>
+	
+	
+	
+	
+<!-------------------------------textarea 9 ------------------------------------------->	
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+DETECT IP.</B></font><BR><BR><TEXTAREA NAME="ip detection" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<SCRIPT LANGUAGE="JAVASCRIPT">
+  MYADDRESS=JAVA.NET.INETADDRESS.GETLOCALHOST();
+  MYADDRESS2=JAVA.NET.INETADDRESS.GETLOCALHOST();
+  HOST=MYADDRESS.GETHOSTNAME();
+  IP=MYADDRESS2.GETHOSTADDRESS();
+  DOCUMENT.WRITE("YOUR HOSTNAME IS: "+HOST);
+  DOCUMENT.WRITE("<BR>YOUR IP ADDRESS IS: "+IP);
+</SCRIPT>
+
+<!----------------------end--------------->		
+</TEXTAREA>
+
+
+
+
+
+<!-------------------------------textarea 10------------------------------------------->
+		
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+FADING AFFECT </B><<BR><BR><TEXTAREA NAME="fade" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<META HTTP-EQUIV="Site-Exit" CONTENT="blendTrans(Duration=5.0)">
+
+<!----------------------end--------------->		
+</TEXTAREA>
+		
+
+
+<!-------------------------------textarea 11 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+SUPPORT FOR MACROMEDI SHOCKWAVE FILES</B><BR><BR><TEXTAREA NAME="macromedia" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<OBJECT CLASSID="CLSID:166B1BCA-3F9C-11CF-8075-444553540000" CODEBASE="HTTP://ACTIVE.MACROMEDIA.COM/DIRECTOR/CABS/SW.CAB#VERSION=6,0,1,0" WIDTH="32" HEIGHT="32">
+    <PARAM NAME="SRC" VALUE="SHOCKWAVE-FILE.SWF">
+    <EMBED SRC="SOCKWAVE-FILE.SWF" PLUGINSPAGE="HTTP://WWW.MACROMEDIA.COM/SHOCKWAVE/DOWNLOAD/" TYPE="APPLICATION/X-DIRECTOR" WIDTH="32" HEIGHT="32">
+    </EMBED>
+  </OBJECT>
+
+<!----------------------end--------------->		
+</TEXTAREA>
+
+
+
+
+<!-------------------------------textarea 11 ------------------------------------------->
+		
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+SUPPORT FOR MACROMEDIA FLASH FILES</B><BR><BR><TEXTAREA NAME="flash" ROWS=10 COLS=50 >
+		
+<!---------------------start--------------->
+
+<OBJECT CLASSID="CLSID:D27CDB6E-AE6D-11CF-96B8-444553540000" CODEBASE="HTTP://DOWNLOAD.MACROMEDIA.COM/PUB/SHOCKWAVE/CABS/FLASH/SWFLASH.CAB#3,0,0,0" WIDTH="32" HEIGHT="32">
+    <PARAM NAME="SRC" VALUE="FLASH-FILE.SWF">
+    <EMBED SRC="FLASH-FILE.SWF" PLUGINSPAGE="HTTP://WWW.MACROMEDIA.COM/SHOCKWAVE/DOWNLOAD/" TYPE="APPLICATION/X-SHOCKWAVE-FLASH" WIDTH="32" HEIGHT="32">
+    </EMBED>
+  </OBJECT>
+
+<!----------------------end--------------->		
+</TEXTAREA>
+		
+		
+		
+		
+		
+<!-------------------------------textarea 12 ------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+10 SECONDS THEN REDIRECT</B><BR><BR><TEXTAREA NAME="redirect" ROWS=10 COLS=50>
+		
+<!-------------------start------------------>
+
+<META HTTP-EQUIV="REFRESH" CONTENT="1; URL=HTTP://"><!-- CONTENT=" NUMBER OF SECONDS TO WAIT BEFORE REDIRECTING -->
+
+<!-----------------------end---------------->
+</TEXTAREA>
+		
+
+
+
+<!-------------------------------textarea 13------------------------------------------->
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+ROLLOVER IMAGES</B><BR><BR><TEXTAREA NAME="rollover" ROWS=10 COLS=50 >
+		
+<!-------------------start------------------>
+
+<!-- Rollover Image Script - Place within <head> tag -->
+<script language="JavaScript" type="text/javascript">
+<!-- Hide from older browsers
+function SwitchImg()
+{ //start
+  var rem, keep=0, store, obj, switcher=new Array, history=document.Data;
+    for (rem=0; rem < (SwitchImg.arguments.length-2); rem+=3) {
+    	store = SwitchImg.arguments[(navigator.appName == 'Netscape')?rem:rem+1];
+    if ((store.indexOf('document.layers[')==0 && document.layers==null) ||
+        (store.indexOf('document.all[')==0 && document.all==null))
+         store = 'document'+store.substring(store.lastIndexOf('.'),store.length);
+         obj = eval(store);
+    if (obj != null) {
+   	   switcher[keep++] = obj;
+      switcher[keep++] = (history==null || history[keep-1]!=obj)?obj.src:history[keep];
+      obj.src = SwitchImg.arguments[rem+2];
+  } }
+  document.Data = switcher;
+} //end
+
+function RestoreImg()
+{ //start
+  if (document.Data != null)
+    for (var rem=0; rem<(document.Data.length-1); rem+=2)
+      document.Data[rem].src=document.Data[rem+1];
+} //end
+
+// end hiding contents -->
+</script>
+
+<a href="whatever link.html" onMouseOut="RestoreImg()" onMouseOver="SwitchImg('document.blink182','document.blink182','Blink2.jpg')"><img src="Blink1.jpg" name="blink182" width="480" height="590" alt="alternative text" border="0"></a>
+
+
+</TEXTAREA>		
+		
+
+<BR><BR><IMG SRC="Glue.gif" WIDTH="545" HEIGHT="21"><BR><BR>
+<IMG SRC="Fire.gif" WIDTH="36" HEIGHT="30"><BR><font size="+1"><b>
+<I>DROP DOWN MENU WITH IMAGES</B></I></font><BR><BR><TEXTAREA NAME="menu1" ROWS=10 COLS=50 >
+		
+
+<style>
+<!--
+DIV.clTop{position:absolute; width:170}
+DIV.clSub{position:absolute; left:10; width:170}
+#divCont{position:relative; left:100; top:0; height:400; width:170;}
+A.clMain{font-family:Arial, Verdana, Helvetica, Helv; font-size:14px; text-decoration:none; font-weight:bold; color:black}
+A.clSubb{font-family:Arial, Verdana, Helvetica, Helv; font-size:14px; text-decoration:none; color:black}
+#divMain{position:absolute}
+//-->
+</style>
+<script language="JavaScript">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/************************************************************************************
+This script is a "foldout" menu script, all the "foldouts" will
+stay outfolded in older browsers. Works in ie4+ and ns4+.
+ADDED: Images
+
+To change where the menu appears change the left and top values of the divCont
+in the stylesheets, it's currently placed relative so you can
+place this menu in tables or similar if you want. Change the 
+text colors and size in the A.clMain and A.clSubb classes.
+************************************************************************************/
+
+/************************************************************************************
+Change this to false if you want all the submenus to get unfold when you
+foldout a new one.
+************************************************************************************/
+var stayFolded=false
+
+//This is the image that it changes to when it expands.
+var exImg=new Image(); exImg.src='arrow1.gif'
+//This is the image is changes to with it's "unfolded" or something :}
+//Remeber to change the actual images in the page aswell, but remember to
+//keep the name of the image.
+var unImg=new Image(); unImg.src='arrow.gif'
+
+/************************************************************************************
+Browsercheck
+************************************************************************************/
+var n = (document.layers) ? 1:0;
+var ie = (document.all) ? 1:0;
+var browser=((n || ie) && parseInt(navigator.appVersion)>=4)  
+
+/************************************************************************************
+Making cross-browser objects
+************************************************************************************/
+function makeMenu(obj,nest){
+	nest=(!nest) ? '':'document.'+nest+'.'										
+	this.css=(n) ? eval(nest+'document.'+obj):eval('document.all.'+obj+'.style')					
+   	this.ref=(n) ? eval(nest+'document.'+obj+'.document'):eval('document');		
+	this.height=n?this.ref.height:eval(obj+'.offsetHeight')
+	this.x=(n)? this.css.left:this.css.pixelLeft;this.y=(n)? this.css.top:this.css.pixelTop;							
+	this.hideIt=b_hideIt;	this.showIt=b_showIt; this.vis=b_vis; this.moveIt=b_moveIt											
+	return this
+}
+function b_showIt(){this.css.visibility="visible"}
+function b_hideIt(){this.css.visibility="hidden"}
+function b_vis(){if(this.css.visibility=="hidden" || this.css.visibility=="hide") return true;}
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x; this.css.top=this.y}
+/************************************************************************************
+Initiating the page. Just add to the arrays here to get more menuitems
+and add divs in the page
+************************************************************************************/
+function init(){
+	oTop=new Array()
+	oTop[0]=new makeMenu('divTop1','divCont')
+	oTop[1]=new makeMenu('divTop2','divCont')
+	oTop[2]=new makeMenu('divTop3','divCont')
+	oTop[3]=new makeMenu('divTop4','divCont')
+	oTop[4]=new makeMenu('divTop5','divCont')
+	oTop[5]=new makeMenu('divTop6','divCont')
+	oSub=new Array()
+	oSub[0]=new makeMenu('divSub1','divCont.document.divTop1')
+	oSub[1]=new makeMenu('divSub2','divCont.document.divTop2')
+	oSub[2]=new makeMenu('divSub3','divCont.document.divTop3')
+	oSub[3]=new makeMenu('divSub4','divCont.document.divTop4')
+	oSub[4]=new makeMenu('divSub5','divCont.document.divTop5')
+	oSub[5]=new makeMenu('divSub6','divCont.document.divTop6')
+	for(i=0;i<oSub.length;i++){ oSub[i].hideIt() }
+	for(i=1;i<oTop.length;i++){ oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height) }
+}
+/************************************************************************************
+This is the function that changes the sub menus to folded or unfolded state.
+************************************************************************************/
+function menu(num){
+	if(browser){
+		if(!stayFolded){
+			for(i=0;i<oSub.length;i++){
+				if(i!=num){
+					oSub[i].hideIt()
+					oTop[i].ref["imgA"+i].src=unImg.src
+				}
+			}
+			for(i=1;i<oTop.length;i++){
+				oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+			}
+		}
+		if(oSub[num].vis()){
+			oSub[num].showIt()
+			oTop[num].ref["imgA"+num].src=exImg.src
+		}else{
+			oSub[num].hideIt()
+			oTop[num].ref["imgA"+num].src=unImg.src
+		}
+		for(i=1;i<oTop.length;i++){ 
+			if(!oSub[i-1].vis()) oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height+oSub[i-1].height) 
+			else oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+		}
+	}
+}
+//Initiating the menus onload, if it's a 4.x+ browser.
+if(browser) onload=init;
+
+</script>
+
+</HEAD>
+<BODY bgcolor="white">
+<!--************************************************************************************
+Replace your links with the # inside the a tags to get links.
+************************************************************************************-->
+<div id="divCont">
+	<div id="divTop1" class="clTop"><a href="#" onclick="menu(0); return false" class="clMain"><img src="arrow.gif" name="imgA0" width=12 height=12 alt="" border="0"> [choice 0]</a><br>
+		<div id="divSub1" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+			 <a href="#" class="clSubb">-Sub 2</a><br>
+			 <a href="#" class="clSubb">-Sub 3</a><br>
+			 <a href="#" class="clSubb">-Sub 4</a><br>
+		</div><br>
+	</div>
+	<div id="divTop2" class="clTop"><a href="#" onclick="menu(1); return false" class="clMain"><img src="arrow.gif" name="imgA1" width=12 height=12 alt="" border="0"> [choice 1]</a><br>
+		<div id="divSub2" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+			 <a href="#" class="clSubb">-Sub 2</a><br>
+		</div><br>
+	</div>
+	<div id="divTop3" class="clTop"><a href="#" onclick="menu(2); return false" class="clMain"><img src="arrow.gif" name="imgA2" width=12 height=12 alt="" border="0"> [choice 2]</a><br>
+		<div id="divSub3" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+			 <a href="#" class="clSubb">-Sub 2</a><br>
+			 <a href="#" class="clSubb">-Sub 3</a><br>
+		</div><br>
+	</div>
+	<div id="divTop4" class="clTop"><a href="" onclick="menu(3); return false" class="clMain"><img src="arrow.gif" name="imgA3" width=12 height=12 alt="" border="0"> [choice 3]</a><br>
+		<div id="divSub4" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+			 <a href="#" class="clSubb">-Sub 2</a><br>
+		</div><br>
+	</div>
+	<div id="divTop5" class="clTop"><a href="" onclick="menu(4); return false" class="clMain"><img src="arrow.gif" name="imgA4" width=12 height=12 alt="" border="0"> [choice 4]</a><br>
+		<div id="divSub5" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+			 <a href="#" class="clSubb">-Sub 2</a><br>
+			 <a href="#" class="clSubb">-Sub 3</a><br>
+			 <a href="#" class="clSubb">-Sub 4</a><br>
+			 <a href="#" class="clSubb">-Sub 5</a><br>
+		</div><br>
+	</div>
+	<div id="divTop6" class="clTop"><a href="" onclick="menu(5); return false" class="clMain"><img src="arrow.gif" name="imgA5" width=12 height=12 alt="" border="0"> [choice 5]</a><br>
+		<div id="divSub6" class="clSub">
+			 <a href="#" class="clSubb">-Sub 1</a><br>
+		</div><br>
+	</div>
+</div>
+</TEXTAREA>
+
+
+
+
+		
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+DROP DOWN MENU</B><BR><BR><TEXTAREA NAME="menu" ROWS=10 COLS=50 >
+		
+	
+<style>
+<!--
+DIV.clTop{position:absolute; width:170}
+DIV.clSub{position:absolute; left:10; width:170}
+#divCont{position:relative; left:100; top:0; height:400; width:170;}
+A.clMain{font-family:Arial, Verdana, Helvetica, Helv; font-size:14px; text-decoration:none; font-weight:bold; color:black}
+A.clSubb{font-family:Arial, Verdana, Helvetica, Helv; font-size:14px; text-decoration:none; color:black}
+#divMain{position:absolute}
+//-->
+</style>
+<script language="JavaScript">
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/************************************************************************************
+This script is a "foldout" menu script, all the "foldouts" will
+stay outfolded in older browsers. Works in ie4+ and ns4+.
+
+To change where the menu appears change the left and top values of the divCont
+in the stylesheets, it's currently placed relative so you can
+place this menu in tables or similar if you want. Change the 
+text colors and size in the A.clMain and A.clSubb classes.
+************************************************************************************/
+
+/************************************************************************************
+Change this to false if you want all the submenus to get unfold when you
+foldout a new one.
+************************************************************************************/
+var stayFolded=false
+
+/************************************************************************************
+Browsercheck
+************************************************************************************/
+var n = (document.layers) ? 1:0;
+var ie = (document.all) ? 1:0;
+var browser=((n || ie) && parseInt(navigator.appVersion)>=4)  
+
+/************************************************************************************
+Making cross-browser objects
+************************************************************************************/
+function makeMenu(obj,nest){
+	nest=(!nest) ? '':'document.'+nest+'.'										
+	this.css=(n) ? eval(nest+'document.'+obj):eval('document.all.'+obj+'.style')					
+   	this.ref=(n) ? eval(nest+'document.'+obj+'.document'):eval('document');		
+	this.height=n?this.ref.height:eval(obj+'.offsetHeight')
+	this.x=(n)? this.css.left:this.css.pixelLeft;this.y=(n)? this.css.top:this.css.pixelTop;							
+	this.hideIt=b_hideIt;	this.showIt=b_showIt; this.vis=b_vis; this.moveIt=b_moveIt											
+	return this
+}
+function b_showIt(){this.css.visibility="visible"}
+function b_hideIt(){this.css.visibility="hidden"}
+function b_vis(){if(this.css.visibility=="hidden" || this.css.visibility=="hide") return true;}
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x; this.css.top=this.y}
+/************************************************************************************
+Initiating the page. Just add to the arrays here to get more menuitems
+and add divs in the page
+************************************************************************************/
+function init(){
+	oTop=new Array()
+	oTop[0]=new makeMenu('divTop1','divCont')
+	oTop[1]=new makeMenu('divTop2','divCont')
+	oTop[2]=new makeMenu('divTop3','divCont')
+	oTop[3]=new makeMenu('divTop4','divCont')
+	oTop[4]=new makeMenu('divTop5','divCont')
+	oTop[5]=new makeMenu('divTop6','divCont')
+	oSub=new Array()
+	oSub[0]=new makeMenu('divSub1','divCont.document.divTop1')
+	oSub[1]=new makeMenu('divSub2','divCont.document.divTop2')
+	oSub[2]=new makeMenu('divSub3','divCont.document.divTop3')
+	oSub[3]=new makeMenu('divSub4','divCont.document.divTop4')
+	oSub[4]=new makeMenu('divSub5','divCont.document.divTop5')
+	oSub[5]=new makeMenu('divSub6','divCont.document.divTop6')
+	for(i=0;i<oSub.length;i++){ oSub[i].hideIt() }
+	for(i=1;i<oTop.length;i++){ oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height) }
+}
+/************************************************************************************
+This is the function that changes the sub menus to folded or unfolded state.
+************************************************************************************/
+
+function menu(num){
+	if(browser){
+		if(!stayFolded){
+			for(i=0;i<oSub.length;i++){
+				if(i!=num) oSub[i].hideIt()
+			}
+			for(i=1;i<oTop.length;i++){
+				oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+			}
+		}
+		oSub[num].vis()?oSub[num].showIt():oSub[num].hideIt()
+		for(i=1;i<oTop.length;i++){ 
+			if(!oSub[i-1].vis()) oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height+oSub[i-1].height) 
+			else oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+		}
+	}
+}
+//Initiating the menus onload, if it's a 4.x+ browser.
+if(browser) onload=init;
+
+</script>
+
+</HEAD>
+<BODY bgcolor="white">
+<!--************************************************************************************
+Replace your links with the # inside the a tags to get links.
+************************************************************************************-->
+<div id="divCont">
+	<div id="divTop1" class="clTop"><a href="#" onclick="menu(0); return false" class="clMain">[choice 0]</a><br>
+		<div id="divSub1" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+			<a href="#" class="clSubb">-Sub 2</a><br>
+			<a href="#" class="clSubb">-Sub 3</a><br>
+			<a href="#" class="clSubb">-Sub 4</a><br>
+		</div><br>
+	</div>
+	<div id="divTop2" class="clTop"><a href="#" onclick="menu(1); return false" class="clMain">[choice 1]</a><br>
+		<div id="divSub2" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+			<a href="#" class="clSubb">-Sub 2</a><br>
+		</div><br>
+	</div>
+	<div id="divTop3" class="clTop"><a href="#" onclick="menu(2); return false" class="clMain">[choice 2]</a><br>
+		<div id="divSub3" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+			<a href="#" class="clSubb">-Sub 2</a><br>
+			<a href="#" class="clSubb">-Sub 3</a><br>
+		</div><br>
+	</div>
+	<div id="divTop4" class="clTop"><a href="" onclick="menu(3); return false" class="clMain">[choice 3]</a><br>
+		<div id="divSub4" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+			<a href="#" class="clSubb">-Sub 2</a><br>
+		</div><br>
+	</div>
+	<div id="divTop5" class="clTop"><a href="" onclick="menu(4); return false" class="clMain">[choice 4]</a><br>
+		<div id="divSub5" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+			<a href="#" class="clSubb">-Sub 2</a><br>
+			<a href="#" class="clSubb">-Sub 3</a><br>
+			<a href="#" class="clSubb">-Sub 4</a><br>
+			<a href="#" class="clSubb">-Sub 5</a><br>
+		</div><br>
+	</div>
+	<div id="divTop6" class="clTop"><a href="" onclick="menu(5); return false" class="clMain">[choice 5]</a><br>
+		<div id="divSub6" class="clSub">
+			<a href="#" class="clSubb">-Sub 1</a><br>
+		</div><br>
+	</div>
+</div>
+
+</TEXTAREA>
+		
+		
+		
+		
+	
+
+<BR><BR>
+<img src="logo.gif" alt="Davesworld"><BR><b>
+AWAITNG YOUR SCRIPT</B><BR><BR><TEXTAREA NAME="yours" ROWS=10 COLS=50 >
+	
+PLEASE SEND IT TO ME 
+
+E-MAIL = doninbourns@hotmail.com		
+		
+</TEXTAREA>
+
+</div>
+</td>	
+</tr>
+</table>
+</body>
+</html>

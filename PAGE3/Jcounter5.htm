@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<html><title>Timer</title>
+<BODY BGCOLOR="FFFFFF">
+<font size=+1>Timer</font><hr>
+A very simple timer that will tell how much time is spent on one page.<p>
+<script>
+ 
+startday = new Date();
+clockStart = startday.getTime();
+
+function initStopwatch() 
+{ 
+ var myTime = new Date(); 
+        var timeNow = myTime.getTime();  
+        var timeDiff = timeNow - clockStart; 
+        this.diffSecs = timeDiff/1000; 
+        return(this.diffSecs); 
+} 
+
+function getSecs() 
+{ 
+        var mySecs = initStopwatch(); 
+        var mySecs1 = ""+mySecs; 
+        mySecs1= mySecs1.substring(0,mySecs1.indexOf(".")) + " secs."; 
+        document.forms[0].timespent.value = mySecs1 
+        window.setTimeout('getSecs()',1000); 
+}
+
+</script>
+</head>
+
+<body onLoad="window.setTimeout('getSecs()',1)">
+<CENTER><form>
+Time spent on this page: 
+<input size=9 name=timespent>
+</form></CENTER><p>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

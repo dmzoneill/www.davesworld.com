@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+//****************************
+//Scrollable links buttons by Dan Patton
+//Copyright (c) 1997 Dan Patton
+//You may freely use, modify this script as long as the credit is given in the source.
+//****************************
+
+var n = 1
+var nn = 2
+var nnn = 3
+var nnnn = 4 /*Add more variables if you want more buttons showing, or take
+them off if you want less. Remember to change the rest of the script
+accordingly if you do this, as well as the <INPUT> tags in the HTML.*/
+var theMessages = new Array(7); {
+theMessages[1] = "This could lead to your Page one."
+theMessages[2] = "This could lead to your Page two."
+theMessages[3] = "This could lead to your Page three."
+theMessages[4] = "This could lead to your Page four."
+theMessages[5] = "This could lead to your Page five."
+theMessages[6] = "This could lead to your Page six."
+theMessages[7] = "This could lead to your Page seven." /*You don't have to have this array unless you still want alert boxes appearing when the buttons are clicked.*/
+}
+var theValues = new Array(7); {
+theValues[1] = "Downloads"
+theValues[2] = "Cheats"
+theValues[3] = "Animations"
+theValues[4] = "Top Tips"
+theValues[5] = "Parameters"
+theValues[6] = "Links"
+theValues[7] = "Comments" } //add more values and/or change them for your liking. 
+function goup() {
+if(n > 1){n = n-1
+nn = nn-1
+nnn = nnn-1
+nnnn = nnnn-1 
+//If you've changed the amount of buttons showing, add your extra variables - 1 here.
+update()}}
+function godown() {
+if(nnnn < 7) { //Change the 7 if you want more buttons
+n++
+nn++
+nnn++
+nnnn++ 
+/*Add your extra variables, with a '++' right after them here, if you've
+changed the amount of buttons showing.*/
+update()}
+else{}}
+//You could do 'window.location.href="whatever.html"' insted of the current alert boxes.
+function go1() {
+alert(cap1)}
+function go2() {
+alert(cap2)}
+function go3() {
+alert(cap3)}
+function go4() {
+alert(cap4)}
+function update() {
+document.form1.b1.value = theValues[n]
+document.form1.b2.value = theValues[nn]
+document.form1.b3.value = theValues[nnn]
+document.form1.b4.value = theValues[nnnn]
+cap1 = theMessages[n]
+cap2 = theMessages[nn]
+cap3 = theMessages[nnn]
+cap4 = theMessages[nnnn]}
+
+//******************************
+//End of Scrolling links buttons script
+//******************************
+//-->
+
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="white" text="black" onLoad="update()">
+<FORM NAME="form1">
+<INPUT TYPE=BUTTON NAME="up" VALUE="  ^  " onClick="goup()"><BR>
+<INPUT TYPE=BUTTON NAME="b1" VALUE="Link To Page One  " onClick="go1()"><BR>
+<INPUT TYPE=BUTTON NAME="b2" VALUE="Link To Page Two  " onClick="go2()"><BR>
+<INPUT TYPE=BUTTON NAME="b3" VALUE="Link To Page Three" onClick="go3()"><BR>
+<INPUT TYPE=BUTTON NAME="b4" VALUE="Link To Page Four " onClick="go4()"><BR>
+<!-- If you add extra buttons here, insert them just above this comment.
+You must add extra functions in the script too, presumably called go5()
+etc.. -->
+<INPUT TYPE=BUTTON NAME="down" VALUE="  v  " onClick="godown()"><BR>
+</FORM>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

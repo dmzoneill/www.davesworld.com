@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<html>
+<head>
+<title>Plinko Javascript</title>
+
+<script language="Javascript">
+function clearAll()
+{
+// function that resets rolls left, score and the board
+	x = document.board.elements.length;
+	for (y=5; y<x-9; y++)
+	document.board.elements[y].value = "";
+
+	document.board.score.value="0";
+	document.board.rolls.value="5";
+	document.board.count.value=0
+}
+
+function clearAll2()
+{
+// function that only resets the board
+	x = document.board.elements.length;
+	for (y=5; y<x-9; y++)
+	document.board.elements[y].value = "";
+}
+function getDirection()
+{
+// a function to generate a random number, 0 or -1. (0 = left, -1 =right)
+	x = new Date();
+	seed = x.getTime();
+	return (parseInt((seed / 10) % 2)-1);   
+}
+
+function chkNext(nextRow, nextCol)
+{
+// function that accounts for moves 'off the board', and for short/long rows (the nextCol+1 line)
+
+	if (nextRow % 2 == 0)
+	{
+		 if (nextCol > 4) return(4)
+		 else
+			if (nextCol < 1) return(1);
+			else
+		 		return(nextCol);
+	}
+	else
+	{
+		 if (nextCol > 5) return(5);
+		  else
+		   	if (nextCol < 1) return(1);
+			else
+		 		return(nextCol+1);
+	}
+}  
+
+function start(curCol)
+{
+// main function. checks for number of move. draws *'s. figures score.
+	if (document.board.count.value < 5)
+	{
+	clearAll2();
+	nextCol=0;
+	nextCol2=0;
+
+	document.board['s1_'+curCol].value=" * ";
+
+		for (curRow=1; curRow<9; curRow++)
+		{
+			direction = getDirection();
+			nextCol = parseInt(curCol)+parseInt(direction);
+			curCol = chkNext(parseInt(curRow)+1, nextCol);
+			nextRow=curRow+1;
+			document.board['s'+nextRow+'_'+curCol].value="*";
+			for (k=1; k<450;k++) { document.bgcolor='ffffff'; }
+		}
+		document.board.score.value = parseInt(document.board.score.value) + parseInt(document.board['s10_'+curCol].value)
+document.board.count.value = parseInt(document.board.count.value) + 1;
+document.board.rolls.value = parseInt(document.board.rolls.value)-1;
+	}
+}
+</script>
+
+<body bgcolor=#999966 link=#000000 vlink=#000000>
+<!-- Begin Advertising Banner-->
+<center>
+<A HREF="http://adforce.imgis.com/?adlink|2|5823|255|1|IMGIS" TARGET="_top">
+<IMG SRC="http://adforce.imgis.com/?adserv|2|5823|255|1|IMGIS" 
+BORDER="0" HEIGHT="60" WIDTH="468" NATURALSIZEFLAG="0" ALIGN="BOTTOM" 
+ALT="Another Wonderful HTML Goodies Advertiser"></A>
+<P><HR WIDTH=60%><P>
+</center>
+<!-- End Advertising Banner-->
+
+<form name="board">
+<font size=+2>
+<center>
+<input type=button name="start1" onClick="start('1')"
+value="go!">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button name="start2" onClick="start('2')"
+value="go!">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button name="start3" onClick="start('3')"
+value="go!">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button name="start4" onClick="start('4')"
+value="go!">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button name="start5" onClick="start('5')" value="go!">
+
+<br>
+<input type=text size=3 name=s1_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s1_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s1_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s1_4>&nbsp;|&nbsp;
+<input type=text size=3 name=s1_5>
+<BR>
+<input type=text size=3 name=s2_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s2_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s2_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s2_4>
+<BR>
+<input type=text size=3 name=s3_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s3_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s3_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s3_4>&nbsp;|&nbsp;
+<input type=text size=3 name=s3_5>
+<BR>
+<input type=text size=3 name=s4_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s4_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s4_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s4_4>&nbsp;|&nbsp;
+<BR>
+<input type=text size=3 name=s5_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s5_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s5_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s5_4>&nbsp;|&nbsp;
+<input type=text size=3 name=s5_5>
+<BR>
+<input type=text size=3 name=s6_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s6_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s6_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s6_4>&nbsp;|&nbsp;
+<BR>
+<input type=text size=3 name=s7_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s7_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s7_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s7_4>&nbsp;|&nbsp;
+<input type=text size=3 name=s7_5>
+<BR>
+<input type=text size=3 name=s8_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s8_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s8_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s8_4>&nbsp;|&nbsp;
+<font size=2><BR>
+==========================================
+<BR>
+</font>
+<input type=text size=3 name=s9_1>&nbsp;|&nbsp;
+<input type=text size=3 name=s9_2>&nbsp;|&nbsp;
+<input type=text size=3 name=s9_3>&nbsp;|&nbsp;
+<input type=text size=3 name=s9_4>&nbsp;|&nbsp;
+<input type=text size=3 name=s9_5>
+<BR>
+<input value="20" type=text size=3 name=s10_1>&nbsp;&nbsp;&nbsp;
+<input value="40" type=text size=3 name=s10_2>&nbsp;&nbsp;&nbsp;
+<input value="30" type=text size=3 name=s10_3>&nbsp;&nbsp;&nbsp;
+<input value="10" type=text size=3 name=s10_4>&nbsp;&nbsp;&nbsp;
+<input value="50" type=text size=3 name=s10_5>
+<BR>
+Score:
+<input type=text name="score" size=3 value="0">&nbsp;&nbsp;&nbsp;&nbsp;
+Rolls left:
+<input type=text size=1 name="rolls" value="5">
+<BR>
+<input type="button" value="Play Again" onClick=clearAll()>
+<input type=hidden name="count" value="0"></form>
+<script>
+clearAll();
+</script>
+<font size=2 face=arial>
+
+Script by:  <A HREF="mailto:jmackin@rocketmail.com">John Mackin</A><P>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And who doesn't want to be Bob Barker, really?!?!
+I know I do.  On the show you can win UP TO $25,000!  Here you just get to see the stars falling through the path.<P>
+
+
+<A HREF="plinko.txt" ONMOUSEOVER="window.status='GRAB THE SCRIPT'">Grab the Script</A>
+
+</body>
+
+</html>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Creation of a pussy</title>
+</head>
+
+<body>
+
+<script language="JavaScript1.2">
+ie=document.all?1:0
+n=document.layers?1:0
+betweendelay=2000
+var loop=1
+FontFace='arial,helvetiva'
+FontSize=16
+fadeback=1
+colors=new Array()
+colors[0]='#FFFFFF'
+colors[1]='#EEEEEE'
+colors[2]='#CCCCCC'
+colors[3]='#999999'
+colors[4]='#666666'
+colors[5]='#333333'
+colors[6]='#000000'
+
+news=new Array()
+news[0]=new Array()
+news[0]["text"]="<b>The Creation Of A Pussy<br><center>1 0f 9</b>"
+news[0]["link"]="http://www.afuckoff.cjb.net"
+
+news[1]=new Array()
+news[1]["text"]="<b>Seven wise men with knowledge so fine, <br>created a pussy to their design.<br><center>2 of 9</b>"
+news[1]["link"]="http://www.afuckoff.cjb.net"
+
+news[2]=new Array()
+news[2]["text"]="<b>First was a butcher, smart with wit,<br>using a knife, he gave it a slit.<br><center>3 of 9</b>"
+news[2]["link"]="http://www.afuckoff.cjb.net"
+
+news[3]=new Array()
+news[3]["text"]="<b>Second was a carpenter, strong and bold,<br>with a hammer and chisel, he gave it a hole.<br><center>4 of 9</b>"
+news[3]["link"]="http://www.afuckoff.cjb.net"
+
+news[4]=new Array()
+news[4]["text"]="<b>Third was a tailor, tall and thin,<br>by using red velvet, he lined it within.<br><center>5 of 9</b>"
+news[4]["link"]="http://www.afuckoff.cjb.net"
+
+news[5]=new Array()
+news[5]["text"]="<b>Fourth was a hunter, short and stout,<br>with a piece of fox fur, he lined it without.<br><center>6 of 9</b>"
+news[5]["link"]="http://www.afuckoff.cjb.net"
+
+news[6]=new Array()
+news[6]["text"]="<b>Fifth was a fisherman, nasty as hell,<br>threw in a fish and gave it a smell.<br><center>7 of 9</b>"
+news[6]["link"]="http://www.afuckoff.cjb.net"
+
+news[7]=new Array()
+news[7]["text"]="<b>Sixth was a preacher whose name was mcgee.<br>Who touched it and blessed it and said it could pee.<br><center>8 of 9</b>"
+news[7]["link"]="http://www.afuckoff.cjb.net"
+
+news[8]=new Array()
+news[8]["text"]="<b>Last came a sailor, dirty little runt,<br>He sucked it and fucked it and called it a cunt.<br><center>9 of 9</b>"
+news[8]["link"]="http://www.afuckoff.cjb.net"
+
+fadeInit=new Function("oNews=new makeObj('divNews','divCont'); fadeNews(0)")
+function makeObj(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+    this.css=(n) ? eval(nest+'document.'+obj):eval(obj+'.style')
+    this.writeref=(n) ? eval(nest+'document.'+obj+'.document'):eval(obj);		
+	this.fadeIt=b_fadeIt
+    this.obj = obj + "Object"; 	eval(this.obj + "=this")	
+}
+function b_fadeIt(text,link,font,size,speed,fn,num,c0,c1,c2,c3,c4,c5,c6){
+	if(num<arguments.length && arguments[num]!=0){
+		writetext='<a href="'+link+'" style="text-decoration:none; font-size:'+size+'px">'
+		+'<font face="'+font+'" color="'+arguments[num]+'">'+text+'</font></a>'
+		if(n){this.writeref.write(writetext); this.writeref.close()}
+		if(ie) this.writeref.innerHTML=writetext		
+		num++
+		setTimeout(this.obj+'.fadeIt("'+text+'","'+link+'","'+font+'",'+size+','+speed+',"'
+		+fn+'",'+num+',"'+c0+'","'+c1+'","'+c2+'","'+c3+'","'+c4+'","'+c5+'","'+c6+'")',speed)
+	}else setTimeout('eval('+fn+')',betweendelay)
+}
+function fadeNews(num){
+	if(num<news.length){
+		fn=fadeback?'fadeBack('+num+')':'fadeNews('+(num+1)+')';
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,fn,7,
+		colors[0],colors[1],colors[2],colors[3],colors[4],colors[5],colors[6])
+	}else if(loop)fadeNews(0)
+}
+function fadeBack(num){
+	if(num>=0){
+		oNews.fadeIt(news[num]["text"],news[num]["link"],FontFace,FontSize,100,'fadeNews('+(num+1)
+		+')',7,colors[6],colors[5],colors[4],colors[3],colors[2],colors[1],colors[0])
+	}
+}
+onload=fadeInit;
+</script>
+</HEAD>
+<BODY bgcolor="white">
+<div id="divCont" style="position:absolute; width:400; height:200; left:1%; top:1%">
+	<div id="divNews" style="position:absolute">
+		<script>
+		if(document.all || document.layers) document.write("I dont know what shitty browser your using but get rid of it, get Internet Explorer")
+		</script>
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+<script language="JavaScript1.2">
+text="www.afuckoff.cjb.net"
+var fontsize=40
+var color="#000099"
+var align="left"
+var Wspeed=140
+var font='Arial'
+var timetowait=2000
+onload=writeInit;
+var ie, n;
+if (document.all) {
+	n=0; ie=1
+	writeText='document.all.divZoom.innerHTML=\'<p align=\"\'+align+\'\" style=\"font-family:\'+font+\'; font-size:\'+fontsize+\'px; color:\'+color+\'">\'+text+\'</p>\''
+	closeIt=""
+}
+if (document.layers) {
+	n=1;ie=0
+	writeText="document.divZoom.document.write('<p align=\"'+align+'\" style=\"font-family:'+font+'; font-size:'+fontsize+'px; color:'+color+'\">'+text+'</p>')"
+	closeIt="document.divZoom.document.close()"
+}
+function writeIt(){
+	if(text.length>0){
+		text=text.slice(0,text.length-1)
+		eval(writeText)
+		eval(closeIt)
+		setTimeout("writeIt()",Wspeed)
+	}
+}
+function writeInit(){
+	eval(writeText)
+	eval(closeIt)
+	if(ie || n) setTimeout("writeIt(0)",timetowait)       
+}
+</script>
+</head>
+<body bgcolor="White">
+<div id="divZoom" style="position:absolute; top:1; left:1"></div>
+
+
+</body>
+</html>

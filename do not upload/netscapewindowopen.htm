@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>Using Hierarchical Object Identifiers</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+outputWindow = open(" ","output")
+function setupWindow() {
+	outputWindow.document.write("<HTML><HEAD><TITLE>Output Window</TITLE></HEAD><BODY>")
+}
+function describeBrowser() {
+	outputWindow.document.write("<H2>Browser Properties</H2>")
+	outputWindow.document.write(navigator.appCodeName+"   ")
+	outputWindow.document.write(navigator.appName+"   ")
+	outputWindow.document.write(navigator.appVersion+"<BR>")
+	outputWindow.document.write(navigator.mimeTypes.length+"MIME types are defined.   ")
+	outputWindow.document.write(navigator.plugins.length+"plug-ins are installed.   ")
+}
+function describeWindow(){
+	outputWindow.document.write("<H2>Window Properties</H2>")
+	outputWindow.document.write("Frames: "+frames.length+"<BR>")
+	outputWindow.document.write("URL:"+location.href+"<BR>")
+}
+function describeDocument(){
+	outputWindow.document.write("<H2>Document Properties</H2>")
+	describeLinks()
+	describeForms()
+}
+function describeLinks(){
+	outputWindow.document.write("<H3>Links</H3>")
+	outputWindow.document.write("This document contains "+document.links.length+"links:<BR>")
+	for(i=0;i<document.links.length;++i)
+		outputWindow.document.write(document.links[i].href+"<BR>")
+}
+function describeForms(){
+	outputWindow.document.write("<H3>Forms</H3>")
+	for(i=0;i<document.forms.length;++i) describeForm(i)
+}
+function describeForm(n) {
+	outputWindow.document.write("Form"+n+" has "
+		+document.forms[n].elements.length+"elements:")
+	for(j=0;j<document.forms[n].elements.length;++j)
+		outputWindow.document.write(""+document.forms[n].elements[j].name)
+	outputWindow.document.write("<br>")
+}
+function finishWindow(){
+	outputWindow.document.write("<form><input type='button' value='close window' 			onClick='window.close()'></form>")
+	outputWindow.document.write("</body></html>")
+}
+</script></head>
+
+<h1>using heirarchical object identifiers</h1>
+<p><a href="http://www.jaworski.com/javascript">link to mastterning javascript and Jscript home page.</a></p>
+<p><a href="http://home.netscape.com/">link to netscapes homepage</a></p>
+<form>
+<p><input type=" text" name="textField1" value="enter text here"></p>
+<p><input type="checkbox" name="checkbox1" checked="checked">i'm checked1</p>
+<p><input type="checkbox" name="checkbox2" >i'm checkbox2</p>
+<input type="submit" name="submitButton" value="click here">
+</form>
+<script language="javascript">
+setupWindow()
+describeBrowser()
+describeWindow()
+describeDocument()
+finishWindow()
+</script>
+</body>
+</html>

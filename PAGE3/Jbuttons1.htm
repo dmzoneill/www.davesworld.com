@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<BODY BGCOLOR="#FFFFFF" onLoad='demoButtons = new buttons ("demoButtons", document.demo.buttonsRadio,document.demo.interval.value, document.demo.increment.value)
+; demoButtons1 = new buttons ("demoButtons1", document.demo.buttonsRadio1, document.demo.interval1.value, document.demo.increment1.value)
+; demoButtons2 = new buttons ("demoButtons2", document.demo.buttonsRadio2, document.demo.interval2.value, document.demo.increment2.value)'
+ onUnload='  demoButtons.stop(); demoButtons1.stop(); demoButtons2.stop()'>
+
+<SCRIPT LANGUAGE='JavaScript'>
+
+<!-- Use comment to hide from browsers not supporting JavaScript
+//=============================================================================
+//
+//              buttons object
+//
+// Author:      Dave Coleman (coleman@faxint.com)
+// Date:        96/02/27
+// Abstract:    A JavaScript object which provides properties and
+//              methods to simulate blinking lights by using RADIO form
+//              objects.
+//
+// Comments:    This is intended as an example of JavaScript objects.
+//              There are more efficient ways to do it without all the
+//              features provided by this example.
+//              This example provides advanced features and can be used
+//              to support multiple buttons objects in the same page.
+
+// NOTE: First parameter is name, which must match the name of the
+// object.  Is there any way to determine this with JavaScript??
+// This is used for the setTimeout, which can't pass an object reference
+// To use status window, specify output parameter as null
+function buttons (name, output, interval, increment, bounce, offset) {
+    // Initialize with default values
+    this.name = name            // object name, needed for setTimeout
+    this.output = null          // output area
+    this.interval = 1000        // milliseconds
+    this.increment = 1          // skip characters
+    this.bounce = 1             // direction to bounce when message wraps
+    this.offset = 0
+    this.timeout = null
+    this.syncCount = 0
+    this.syncName = new array ()
+    this.syncInterval = new array ()
+    this.syncCountdown = new array ()
+
+    // Define object methods
+    this.update = buttonsUpdate
+    this.start = timerAppStart
+    this.stop = timerAppStop
+    this.toggle = timerAppToggle
+    this.loop = timerAppLoop
+    this.setOutput = timerAppSetOutput
+    this.setInterval = timerAppSetInterval
+    this.sync = timerAppSync
+    this.unsync = timerAppUnsync
+    this.setIncrement = timerAppSetIncrement
+    this.setBounce = timerAppSetBounce
+    this.setOffset = timerAppSetOffset
+
+    // Initialize with specified values
+    this.setOutput (output)
+    this.setInterval (interval)
+    this.setIncrement (increment)
+    this.setBounce (bounce)
+    this.setOffset (offset)
+
+    this.start()
+}
+
+function buttonsUpdate () {
+    if (this.output) {
+        var newOffset = this.offset + this.increment
+        if ((newOffset < this.output.length)
+            && (newOffset >= 0)) {
+            this.offset = newOffset
+        } else {
+            this.increment *= this.bounce
+            if (this.increment >= 0) {
+                this.increment = modRange (this.increment, 0, this.output.length-1)
+            } else {
+                this.increment = 0 - modRange (Math.abs (this.increment),
+                                0, this.output.length-1)
+            }
+            this.offset += this.increment
+            this.offset = modRange (this.offset, 0, this.output.length-1)
+        }
+
+        this.output[this.offset].checked = true
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Common functions
+//
+
+// return value as modulo value between min and max range
+function modRange (value, min, max) {
+    if (min == max) {
+        return (min)
+    }
+    var low = Math.min (min, max)
+    var high = Math.max (min, max)
+    var range = high - low + 1
+    var valOff = parseInt (value) - low
+    var mod = range * Math.floor (valOff / range)
+    result = low + valOff - mod
+    if (result < low) {
+        result += high
+    }
+    if (result > high) {
+        result = low
+    }
+    return (result)
+}
+
+// array must be created as an object, does not work as inline statement
+function array () {
+    this[0] = null
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// timerApp functions, common for all timer applications
+//
+function timerAppStart () {
+    this.stop ()
+    this.loop ()
+}
+
+function timerAppStop () {
+    clearTimeout (this.timeout)
+    this.timeout = null
+}
+
+function timerAppToggle () {
+    if (this.timeout) {
+        this.stop ()
+    } else {
+        this.start ()
+    }
+}
+
+function timerAppLoop () {
+    this.update ()
+    command = this.name + '.loop()'
+    for (var i = 0; i < this.syncCount; i++) {
+        if (this.syncName[i] != "") {
+            if (--this.syncCountdown[i] <= 0) {
+                this.syncCountdown[i] = this.syncInterval[i]
+                command += ";" + this.syncName[i] + '.update()'
+            }
+        }
+    }
+    this.timeout = setTimeout (command, this.interval)
+}
+
+function timerAppSetOutput (output) {
+    if (! this.output) {
+        this.output = output
+    }
+}
+
+function timerAppSetInterval (interval) {
+    if (interval) {
+        var newInterval = parseInt (interval)
+        if (newInterval > 0) {
+            this.interval = newInterval
+        } else {
+            alert ('Interval value must be a positive number: ' + interval)
+        }
+    }
+}
+
+function timerAppSync (name, interval) {
+    if (! interval) {
+        interval = 1
+    }
+    if (interval <= 0) {
+        eval (this.name + '.unsync("' + name + '")')
+        return
+    }
+    var newIndex = this.syncCount
+    for (var i = 0; i < this.syncCount; i++) {
+        if (this.syncName[i] == name) {
+            newIndex = i
+            break
+        }
+    }
+    if (newIndex == this.syncCount) {
+        this.syncCount++
+    }
+    this.syncInterval[newIndex] = interval
+    this.syncCountdown[newIndex] = interval
+    this.syncName[newIndex] = name
+}
+
+function timerAppUnsync (name) {
+    for (var i = 0; i < this.syncCount; i++) {
+        if (this.syncName[i] == name) {
+            this.syncName[i] = ""
+            if (i == (this.syncCount - 1)) {
+                this.syncCount--
+            }
+        }
+    }
+}
+
+function timerAppSetIncrement (increment) {
+    if (increment) {
+        var newIncrement = parseInt (increment)
+//*Unix only*   if (! isNan (newIncrement)) {
+        if (newIncrement != 0) {
+            this.increment = newIncrement
+        } else {
+            alert ('Increment value must be a number: ' + increment)
+        }
+    }
+}
+
+function timerAppSetBounce (bounce) {
+    if (bounce) {
+        var newBounce = parseInt (bounce)
+//*Unix only*   if (! isNan (newBounce)) {
+        if (newBounce != 0) {
+            this.bounce = newBounce
+        } else {
+            alert ('Bounce value must be a number: ' + bounce)
+        }
+    }
+}
+
+function timerAppSetOffset (offset) {
+    if (offset) {
+        var newOffset = parseInt (offset)
+        if ((newOffset > 0)
+            && (newOffset <= this.output.length)) {
+            this.offset = newOffset
+        } else {
+            warnMessage = 'Value of offset must be a valid index (0 - '
+                        + this.output.length + '): ' + offset
+            alert (warnMessage)
+        }
+    }
+}
+
+<!-- done hiding from old browsers not supporting JavaScript -->
+
+</SCRIPT>
+
+
+<CENTER>
+<H1>Dave's demo for JavaScript
+        <B>buttons</B> object</H1>
+<TABLE BORDER=1>
+<CAPTION> Enter new values to change properties of each <B>buttons</B> object
+</CAPTION>
+</TR><TR><TH>   Interval</TH>
+<TD>    interval, in <EM>milliseconds</EM>, between updates</TD>
+</TR><TR><TH>   Inc</TH>
+<TD>    number of button positions to increment between updates</TD>
+</TR><TR><TH>   Bounce</TH>
+<TD>    direction to bounce when button reaches end</TD>
+</TR><TR><TH>   Sync</TH>
+<TD>    Synchronize this object with first button object, updating after
+        every <EM>x</EM> intervals.  Value of <EM>0</EM> will turn off</TD>
+</TR></TABLE>
+
+<FORM NAME='demo' ACTION=''>
+<TABLE NOBORDER>
+<TR>
+<TH>Interval</TH>
+<TH>Inc</TH>
+<TH>Bounce</TH>
+<TH>Sync</TH>
+<TH>Start/Stop</TH>
+<TH>Buttons</TH>
+</TR>
+<TR><TD>
+<INPUT TYPE='text' SIZE=5 NAME='interval' VALUE=1000
+ onChange='demoButtons.setInterval (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=3 NAME='increment' VALUE=1
+ onChange='demoButtons.setIncrement (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=3 NAME='bounce' VALUE=1
+         onChange='demoButtons.setBounce (this.value)'>
+</TD><TD>
+<EM>N/A</EM>
+</TD><TD>
+<INPUT TYPE='button' VALUE='Start/Stop' onClick='demoButtons.toggle ()'>
+</TD><TD>
+<INPUT TYPE='radio' NAME='buttonsRadio'>
+<INPUT TYPE='radio' NAME='buttonsRadio'>
+<INPUT TYPE='radio' NAME='buttonsRadio'>
+<INPUT TYPE='radio' NAME='buttonsRadio'>
+</TD></TR>
+<TR><TD>
+<INPUT TYPE='text' SIZE=5 NAME='interval1' VALUE=500
+ onChange='demoButtons1.setInterval (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=3 NAME='increment1' VALUE=-1
+ onChange='demoButtons.setIncrement (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=2 NAME='bounce' VALUE=-1
+         onChange='demoButtons1.setBounce (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=2 VALUE='0'
+         onChange='demoButtons.sync ("demoButtons1", this.value)'>
+</TD><TD>
+<INPUT TYPE='button' VALUE='Start/Stop' onClick='demoButtons1.toggle ()'>
+</TD><TD>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+<INPUT TYPE='radio' NAME='buttonsRadio1'>
+</TD></TR>
+<TR><TD>
+<INPUT TYPE='text' SIZE=5 NAME='interval2' VALUE=250
+ onChange='demoButtons2.setInterval (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=3 NAME='increment2' VALUE=3
+ onChange='demoButtons.setIncrement (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=2 NAME='bounce' VALUE=1
+         onChange='demoButtons2.setBounce (this.value)'>
+</TD><TD>
+<INPUT TYPE='text' SIZE=2 VALUE='0'
+         onChange='demoButtons.sync ("demoButtons2", this.value)'>
+</TD><TD>
+<INPUT TYPE='button' VALUE='Start/Stop' onClick='demoButtons2.toggle ()'>
+</TD><TD>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+<INPUT TYPE='radio' NAME='buttonsRadio2'>
+</TD></TR>
+</TABLE>
+</FORM>
+</CENTER>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

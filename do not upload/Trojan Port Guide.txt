@@ -1,0 +1,471 @@
+_______________________________________________________________
+
+Trojan Port Numbers (Complied) By Ankit Fadia ankit@bol.net.in
+_______________________________________________________________
+
+The following is a list of common Trojan ports. 
+This list is by no means complete and you contributions to make this list
+the most comprehensive one around are welcomed.
+
+Satanz Backdoor|666
+Silencer|1001 
+WebEx|1001
+Doly Trojan|1011
+Psyber Stream Server|1170
+Ultors Trojan|1234
+VooDoo Doll|1245
+FTP99CMP|1492
+Shivka-Burka|1600
+SpySender|1807
+Shockrave|1981
+BackDoor|1999
+Trojan Cow|2001
+Ripper|2023
+Bugs|2115
+Deep Throat|2140 
+The Invasor|2140
+Phineas Phucker|2801
+Masters Paradise|30129
+Portal of Doom|3700
+WinCrash|4092
+ICQTrojan|4590
+Sockets de Troie|5000
+Sockets de Troie 1.x|5001
+Firehotcker|5321
+Blade Runner|5400
+Blade Runner 1.x|5401
+Blade Runner 2.x|5402
+Robo-Hack|5569
+DeepThroat|6670
+DeepThroat|6771
+GateCrasher|6969
+Priority|6969
+Remote Grab|7000
+NetMonitor|7300
+NetMonitor 1.x|7301
+NetMonitor 2.x|7306
+NetMonitor 3.x|7307
+NetMonitor 4.x|7308
+ICKiller|7789
+Portal of Doom|9872
+Portal of Doom 1.x|9873
+Portal of Doom 2.x|9874
+Portal of Doom 3.x|9875
+Portal of Doom 4.x|10067
+Portal of Doom 5.x|10167
+iNi-Killer|9989
+Senna Spy|11000
+Progenic trojan|11223
+Hack?99 KeyLogger|12223
+GabanBus|1245
+NetBus|1245
+Whack-a-mole|12361
+Whack-a-mole 1.x|12362
+Priority|16969
+Millennium|20001
+NetBus 2 Pro|20034
+GirlFriend|21544
+Prosiak|22222
+Prosiak|33333
+Evil FTP|23456
+Ugly FTP|23456
+Delta|26274
+Back Orifice|31337
+Back Orifice|31338
+DeepBO|31338
+NetSpy DK|31339
+BOWhack|31666
+BigGluck|34324
+The Spy|40412
+Masters Paradise|40421
+Masters Paradise 1.x|40422
+Masters Paradise 2.x|40423
+Masters Paradise 3.x|40426
+Sockets de Troie|50505
+Fore|50766
+Remote Windows Shutdown|53001
+Telecommando|61466
+Devil|65000
+The tHing|6400 
+NetBus 1.x|12346 
+NetBus Pro  20034 
+SubSeven|1243 
+NetSphere|30100  
+Silencer |1001 
+Millenium |20000 
+Devil 1.03 |65000 
+NetMonitor| 7306 
+Streaming Audio Trojan| 1170 
+Socket23 |30303 
+Gatecrasher |6969  
+Telecommando | 61466 
+Gjamer  |12076 
+IcqTrojen| 4950 
+Priotrity  |16969 
+Vodoo | 1245 
+Wincrash | 5742 
+Wincrash2|  2583 
+Netspy  |1033 
+ShockRave | 1981 
+Stealth Spy  |555 
+Pass Ripper  |2023 
+Attack FTP  |666 
+GirlFriend | 21554 
+Fore, Schwindler|  50766 
+Tiny Telnet Server| 34324 
+Kuang   |30999 
+Senna Spy Trojans|   11000 
+WhackJob  | 23456 
+Phase0  | 555 
+BladeRunner |  5400 
+IcqTrojan | 4950 
+InIkiller  | 9989 
+PortalOfDoom |  9872 
+ProgenicTrojan |  11223 
+Prosiak 0.47  | 22222 
+RemoteWindowsShutdown |  53001 
+RoboHack  |5569 
+Silencer  | 1001 
+Striker | 2565 
+TheSpy |  40412 
+TrojanCow |  2001 
+UglyFtp | 23456 
+WebEx  |1001 
+Backdoor |  1999 
+Phineas  | 2801 
+Psyber Streaming Server | 1509 
+Indoctrination  | 6939 
+Hackers Paradise |  456 
+Doly Trojan  | 1011 
+FTP99CMP |  1492 
+Shiva Burka |  1600 
+Remote Windows Shutdown |  53001 
+BigGluck, | 34324 
+NetSpy DK |  31339 
+Hack?99 KeyLogger | 12223 
+iNi-Killer  | 9989 
+ICQKiller | 7789 
+Portal of Doom |  9875 
+Firehotcker  | 5321 
+Master Paradise |40423 
+BO jammerkillahV |  121 
+port 2 - Death
+port 21 - Back Construction, Blade Runner, Doly Trojan, Fore, FTP trojan, Invisible FTP, Larva, MBT, Motiv, Net Administrator, Senna Spy FTP Server, WebEx, WinCrash
+port 23 - Tiny Telnet Server, Truva Atl
+port 25 - Aji, Antigen, Email Password Sender, Gip, Happy 99, I Love You, Kuang 2, Magic Horse, Moscow Email Trojan, Naebi, NewApt, ProMail trojan, Shtrilitz, Stealth, Tapiras, Terminator, WinPC, WinSpy
+port 31 - Agent 31, Hackers Paradise, Masters Paradise
+port 41 - DeepThroat
+port 48 - DRAT
+port 50 - DRAT
+port 59 - DMSetup
+port 79 - Firehotcker
+port 80 - Back End, Executor, Hooker, RingZero
+port 99 - Hidden Port
+port 110 - ProMail trojan
+port 113 - Invisible Identd Deamon, Kazimas
+port 119 - Happy 99
+port 121 - JammerKillah
+port 123 - Net Controller
+port 133 - Farnaz, port 146 - Infector
+port 146 (UDP) - Infector
+port 170 - A-trojan
+port 421 - TCP Wrappers
+port 456 - Hackers Paradise
+port 531 - Rasmin
+port 555 - Ini-Killer, NeTAdministrator, Phase Zero, Stealth Spy
+port 606 - Secret Service
+port 666 - Attack FTP, Back Construction, NokNok, Cain & Abel, Satanz Backdoor, ServeU, Shadow Phyre
+port 667 - SniperNet
+port 669 - DP Trojan
+port 692 - GayOL
+port 777 - Aim Spy
+port 808 - WinHole
+port 911 - Dark Shadow
+port 999 - DeepThroat, WinSatan
+port 1000 - Der Spacher 3
+port 1001 - Der Spacher 3, Le Guardien, Silencer, WebEx
+port 1010 - Doly Trojan
+port 1011 - Doly Trojan
+port 1012 - Doly Trojan
+port 1015 - Doly Trojan
+port 1016 - Doly Trojan
+port 1020 - Vampire
+port 1024 - NetSpy
+port 1042 - Bla
+port 1045 - Rasmin
+port 1050 - MiniCommand
+port 1080 - WinHole
+port 1081 - WinHole
+port 1082 - WinHole
+port 1083 - WinHole
+port 1090 - Xtreme
+port 1095 - RAT
+port 1097 - RAT
+port 1098 - RAT
+port 1099 - BFevolution, RAT
+port 1170 - Psyber Stream Server, Streaming Audio trojan, Voice
+port 1200 (UDP) - NoBackO
+port 1201 (UDP) - NoBackO
+port 1207 - SoftWAR
+port 1212 - Kaos
+port 1225 - Scarab
+port 1234 - Ultors Trojan
+port 1243 - BackDoor-G, SubSeven, SubSeven Apocalypse, Tiles
+port 1245 - VooDoo Doll
+port 1255 - Scarab
+port 1256 - Project nEXT
+port 1269 - Mavericks Matrix
+port 1313 - NETrojan
+port 1338 - Millenium Worm
+port 1349 (UDP) - BO DLL
+port 1492 - FTP99CMP
+port 1509 - Psyber Streaming Server
+port 1524 - Trinoo
+port 1600 - Shivka-Burka
+port 1777 - Scarab
+port 1807 - SpySender
+port 1966 - Fake FTP
+port 1969 - OpC BO
+port 1981 - Shockrave
+port 1999 - BackDoor, TransScout
+port 2000 - Der Spaeher 3, Insane Network, TransScout
+port 2001 - Der Spaeher 3, TransScout, Trojan Cow 
+port 2002 - TransScout 
+port 2003 - TransScout 
+port 2004 - TransScout 
+port 2005 - TransScout 
+port 2023 - Ripper
+port 2080 - WinHole
+port 2115 - Bugs
+port 2140 - Deep Throat, The Invasor
+port 2155 - Illusion Mailer
+port 2283 - HVL Rat5
+port 2300 - Xplorer
+port 2565 - Striker
+port 2583 - WinCrash
+port 2600 - Digital RootBeer
+port 2716 - The Prayer
+port 2773 - SubSeven
+port 2801 - Phineas Phucker
+port 3000 - Remote Shutdown
+port 3024 - WinCrash
+port 3128 - RingZero
+port 3129 - Masters Paradise
+port 3150 - Deep Throat, The Invasor
+port 3456 - Teror Trojan
+port 3459 - Eclipse 2000, Sanctuary
+port 3700 - Portal of Doom
+port 3791 - Eclypse
+port 3801 (UDP) - Eclypse
+port 4000 - Skydance
+port 4092 - WinCrash
+port 4242 - Virtual hacking Machine
+port 4321 - BoBo
+port 4444 - Prosiak, Swift remote
+port 4567 - File Nail
+port 4590 - ICQTrojan
+port 5000 - Bubbel, Back Door Setup, Sockets de Troie
+port 5001 - Back Door Setup, Sockets de Troie
+port 5010 - Solo
+port 5011 - One of the Last Trojans (OOTLT)
+port 5031 - NetMetropolitan
+port 5031 - NetMetropolitan
+port 5321 - Firehotcker
+port 5343 - wCrat
+port 5400 - Blade Runner, Back Construction
+port 5401 - Blade Runner, Back Construction
+port 5402 - Blade Runner, Back Construction
+port 5550 - Xtcp
+port 5512 - Illusion Mailer
+port 5555 - ServeMe
+port 5556 - BO Facil
+port 5557 - BO Facil
+port 5569 - Robo-Hack
+port 5637 - PC Crasher
+port 5638 - PC Crasher
+port 5742 - WinCrash
+port 5882 (UDP) - Y3K RAT
+port 5888 - Y3K RAT
+port 6000 - The Thing
+port 6006 - The Thing
+port 6272 - Secret Service
+port 6400 - The Thing
+port 6667 - Schedule Agent
+port 6669 - Host Control, Vampyre
+port 6670 - DeepThroat, BackWeb Server, WinNuke eXtreame
+port 6711 - SubSeven
+port 6712 - Funny Trojan, SubSeven
+port 6713 - SubSeven
+port 6723 - Mstream
+port 6771 - DeepThroat
+port 6776 - 2000 Cracks, BackDoor-G, SubSeven
+port 6838 (UDP) - Mstream
+port 6912 - Shit Heep (not port 69123!)
+port 6939 - Indoctrination
+port 6969 - GateCrasher, Priority, IRC 3, NetController
+port 6970 - GateCrasher
+port 7000 - Remote Grab, Kazimas, SubSeven
+port 7001 - Freak88
+port 7215 - SubSeven
+port 7300 - NetMonitor
+port 7301 - NetMonitor
+port 7306 - NetMonitor
+port 7307 - NetMonitor
+port 7308 - NetMonitor
+port 7424 - Host Control
+port 7424 (UDP) - Host Control
+port 7789 - Back Door Setup, ICKiller
+port 7983 - Mstream
+port 8080 - RingZero
+port 8787 - Back Orifice 2000
+port 8897 - HackOffice
+port 8988 - BacHack
+port 8989 - Rcon
+port 9000 - Netministrator
+port 9325 (UDP) - Mstream
+port 9400 - InCommand
+port 9872 - Portal of Doom
+port 9873 - Portal of Doom
+port 9874 - Portal of Doom
+port 9875 - Portal of Doom
+port 9876 - Cyber Attacker, RUX
+port 9878 - TransScout
+port 9989 - iNi-Killer
+port 9999 - The Prayer
+port 10067 (UDP) - Portal of Doom
+port 10085 - Syphillis
+port 10086 - Syphillis
+port 10101 - BrainSpy
+port 10167 (UDP) - Portal of Doom
+port 10528 - Host Control
+port 10520 - Acid Shivers
+port 10607 - Coma
+port 10666 (UDP) - Ambush
+port 11000 - Senna Spy
+port 11050 - Host Control
+port 11051 - Host Control
+port 11223 - Progenic trojan, Secret Agent
+port 12076 - Gjamer
+port 12223 - Hack´99 KeyLogger
+port 12345 - GabanBus, My Pics, NetBus, Pie Bill Gates, Whack Job, X-bill
+port 12346 - GabanBus, NetBus, X-bill
+port 12349 - BioNet
+port 12361 - Whack-a-mole
+port 12362 - Whack-a-mole
+port 12623 (UDP) - DUN Control
+port 12624 - Buttman
+port 12631 - WhackJob
+port 12754 - Mstream
+port 13000 - Senna Spy
+port 13010 - Hacker Brazil
+port 15092 - Host Control
+port 15104 - Mstream
+port 16660 - Stacheldracht
+port 16484 - Mosucker
+port 16772 - ICQ Revenge
+port 16969 - Priority
+port 17166 - Mosaic
+port 17300 - Kuang2 The Virus
+port 17777 - Nephron
+port 18753 (UDP) - Shaft
+port 19864 - ICQ Revenge
+port 20001 - Millennium
+port 20002 - AcidkoR
+port 20034 - NetBus 2 Pro, NetRex, Whack Job
+port 20203 - Chupacabra
+port 20331 - Bla
+port 20432 - Shaft
+port 20432 (UDP) - Shaft
+port 21544 - GirlFriend, Kidterror, Schwindler, WinSp00fer
+port 22222 - Prosiak
+port 23023 - Logged
+port 23432 - Asylum
+port 23456 - Evil FTP, Ugly FTP, Whack Job
+port 23476 - Donald Dick
+port 23476 (UDP) - Donald Dick
+port 23477 - Donald Dick
+port 26274 (UDP) - Delta Source
+port 26681 - Spy Voice
+port 27374 - SubSeven
+port 27444 (UDP) - Trinoo
+port 27573 - SubSeven
+port 27665 - Trinoo
+port 29104 - Host Control
+port 29891 (UDP) - The Unexplained
+port 30001 - TerrOr32
+port 30029 - AOL Trojan
+port 30100 - NetSphere
+port 30101 - NetSphere
+port 30102 - NetSphere
+port 30103 - NetSphere
+port 30103 (UDP) - NetSphere
+port 30133 - NetSphere
+port 30303 - Sockets de Troie
+port 30947 - Intruse
+port 30999 - Kuang2
+port 31335 (UDP) - Trinoo
+port 31336 - Bo Whack, ButtFunnel
+port 31337 - Baron Night, BO client, BO2, Bo Facil
+port 31337 (UDP) - BackFire, Back Orifice, DeepBO, Freak>
+port 31338 - NetSpy DK, ButtFunnel
+port 31338 (UDP) - Back Orifice, DeepBO
+port 31339 - NetSpy DK
+port 31666 - BOWhack
+port 31785 - Hack´a´Tack
+port 31787 - Hack´a´Tack
+port 31788 - Hack´a´Tack
+port 31789 (UDP) - Hack´a´Tack
+port 31791 (UDP) - Hack´a´Tack
+port 31792 - Hack´a´Tack
+port 32100 - Peanut Brittle, Project nEXT
+port 32418 - Acid Battery
+port 33333 - Blakharaz, Prosiak
+port 33577 - PsychWard
+port 33777 - PsychWard
+port 33911 - Spirit 2001a
+port 34324 - BigGluck, TN
+port 34555 (UDP) - Trinoo (Windows)
+port 35555 (UDP) - Trinoo (Windows)
+port 37651 - YAT
+port 40412 - The Spy
+port 40421 - Agent 40421, Masters Paradise 
+port 40422 - Masters Paradise 
+port 40423 - Masters Paradise 
+port 40426 - Masters Paradise
+port 41666 - Remote Boot
+port 41666 (UDP) - Remote Boot
+port 44444 - Prosiak
+port 47262 (UDP) - Delta Source
+port 50505 - Sockets de Troie
+port 50766 - Fore, Schwindler
+port 51996 - Cafeini
+port 52317 - Acid Battery 2000
+port 53001 - Remote Windows Shutdown
+port 54283 - SubSeven
+port 54320 - Back Orifice 2000
+port 54321 - School Bus
+port 54321 (UDP) - Back Orifice 2000
+port 57341 - NetRaider
+port 58339 - ButtFunnel
+port 60000 - Deep Throat
+port 60068 - Xzip 6000068
+port 60411 - Connection
+port 61348 - Bunker-Hill
+port 61466 - Telecommando
+port 61603 - Bunker-Hill
+port 63485 - Bunker-Hill
+port 65000 - Devil, Stacheldracht
+port 65432 - The Traitor
+port 65432 (UDP) - The Traitor
+port 65535 - RC
+
+Ankit Fadia
+ankit@bol.net.in
+hackingtruths.box.sk
+
+To recieve tutorials on everything you dreamt of written by Ankit Fadia 
+join his mailing list by sending an email to: 
+programmingforhackers-subscribe@egroups.com
+
+
+

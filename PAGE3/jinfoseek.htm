@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 3.0//EN" "html.dtd">
+
+<TITLE>Java Goodies</TITLE>
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//Script Author: James Gabel(james.gabel@usa.net).
+//Date: 01-27-98
+//Use all you want provided you leave in the comments.
+
+function netsearch(formname) 
+
+{
+   var a1
+   var a2
+   var b1
+   var b2
+   var c1
+   var c2
+   var d1
+   var d2
+   var e1
+   var e2
+   var f1
+   var f2
+   var g1
+   var g2
+   var TEXT
+   var noENGINE
+   var haveTEXT
+
+   TEXT=formname.TEXT.value;
+   noEngine=true;
+   haveTEXT=true;
+
+   if (TEXT==" ")
+     {
+     alert("Please type in some text!")
+     haveTEXT=false
+     }
+
+   //ALTAVISTA
+   a1=formname.altavista.checked;
+  
+a2="http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q="+TEXT; 
+     if (a1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(a2, "av","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }
+   
+   //EXCITE
+   b1=formname.excite.checked;
+   b2="http://www.excite.com/search.gw?trace=a&search="+TEXT;  
+     if (b1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(b2, "e","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }  
+
+   //HOTBOT
+   c1=formname.hotbot.checked;
+  
+c2="http://www.search.hotbot.com/hResult.html?SM=MC&MT="+TEXT+"&DV=7&RG=.com&DC=10&DE=2&OPs=MDRTP&_v=2&DU=days&SW=web&search.x=23&search.y=8";
+     if (c1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(c2, "h","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }  
+    
+   //INFOSEEK
+   d1=formname.infoseek.checked;
+  
+d2="http://www.infoseek.com/Titles?qt="+TEXT+"&col=WW&sv=IS&lk=noframes&nh=10";
+     if (d1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(d2, "i", "toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }  
+    
+   //LYCOS
+   e1=formname.lycos.checked;
+  
+e2="http://www.lycos.com/cgi-bin/pursuit?query="+TEXT+"&matchmode=and&cat=lycos&x=33&y=10";
+     if (e1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(e2, "l","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }  
+
+   //WEBCRAWLER
+   f1=formname.webcrawler.checked;
+   f2="http://www.webcrawler.com/cgi-bin/WebQuery?searchText="+TEXT;
+     if (f1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(f2, "w","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }       
+
+   //YAHOO
+   g1=formname.yahoo.checked;
+   g2="http://search.yahoo.com/bin/search?p="+TEXT;
+     if (g1)
+       {
+       noEngine=false
+       if (haveTEXT)
+         {
+         newWindow=window.open(g2, "y","toolbar,location,directories,status,menubar,scrollbars,resizable=1")
+         }
+       }  
+
+   //noENGINE
+     if (noEngine)
+       {
+       alert("Please select a search engine!")
+       }  
+
+// END SCRIPT
+ 
+}
+
+//Done Hiding-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<!-- Begin Advertising Banner-->
+<center>
+<A HREF="http://adforce.imgis.com/?adlink|2|5823|528|1|IMGIS" TARGET="_top">
+<IMG SRC="http://adforce.imgis.com/?adserv|2|5823|528|1|IMGIS" 
+BORDER="0" HEIGHT="60" WIDTH="468" NATURALSIZEFLAG="0" ALIGN="BOTTOM" 
+ALT="Another Wonderful HTML Goodies Advertiser"></A>
+<P><HR WIDTH=60%><P>
+</center>
+<!-- End Advertising Banner-->
+
+
+
+
+
+
+<FONT SIZE=5 COLOR=#0000CC>
+<i>NetSearch Page</i></FONT>
+<br>
+
+<hr>
+
+<FONT FACE=ARIAL SIZE=1>
+(Note:  This page opens a new window for each engine's results.)
+</FONT>
+
+<FORM NAME="engines">
+
+<FONT SIZE=4>Select Search Engines:</FONT><br>
+  <INPUT TYPE="Checkbox" NAME="altavista" VALUE="">Alta Vista<br>
+  <INPUT TYPE="Checkbox" NAME="excite" VALUE="">Excite<br>
+  <INPUT TYPE="Checkbox" NAME="hotbot" VALUE="">HotBot<br>
+  <INPUT TYPE="Checkbox" NAME="infoseek" VALUE="">Infoseek<br>
+  <INPUT TYPE="Checkbox" NAME="lycos" VALUE="">Lycos<br>
+  <INPUT TYPE="Checkbox" NAME="webcrawler" VALUE="">Webcrawler<br>
+  <INPUT TYPE="Checkbox" NAME="yahoo" VALUE="">Yahoo
+<P>
+
+<INPUT NAME=TEXT size=15 maxlength=200 VALUE=" ">
+
+<INPUT TYPE="BUTTON" VALUE="Go!" onClick="netsearch(engines)">
+
+<INPUT TYPE="RESET" VALUE="Clear">
+
+</FORM>
+<P> 
+  
+<hr>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here's a good, professional looking script.
+However, as it says above, it does open a lot of new windows.<P>
+
+<A HREF="newwindowsearch.txt" ONMOUSEOVER="window.status='GRAB THE SCRIPT'">Grab the Script</A>
+
+
+
+
+
+</BODY>
+
+</HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

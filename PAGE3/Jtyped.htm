@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+<TITLE>Key down Event</TITLE>
+<BODY BGCOLOR="WHITE">
+<SCRIPT LANGUAGE = "JavaScript">
+
+<!--   
+var count = 0;       
+var doPolling;  
+function stopPolling(){    
+        clearTimeout(doPolling) 
+}   
+
+function polling(){           
+        doPolling = setTimeout("looking()",100)   
+}    
+
+function looking(){          
+        document.form1.text1.blur()        
+        theInput = document.form1.text1.value;           
+        entered = theInput.length;           
+        if(entered > count){          
+                //keypress has occurred in text field          
+                alert("You entered a:\n       " + theInput.substring(count,entered + 1))          
+                count++         
+        }          
+        document.form1.text1.focus()          
+        polling()    
+}
+// -->
+
+</SCRIPT>
+</HEAD>
+<FORM NAME = "form1">
+<b>Enter Something:</b>
+</FONT>
+<INPUT TYPE = "text" NAME = "text1" onFocus = "polling()" onBlur = "stopPolling()">
+</FORM>
+</center>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

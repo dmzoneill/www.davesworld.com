@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML><HEAD><TITLE>Java Goodies</TITLE></HEAD>
+<BODY BGCOLOR="FFFFFF">
+<font face=arial>
+<h1><center>JavaScript Football</center></h1>
+<font size=2>
+<b>Directions</b><br>
+You're a quaterback in the Ultra Bowl. You are down 6 points
+with only 1 minute left in the game. You have the ball on your
+20 yard line and you must score a touchdown to win.<p>
+
+<b>How to play</b><br>
+1. Select either a RUNNING or a PASSING Play by filling in block in the
+appropriate Down chart.  If a number appears, advance your ball on the
+field that number of  yards by checking in the marker boxes on the field.  
+If 0 appears,  there is no gain and you lose that down.
+<P>
+2. Continue until you get 10 or more yards and another first down.  You lose
+possesion, and the game, if you advance less than 10 yards in 4 plays
+(Downs).
+<P>
+3. If a Fumble or an Interception appears, the opposing team gains
+possesion and your team loses the game.  If you get a Touchdown, you score 7 points* and
+your team wins the game.
+<P>
+
+<center><h2>Field</center></h2>
+<!-- Football                              -->
+<!-- This program was made by tfortune@students.wisc.edu.          -->
+<!-- You can copy this program freely.  If you want it for your webpage, just
+include a link to http://www.geocities.com/Area51/Zone/3561          -->
+
+<FORM>
+<p><pre>
+________________________________________________________________________
+________________
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |  <INPUT TYPE="checkbox"
+value="Touchdown!  You Win!" onClick="alert(value)">   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|  <INPUT TYPE="checkbox"
+value="Glorious victory is only 5 yards away!" onClick="alert(value)">   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+<INPUT TYPE="checkbox" value="10
+more yards!" onClick="alert(value)">   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+<INPUT TYPE="checkbox" value="You can
+do that in one play." onClick="alert(value)">   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |  <INPUT
+TYPE="checkbox" value="I can almost
+smell victory!" onClick="alert(value)">   |   |   |   | T |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |  <INPUT
+TYPE="checkbox" value="You.re good
+at this!" onClick="alert(value)">   |   |   |   |   | O |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |  <INPUT
+TYPE="checkbox" value="Only 30 more
+yards!" onClick="alert(value)">   |   |   |   |   |   | U |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |  <INPUT
+TYPE="checkbox" value="Keep it up!"
+onClick="alert(value)">   |   |   |   |   |   |   | C |
+|   |   |   |   |   |   |   |   |   |   |   |   |  <INPUT TYPE="checkbox"
+value="You.re halfway
+done!" onClick="alert(value)">   |   |   |   |   |   |   |   | H |
+|   |   |   |   |   |   |   |   |   |   |   |  <INPUT TYPE="checkbox"
+value="Already to the 45?"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   | D |
+|   |   |   |   |   |   |   |   |   |   |  <INPUT TYPE="checkbox"
+value="Half of the field!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   | O |
+|   |   |   |   |   |   |   |   |   |  <INPUT TYPE="checkbox" value="5 more
+to half of the field!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   |   | W |
+|   |   |   |   |   |   |   |   |  <INPUT TYPE="checkbox" value="You.re 1/4
+of the way there!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   |   |   | N |
+|   |   |   |   |   |   |   |  <INPUT TYPE="checkbox" value="Now we.re
+movin.!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   |   |   |   |
+  |
+|   |   |   |   |   |   |  <INPUT TYPE="checkbox" value="Your first, First
+Down!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   |   |   |   |
+  |   |
+|   |   |   |   |   |  <INPUT TYPE="checkbox" value="And we.re off!"
+onClick="alert(value)">   |   |   |   |   |   |   |   |   |   |   |   |   |
+  |   |   |
+|___|___|___|___|__<INPUT TYPE="checkbox" value="Here we go!"
+onClick="alert(value)">___|___|___|___|___|___|___|___|___|___|___|___|___|_
+__|___|_
+__|___|
+    G   5   10  15  20  25  30  35  40  45  50  45  40  35  30  25  20  15
+10  5   G
+
+<center><h3>Down	   Running Plays</center></h3></pre>
+<center>1st <INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)"></center>
+<center>2nd <INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)"></center>
+<center>3rd <INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)"></center>
+<center>4th <INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="Fumble." onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="5 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)"></center>
+<pre><center><h3>Down	   Passing Plays</center></h3></pre>
+<center>1st <INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)"></center>
+<center>2nd <INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)"></center>
+<center>3rd <INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="15 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="20 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)"></center>
+<center>4th <INPUT TYPE="checkbox" value="30 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="Touchdown!" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="25 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="0 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="10 Yards" onClick="alert(value)">
+<INPUT TYPE="checkbox" value="Interception" onClick="alert(value)"></center>
+</form>
+
+
+
+</BODY>
+</HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

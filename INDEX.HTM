@@ -1,0 +1,502 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="DAVID O'NEILL">
+<meta name="description" content="This site contains all sorts of complete bullshit">
+<meta name="keywords" content="Java, Java scripts, htm, html, learning html, software,sex,britney spears,anna kournikova,mandy moore,jessica simpson,melinda messenger">
+<title>Home Page</title>
+<link rel=stylesheet type="text/css" href="style1.css" title="syle1">
+
+<style>
+#divBottom{position:absolute; font-family:arial,helvetica; height:20; width:100; font-size:12pt; font-weight:bold} 
+</style>
+<script language="JavaScript1.2">
+var gright=170
+var gbottom=60
+var n = (document.layers) ? 1:0;
+var ie = (document.all) ? 1:0;
+function makeObj(obj,nest){
+	nest=(!nest) ? '':'document.'+nest+'.'
+   	this.css=(n) ? eval(nest+'document.'+obj):eval(obj+'.style')							
+	this.moveIt=b_moveIt;
+}
+function b_moveIt(x,y){
+	this.x=x; this.y=y
+   	this.css.left=this.x
+	this.css.top=this.y
+}
+var pageWidth,pageHeight
+function geoInit(){
+	oTest=new makeObj('divBottom')
+	pageWidth=(ie)?document.body.offsetWidth-4:innerWidth;
+	pageHeight=(ie)?document.body.offsetHeight-2:innerHeight;
+	checkIt()
+	onresize=resized
+	if(ie) window.onscroll=checkIt;
+}
+function checkIt(){
+	if(ie) oTest.moveIt(document.body.scrollLeft +pageWidth-gright,document.body.scrollTop+pageHeight-gbottom)
+	else if(n){
+		oTest.moveIt(window.pageXOffset+pageWidth-gright, window.pageYOffset+pageHeight-gbottom)
+		setTimeout('checkIt()',20)
+	}
+}
+function resized(){
+	pageWidth=(ie)?document.body.offsetWidth-4:innerWidth;
+	pageHeight=(ie)?document.body.offsetHeight-2:innerHeight;
+	if(ie) checkIt()
+}
+onload=geoInit;
+if(n || ie) document.write('<div id="divBottom"><img src="logo.gif"></div>')
+</script>
+</HEAD>
+<body background="white.jpg" leftmargin="5" topmargin="15">
+
+<div align="center">
+<iframe src="menu.htm" width="745" height="140" scrolling="no" frameborder="0" hspace="0" vspace="0" name="top"></iframe>
+
+<table width="745"><tr>
+<td width="220"><div align="center"><img src="logo.gif" alt="Davesworld"></div></td>
+
+<td width="305"><div align="center">
+<img src="back.gif" alt="BACK" onClick="history.back(-1)">
+<img src="home.gif" alt="HOME" onClick="window.location.href='index.htm'">
+<img src="foward.gif" alt="FOWARD" onClick="history.back(+1)">
+</div></td>
+
+<td width="75"></td>
+<td width="145"><div align="center">
+
+</div>
+</td></tr></table></div>
+
+<!-----THIS IS A TABLE WIDTH 3 COLS + 3 TABLES WITHIN THEM------->
+<div align="center">
+<table width="745">
+<!---td 1 left of the screen--->
+<!--sub1--->
+<tr><td width="220" valign="top">
+<img src="search.gif" alt="search"><br>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<!-- Search Google -->
+<center>
+<FORM method=GET action=http://www.google.com/custom>
+<A HREF=http://www.google.com/search>
+<IMG SRC=http://www.google.com/logos/Logo_40wht.gif border=0></A><br>
+SEARCH:
+<INPUT TYPE=text name=q size=25 maxlength=255 value="">
+<INPUT type=submit name=sa VALUE="Google Search">
+</FORM>
+</center>
+<!-- Search Google -->
+
+</td></tr></table>
+
+<img src="browse.gif" alt="browse"><br>
+
+<!---td 1 left of the screen--->
+<!--sub2--->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<img src="arrow.gif"><b class="my1">IN THIS SITE</b>
+
+<br><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="homepage.htm"  onMouseOver="window.status='YOUR ON IT!!!'; return true;" onMouseOut="window.status=''; return true;">Homepage</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="java.htm"  onMouseOver="window.status='Java Scripts'; return true;" onMouseOut="window.status=''; return true;">Java Scripts</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="htmlp.htm" onMouseOver="window.status='programming'; return true;" onMouseOut="window.status=''; return true;">HTML programming</a>
+		
+<BR>
+		           
+<img src="lbball1.gif">&nbsp;<a href="htmll.htm" onMouseOver="window.status='Learning HTML'; return true;" onMouseOut="window.status=''; return true;">Learning HTML</a>
+
+<BR>
+          
+<img src="lbball1.gif">&nbsp;<a href="software.htm" onMouseOver="window.status='Software'; return true;" onMouseOut="window.status=''; return true;">Software</a>
+
+<BR>
+          
+ <img src="lbball1.gif">&nbsp;<a href="other.htm" onMouseOver="window.status='Other Stuff'; return true;" onMouseOut="window.status=''; return true;">Other stuff</a>
+
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="photos.htm" onMouseOver="window.status='photos'; return true;" onMouseOut="window.status=''; return true;">Photos</a>
+		
+<BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="sites.htm" onMouseOver="window.status='Recommended sites'; return true;" onMouseOut="window.status=''; return true;">Recommended sites</a>
+		
+<BR>
+<BR>
+</td></tr></table>
+
+<img src="contact.gif" alt="contact me + sign guestbook"><br>
+
+<!---td 1 left of the screen--->
+<!--sub3--->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+<img src="arrow.gif"><b class="my1">SIGN THE GUESTBOOK</b>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="contact.htm" onMouseOver="window.status='E-mail Me'; return true;" onMouseOut="window.status=''; return true;">Forum + Contact a Friend</a>
+		
+<BR>
+
+<img src="lbball1.gif">&nbsp;
+<A HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?view=aforfucksake" onMouseOver="window.status='View guestbook'; return true;" onMouseOut="window.status=''; return true;">Read My Guestbook!</A>
+
+<BR>
+
+<img src="lbball1.gif">&nbsp;
+<A HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?sign=aforfucksake"  onMouseOver="window.status='Add to the guestbook'; return true;" onMouseOut="window.status=''; return true;">Sign Guestbook!</A>
+
+<br>
+<br>
+</td></tr></table>
+
+<!------td 1---->
+<!---sub4---->
+<img src="something.gif" alt="looking for something"><br>
+
+<table cellspacing="1" cellpadding="5" bgcolor="#000099" width="220">
+<tr><td valign="top" bgcolor="#F5FCDC">
+
+<img src="arrow.gif"><b class="my1">SEARCH</b>
+
+<br><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.yahoo.com"  onMouseOver="window.status='www.yahoo.com'; return true;" onMouseOut="window.status=''; return true;">Yahoo.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.webcrawler.com"  onMouseOver="window.status='www.webcrawler.com'; return true;" onMouseOut="window.status=''; return true;">Webcrawler.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.lycos.com"  onMouseOver="window.status='www.lycos.com'; return true;" onMouseOut="window.status=''; return true;">Lycos.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.google.com"  onMouseOver="window.status='www.google.com'; return true;" onMouseOut="window.status=''; return true;">Google.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.altavista.com" onMouseOver="window.status='www.altavista.com'; return true;" onMouseOut="window.status=''; return true;">Altavista.com</a><br>
+		        
+<img src="lbball1.gif">&nbsp;<a href="http://www.alltheweb.com" onMouseOver="window.status='www.alltheweb.com'; return true;" onMouseOut="window.status=''; return true;">Alltheweb.com</a><br>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.bigbot.com" onMouseOver="window.status='www.bigbot.com'; return true;" onMouseOut="window.status=''; return true;">Bigbot.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.askjeeves.co.uk/" onMouseOver="window.status='www.askjeeves.co.uk/'; return true;" onMouseOut="window.status=''; return true;">Ask Jeeves.co.uk</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mamma.com/"  onMouseOver="window.status='www.mamma.com/'; return true;" onMouseOut="window.status=''; return true;">Mamma.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.oingo.com/" onMouseOver="window.status='www.oingo.com/'; return true;" onMouseOut="window.status=''; return true;">Oingo.com</a><br>
+
+<br>
+</td></tr></table>
+
+<img src="sites.gif" alt="sites"><br>
+<table cellspacing="1" cellpadding="5" width="220" bgcolor="#000099">
+<tr><td valign="top" bgcolor="#F5FCDC" width="220">
+
+<p>FOR MORE COMPREHENSIVE GUIDE TO THE BEST SITES ON THE WEB GO 
+<A HREF="SITES.HTM">HERE</A><BR><BR></P>
+
+<img src="arrow.gif"><B class="my1">Hacking Sites</B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.hackology.com" onMouseOver="window.status='www.hackology.com'; return true;" onMouseOut="window.status=''; return true;">Hackology.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.haquerz.com" onMouseOver="window.status='www.haquerz.com'; return true;" onMouseOut="window.status=''; return true;">Haquerz.com</a><BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.elitehackers.com/" onMouseOver="window.status='www.elitehackers.com/'; return true;" onMouseOut="window.status=''; return true;">Elitehackers.com</a><BR>
+				
+<img src="lbball1.gif">&nbsp;<a href="http://www.cyberarmy.com" onMouseOver="window.status='www.cyberarmy.com'; return true;" onMouseOut="window.status=''; return true;">Cyberarmy.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.hackersclub.com" onMouseOver="window.status='www.hackersclub.com'; return true;" onMouseOut="window.status=''; return true;">Hackersclub.com</a><BR><br>
+
+<img src="arrow.gif"><B class="my1">WEB SITE STUFF</B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.flamingtext.com" onMouseOver="window.status='www.flamingtext.com'; return true;" onMouseOut="window.status=''; return true;">Flamingtext.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.bseen.com" onMouseOver="window.status='www.bseen.com'; return true;" onMouseOut="window.status=''; return true;">Bseen.com</a><BR>
+		
+<img src="lbball1.gif">&nbsp;<a href="http://www.ultimatecounter.com" onMouseOver="window.status='www.ultimatecounter.com'; return true;" onMouseOut="window.status=''; return true;">Ultimatecounter.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.shockwave.com" onMouseOver="window.status='www..shockwave.com'; return true;" onMouseOut="window.status=''; return true;">Shockwave.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.macromedia.com" onMouseOver="window.status='www..macromedia.com'; return true;" onMouseOut="window.status=''; return true;">Macromedia.com</a><BR>
+
+<img src="lbball1.gif">&nbsp;<a href="http://scriptsearch.internet.com" onMouseOver="window.status='http://scriptsearch.internet.com';return true;" onMouseOut="window.status=''; return true;">Scriptsearch.com</a><BR><br>
+
+<img src="arrow.gif"><B class="my1">MUSIC + MP3 SOFTWARE </B>
+
+<br><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mtv.co.uk/" onMouseOver="window.status='http://www.mtv.co.uk/';return true;" onMouseOut="window.status=''; return true;">Mtv.co.uk</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.mp3.com/" onMouseOver="window.status='http://www.mp3.com/';return true;" onMouseOut="window.status=''; return true;">Mp3.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.audiofind.com/" onMouseOver="window.status='http://www.audiofind.com/';return true;" onMouseOut="window.status=''; return true;">Audiofind.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.napster.com/" onMouseOver="window.status='http://www.napster.com/';return true;" onMouseOut="window.status=''; return true;">Napster.com</a><br>
+
+<img src="lbball1.gif">&nbsp;<a href="http://www.real.com/" onMouseOver="window.status='http://www.real.com/';return true;" onMouseOut="window.status=''; return true;">Real.com</a><br><br>
+</td></tr></table>
+<img src="end.gif"><br><br><div align="center">
+<img src="bum.gif" alt="will design web pages for money">
+</div>
+</td>
+
+<!----td2-middle of the screen---->
+<td width="375" valign="top">
+<table width="375" cellpadding="10"><tr>
+<td valign="top" width="375">
+
+
+<h4><a name="ex">AN INTRODUCTION TO WHATS IN THIS SITE</a></h4>
+
+<img src="arrow.gif"><a href="java.htm" class="my1">Java Scripts/Applets (OVER 100 SCRIPTS NOW AVAILABLE</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>There's all different scripts ranging from games to just plane bullshit scripts, eh by the way these where borrowed, the copyright information is in the source and must be left alone if you want to use it in your own site.  They came with 1st Page 2000 a brilliant program for creating web sites which you can download form <a href="http://www.evrsoft.com">Evrsoft.com</a> but you still need to have basic HTML knowledge.<BR><BR>
+
+<img src="arrow.gif"><a href="htmll.htm" class="my1">Learn Html</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>I never really used this when learning, but it is good for reference when your in a hot spot.  This was provided by the Web Design Group.<a href="http://www.htmlhelp.com/" target="_blank">HTMLHelp.com</a>
+<BR><BR>
+
+<img src="arrow.gif"><a href="htmlp.htm" class="my1">Html Programming</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>If you liked any of the javascripts or dhtml or whatever you can copy the code form this  speiceally designed page.<BR><BR>
+
+<img src="arrow.gif"><a href="software.htm" class="my1">Software</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>I hope to provide you with software ranging from Web developer tools and useful tools such as winzip, also desk top enhancements, such as different mouse designs. i also wil be including hacking tools, etc.  The most usefull of all the software available will be cracks for your shareware products with those annoying 30 day trial period enhingements<BR><BR>
+
+<img src="arrow.gif"><a href="other.htm" class="my1">Other Stuff</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>At the moment there is a large collection of the Famous Jolly Rodger anarchy which you can test out.  I obviously won't take any responcibilty for your actions so don't go blaming me and my site, OK!!!<there bullshit anyway><br> Ill try <BR><BR>
+
+<img src="arrow.gif"><a href="contact.htm" class="my1">Contact Me</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>By clicking on the text above it will bring you to a page with a form, ranging from a comment section to a marks out of ten list.  Just fill it out and click send.  If it doesn't work then follow the instructions given on the page.  It's as simple as that.!  Use this for serious stuff, otherwise use the 
+<a href="guestbook.html">Guestbook.</a>  You can also email a friend<BR><BR>
+
+<img src="arrow.gif"><a href="photos.htm" class="my1">Photos</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>On this page, you will find numerous babes including, Britney Spears, Jessica Simpson and Mandy Moore.  There is also links to other sites. <BR><BR>
+
+<img src="arrow.gif"><a href="sites.htm" class="my1">Recommended Sites</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5"><p>Recommended sites form all catagories.  This is a whole page dedicated to the best sites on the web<BR><BR>
+
+<img src="arrow.gif"><a href="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?view=aforfucksake" class="my1">Guestbook</a>
+<img src="pawfoot.gif" alt="go to java" hspace="5">
+<p>Place your opinions and recommendations for this site in this brilliant guestbook<BR>
+
+<div align="center"><img src="map.gif" alt="site map" border="0"></div>
+
+</td></tr></table>
+
+<td valign="top" width="150">
+<!------this is table6---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="25"width="150" bgcolor="#000099">
+<a HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?sign=aforfucksake" onMouseOver="window.status='Add to the guestbook'; return true;" onMouseOut="window.status=''; return true;" class="my2">
+SIGN GUESTBOOK!</A></td></tr></table>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="100"width="150" bgcolor="#F5FCDC">
+<div align="center"><A HREF="http://guestbooks.netservices.gr/addgb.cgi?name=aforfucksake"  onMouseOver="window.status='Add to the guestbook'; return true;" onMouseOut="window.status=''; return true;">
+<img src="pawfootbig.gif" alt="sign guestbook" border="0" hspace="0"></a>
+</div></td></tr></table>
+
+<BR>
+<!------this is table3---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="25"width="150" bgcolor="#000099">
+<a href="java.htm" class="my2">JAVA SCRIPTS</a></td></tr></table>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="100"width="150" bgcolor="#F5FCDC">
+<div align="center"><font size="-1"><script language="JavaScript">
+today = new Date();
+bYear   = 2000;  // Start year
+bMonth = 09;  // Start month
+bDay    = 23;  // Start day
+tYear    =  today.getYear(); 
+tMonth  =  (today.getMonth() ) + 1 ;
+tDay     =  today.getDate();
+tHour    =  today.getHours();
+fYear    = 0;
+fMonth  = 0;
+fDay     = 0;
+fHour    = 0;
+x = 0;
+y = 0;
+z = 0;
+a = 0;
+b = 0;
+c = 0;
+function testMonth() {
+     if (y==4 || y==6 || y==9 || y==11) x=30
+     else if (y==2) x=28 
+     else x=31 
+}
+function testDay() {
+     fDay = (z - bDay) + tDay;
+          if (fDay > a) {
+               fMonth += 1;
+               fDay = fDay - a;
+          }
+}
+y = bMonth;
+testMonth();
+z = x;
+y = bMonth;
+testMonth();
+a = x;
+if (bMonth <= tMonth) {
+     fYear = tYear - bYear;
+     fMonth = (tMonth - bMonth);
+     testDay();
+}
+fYear = (tYear - bYear) - 1
+fMonth = ((12 - bMonth) + tMonth) - 1;
+testDay();
+if (fMonth >= 12) {
+     fYear += 1;
+     fMonth -= 12;
+}
+// the following splits apart the dates recursively and replaces them with equiv graphics and displays.
+with(Math) {
+theYear=fYear;
+tensYear=floor(theYear/10);
+onesYear=theYear-(tensYear*10);
+theMonth=fMonth
+tensMonth=floor(theMonth/10);
+onesMonth=theMonth-(tensMonth*10);
+theDay=fDay
+tensDay=floor(theDay/10);
+onesDay=theDay-(tensDay*10);
+var testArray = new makeArray("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+for (z=1; z<=12; z++) {
+  if (tMonth==z) {
+      var b=testArray[z] 
+   }
+}
+for (z=1; z<=12; z++) {
+  if (bMonth==z) {
+      var c=testArray[z] 
+   }
+}
+}
+var page
+page = "Today's date:<br>"+b+" "+tDay+"&nbsp;"+tYear+".<br><br>"
+page += "launched on the<br>"+c+" "+bDay+"&nbsp;"+bYear+"<br><br>"
+page += "It's been "
+if(parseInt(tensYear+onesYear) > 0) {
+	page += tensYear + onesYear +" years, "
+}
+if(parseInt(tensMonth+onesMonth) > 0) {
+	page += tensMonth + onesMonth + " months "
+	page += "and "
+}
+if(parseInt(tensDay+onesDay) == 1) {
+	page += tensDay + onesDay + " day</b>."
+}
+else {
+	page += tensDay + onesDay + " days</b>."
+}
+function makeArray() {
+      this.length = makeArray.arguments.length
+      for (var i = 0; i < this.length; i++)
+      this[i+1] = makeArray.arguments[i]
+}
+// -- End Hiding Here -->
+</script>
+<script language="JavaScript">
+document.write(page)
+</script></font></div>
+</td></tr></table>
+
+<br>
+
+<!------this is table2---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099"><tr>
+<td height="25" width="150" bgcolor="#000099">
+<a href="photos.htm" class="my2">PHOTOS</a></td></tr></table>
+
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="100"width="150" bgcolor="#F5FCDC">
+<a href="photos.htm#bs"><div align="center">BRITNEY SPEARS<BR><BR>
+<img src="bs1a.jpg" alt="click to see more" border="0">
+<img src="bs2a.jpg" alt="click to see more" border="0">
+<img src="bs3a.jpg" alt="click to see more" border="0">
+<img src="bs4a.jpg" alt="click to see more" border="0">
+<img src="bs5a.jpg" alt="click to see more" border="0">
+<img src="bs6a.jpg" alt="click to see more" border="0">
+</a></div></td></tr></table><br>
+
+<!------this is table4---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="25"width="150" bgcolor="#000099">
+<a href="other.htm" class="my2">OTHER STUFF</a></td></tr></table>
+
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="100"width="150" bgcolor="#F5FCDC"><center>
+<img src="blast.gif"></center>
+</td></tr></table>
+
+<br>
+<!------this is table6---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="25"width="150" bgcolor="#000099">
+<a href="software.htm" class="my2">SOFTWARE</a></td></tr></table>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="140"width="150" bgcolor="#F5FCDC"><center>
+<img src="zip2.gif" border="0"><br><font size="-1">Hackling Tools<br>Icq war Tools<br>ETC</font></center>
+</td></tr></table>
+
+<br>
+<!------this is table7---->
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="25"width="150" bgcolor="#000099">
+<a href="sites.htm" class="my2">RECOMMENDED SITES</a></td></tr></table>
+<table cellspacing="1" cellpadding="5" bgcolor="#000099">
+<tr><td height="140"width="150" bgcolor="#F5FCDC"><center>
+<img src="stars.gif"><br><font size="-1">
+A comprehensive guide to the best hacking sites and web developement sites on the web</font></center>
+</td></tr></table>
+
+<br><div align="center">
+<img src="diploma.gif" height="200" width="140" alt="diploma for creating web pages">
+</div>
+</td></tr></table>
+
+<div align="center"><img src="optimized.gif"alt="optimized"></div>
+
+<script language="JavaScript" type="text/javascript">
+document.write("Site Last Modified On The"+"&nbsp;&nbsp;" + document.lastModified)
+</script>
+</div>
+
+<center>
+
+<PARAM name="bgcolor" value="#000000">
+<PARAM name="counter_id" value="386934">
+<PARAM name="increment" value="false">
+<PARAM name="CGI_configuration" value="true">
+<a href="http://www.jcount.com/cgi-bin/counter_stats.cgi?counter_id=386934">
+<img src="http://www.jcount.com/cgi-bin/backup_counter.cgi?counter_id=386934" nosave border=0>
+</a></APPLET><br>
+<a href="http://www.jcount.com/cgi-bin/free_button_clicked.cgi">
+<img src="http://www.jcount.com/cgi-bin/updater.cgi?counter_id=386934&increment=true" nosave border=0 width=133 height=53></a>
+<p>
+</center>
+
+
+
+
+
+
+</body>
+</html>

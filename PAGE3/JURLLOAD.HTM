@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--start stealth
+//---------------------------------
+//GoTo SCRIPT BY ALEX KEENE 1997
+//INFO@FIRSTSOUND.COM
+//---------------------------------
+ function GoToURL(j) {
+  window.status=('Connecting....')
+  
+var URLis;
+ URLis = document.URLframe.Dest.value
+  
+   if (URLis == "" || URLis.length <= 8)
+           { 
+     j.value = "Try Again"
+      alert('\nOops!\n\nYou must enter a valid URL');
+         window.status=('Missing data or Invalid. Try again?.')
+           } 
+    else
+        {
+ j.value = "Connecting to: http:\\" + URLis   
+ var location=("http://" + URLis);
+         this.location.href = location;
+window.status=('Connecting to ' + URLis + '  Please wait........');
+        }
+        }
+//-->
+
+</SCRIPT>
+<FORM NAME="URLframe">
+<TABLE BORDER="0" ALIGN="CENTER">
+<TR>
+<TD VALIGN="MIDDLE" ALIGN="CENTER"><BR><FONT
+SIZE="3" COLOR="#FF0000"
+FACE="VERANDA,ARIAL,HELVETICA"><B>http://</B></FONT><INPUT
+TYPE="TEXT" NAME="Dest" SIZE="55" MAXLENGTH="50"></TD></TR>
+<TR>
+<TD ALIGN="CENTER">
+<P><INPUT TYPE="BUTTON" VALUE="    Go to..   " ONCLICK="GoToURL(this)" WIDTH="50"></P></TD></TR></TABLE></FORM>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

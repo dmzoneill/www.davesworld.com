@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<BODY onLoad="animate()">
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+// Copyright (c) 1996-1997 Tomer Shiran. All rights reserved.
+// Permission given to use the script provided that this notice remains as is.
+// Additional scripts can be found at http://www.geocities.com/~yehuda/
+
+// create row of radio buttons
+lay(20)
+
+// set index of lamp to start animation
+var current = 0
+
+// set speed (pause in milliseconds between each movement)
+var speed = 100
+
+function lay(num) {
+        // assign "greater than" character to variable
+        var gt = unescape("%3e")
+
+        // open form
+        document.write("<FORM NAME='animation'" + gt)
+
+        // use loop to lay radio buttons down (all buttons in same group)
+        for (var i = 0; i < num; ++i) {
+                document.write("<INPUT TYPE='radio' NAME='lamps'" + gt)
+        }
+
+        // close form
+        document.write("</FORM" + gt)
+}
+
+function animate() {
+        // click next radio button
+        document.animation.lamps[current].click()
+
+        // if radio button is the last one reset variable to 0 (otherwise increment)
+        current = (current == document.animation.lamps.length - 1) ? 0 : ++current  
+
+        // recursive call after speed milliseconds
+        timerID = setTimeout("animate()", speed)
+}
+
+// -->
+
+</SCRIPT>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+<TITLE>Redirection Depending on the Day</TITLE>
+
+<SCRIPT>
+<!--
+
+function initArray() 
+{
+  this.length = initArray.arguments.length;
+  for (var i = 0; i < this.length; i++)
+  this[i+1] = initArray.arguments[i];
+}
+
+ var DOWArray = new
+ initArray("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+ var today = new Date();
+ var day = DOWArray[today.getDay()];
+alert("Today is " + day + "! If the file " + day + ".html had existed, you would have been taken there.")
+ if (day == "Monday") window.location = "Monday.html"
+ if (day == "Tuesday") window.location = "Tuesday.html"
+ if (day == "Wednesday") window.location = "Wednesday.html"
+ if (day == "Thursday") window.location = "Thursday.html"
+ if (day == "Friday") window.location = "Friday.html"
+ if (day == "Saturday") window.location = "Saturday.html"
+ if (day == "Sunday") window.location = "Sunday.html"
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+This script automatically transfers you to a page
+depending on the day of the week.
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

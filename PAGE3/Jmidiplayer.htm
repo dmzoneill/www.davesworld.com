@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<HTML>
+<HEAD>
+<TITLE>Cd Midi Player</TITLE>
+</HEAD>
+<Script Language="JavaScript">
+<!-- Hiding 
+/*  Script by Lefteris Haritou :
+    http://www.geocities.com/~lef
+    Please keep the above credit.
+    No copyrights but be fair.
+*/
+
+song = new Array()
+var x = 0
+
+song[1] = "Songname # 1"
+song[2] = "Songname # 2"
+song[3] = "Songname # 3"
+song[4] = "Songname # 4"
+song[5] = "Songname # 5"
+song[6] = "Songname # 6"
+
+function prev(){
+if (x>1)
+{ x--
+document.midi.typein.value=song [x]
+}
+}
+
+function next(){
+var max= song.length-1
+if (x<max)
+{ x++
+document.midi.typein.value=song [x]
+}
+}
+
+function go(){
+if (x != 0){
+location.href='song'+x+'.mid'
+}
+}
+
+function start(){
+x=1
+document.midi.typein.value=song [x]
+}
+
+function end(){
+x=song.length-1
+document.midi.typein.value=song [x]
+}
+
+function cls(){
+document.midi.typein.value="Select Midi Song"
+}
+// Done Hiding -->
+</Script>
+<BODY Bgcolor="#ffffff" onload="cls()">
+<Center>
+<FORM Name="midi">
+<INPUT NAME="typein" TYPE="text" SIZE="25" ALIGN=top><BR><!-- You can change the size of the textbox if you need-->
+<font size=3 face="Comic Sans Ms">
+<INPUT TYPE=Button Value="|<<" Align=left onclick="start()">
+<INPUT TYPE=Button Value="<<" Align=left onclick="prev()">
+<INPUT TYPE=Button Value="PLAY" Align=left onclick="go()">
+<INPUT TYPE=Button Value=">>" Align=left onclick="next()">
+<INPUT TYPE=Button Value=">>|" Align=left onclick="end()">
+</FORM></font>
+</Center>
+</BODY>
+</HTML>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

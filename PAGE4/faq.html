@@ -1,0 +1,1853 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+	<TITLE>Commonly Asked Questions | Web Authoring FAQ (WDG)</TITLE>
+	<meta name="description" content="The Web Design Group's Web Authoring FAQ addresses frequently asked questions related to HTML, images, style sheets, and other Web authoring issues.">
+</head>
+
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<table border=0 width="90%">
+<tr>
+<td>
+<H1 align=center>Web Authoring FAQ</H1>
+
+<hr width="75%" size=1>
+
+<H2><A NAME="index">Index</A></H2>
+
+<OL>
+<LI><A HREF="#basics">Getting Started</A>
+<OL>
+<LI><A HREF="#html-tags">Where can I find a list of all the current HTML tags?</A></LI>
+<LI><A HREF="#special-char">How do I get a so-and-so character in my HTML?</A></LI>
+<LI><A HREF="#quotes">Should I put quotes around attribute values?</A></LI>
+<LI><A HREF="#html-comments">How can I include comments in HTML?</A></LI>
+<LI><A HREF="#error-check">How can I check for errors?</A></LI>
+<LI><A HREF="#doctype">What is a DOCTYPE?  Which one do I use?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#publishing">Web Publishing</A>
+<OL>
+<LI><A HREF="#publish-howto">Where can I put my newly created Web pages?</A></LI>
+<LI><A HREF="#announcing">Where can I announce my site?</A></LI>
+<LI><A HREF="#index-better">Is there a way to get indexed better by the search engines?</A></LI>
+<LI><A HREF="#no-index">How do I prevent my site from being indexed by search engines?</A></LI>
+<LI><A HREF="#redirect">How do I redirect someone to my new page?</A></LI>
+<LI><A HREF="#password">How do I password protect my web site?</A></LI>
+<LI><A HREF="#hide-source">How do I hide my source?</A></LI>
+<LI><A HREF="#browser-detect">How do I detect what browser is being used?</A></LI>
+<LI><A HREF="#get-address">How do I get my visitors' email addresses?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#design">Web Design</A>
+<OL>
+<LI><A HREF="#include-file">How do I include one file in another?</A></LI>
+<LI><A HREF="#entity-or-number">Which should I use, &amp;entityname; or &amp;#number; ?</A></LI>
+<LI><A HREF="#tag-case">Should I use lower case or upper case for tags?</A></LI>
+<LI><A HREF="#screen-size">For what screen size should I write?</A></LI>
+<LI><A HREF="#page-inconsistent">Why does my page display fine in browser X but incorrectly or not at all in browser Y?</A></LI>
+<LI><A HREF="#freeze-URL">How do I freeze the URL displayed in a visitor's browser?</A></LI>
+<LI><A HREF="#tables-unsupported">How do I make a table which looks good on non-supporting browsers?</A></LI>
+<LI><A HREF="#nest-table">Can I nest tables within tables?</A></LI>
+<LI><A HREF="#center-table">How do I center a table?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#links">Hyperlinks</A>
+<OL>
+<LI><A HREF="#url-slash">Should I end my URLs with a slash?</A></LI>
+<LI><A HREF="#new-window">How do I create a link that opens a new window?</A></LI>
+<LI><A HREF="#button-link">How do I get a button which takes me to a new page?</A></LI>
+<LI><A HREF="#back-button">How do I get a back button on my page?</A></LI>
+<LI><A HREF="#mailto-link">How do I create a link that sends me email?</A></LI>
+<LI><A HREF="#mailto-subject">How do I specify a subject for a mailto: link?</A></LI>
+<LI><A HREF="#no-border">How do I eliminate the blue border around linked images?</A></LI>
+<LI><A HREF="#no-underline">How do I turn off underlining on my links?</A></LI>
+<LI><A HREF="#link-2color">How can I have two sets of links with different colors?</A></LI>
+<LI><A HREF="#broken-link">Why are my hyperlinks coming out all wrong or not loading?</A></LI>
+<LI><A HREF="#link-msie-only">Why does my link work in Internet Explorer but not in Netscape?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#media">Other Media</A>
+<OL>
+<LI><A HREF="#download-howto">How do I let people download a file from my page?</A></LI>
+<LI><A HREF="#garbled-media">Why did my link to a _______ file only download a bunch of characters instead?</A></LI>
+<LI><A HREF="#force-download">How do I force a download?</A></LI>
+<LI><A HREF="#animated-gif">How do I make animated GIFs?</A></LI>
+<LI><A HREF="#image-whisker">Why am I getting a colored whisker to the left or right of my image?</A></LI>
+<LI><A HREF="#broken-image">Why are my images coming out all wrong or not loading?</A></LI>
+<LI><A HREF="#alt-markup">Can I put markup in ALT text?</A></LI>
+<LI><A HREF="#bg-sound">How do I get an audio file to play automatically when someone visits my site?</A></LI>
+<LI><A HREF="#strip-html">How can I strip all the HTML from a document to get plain text?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#presentation">Presentational Effects</A>
+<OL>
+<LI><A HREF="#custom-rule">How can I make a custom rule?</A></LI>
+<LI><A HREF="#custom-bullet">How can I make a list with custom bullets?</A></LI>
+<LI><A HREF="#hit-counter">Where can I get a "hit counter"?</A></LI>
+<LI><A HREF="#date-time">How do I display the current date or time in my document?</A></LI>
+<LI><A HREF="#status-scroll">How do I get scrolling text in the status bar?</A></LI>
+<LI><A HREF="#right-align">How do I right align text or images?</A></LI>
+<LI><A HREF="#fonts">How can I specify fonts in my Web pages?</A></LI>
+<LI><A HREF="#indent-1stline">How do I indent the first line in my paragraphs?</A></LI>
+<LI><A HREF="#indent-block">How do I indent a lot of text?</A></LI>
+<LI><A HREF="#page-break">How do I do a page break?</A></LI>
+<LI><A HREF="#fixed-bg">How do I have a fixed background image?</A></LI>
+<LI><A HREF="#no-repeat-bg">How do I have a non-tiled background image?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#forms">HTML Forms</A>
+<OL>
+<LI><A HREF="#form-howto">How do I use forms?</A></LI>
+<LI><A HREF="#mailto-form">Why won't my form email the user's data to me?</A></LI>
+<LI><A HREF="#enter-submit">How do I make a form so it can be submitted by hitting ENTER?</A></LI>
+<LI><A HREF="#custom-button">How can I make a form with custom buttons?</A></LI>
+<LI><A HREF="#two-submit">Can I have two or more Submit buttons in the same form?</A></LI>
+<LI><A HREF="#file-upload">How can I allow file uploads to my web site?</A></LI>
+</OL>
+</LI>
+<LI><A HREF="#frames">HTML Frames</A>
+<OL>
+<LI><A HREF="#frame-update2">How do I update two frames at once?</A></LI>
+<LI><A HREF="#frame-getout">How do I get out of a frameset?</A></LI>
+<LI><A HREF="#stop-framing">Is there a way to prevent getting framed?</A></LI>
+<LI><A HREF="#frame-address">How do I specify a specific combination of frames instead of the default document?</A></LI>
+<LI><A HREF="#stop-windows">Why do my links open new windows instead of updating an existing window?</A></LI>
+<LI><A HREF="#frame-noborder">How do I remove the border around frames?</A></LI>
+<LI><A HREF="#frame-title">How do I change the title of a framed document?</A></LI>
+<LI><A HREF="#frame-context">How do I make sure my framed documents are displayed inside their frameset?</A></LI>
+<LI><A HREF="#frame-problems">Are there any problems with using frames?</A></LI>
+<LI><A HREF="#frame-size">Why aren't my frames the exact size I specified?</A></LI>
+</OL>
+</LI>
+</OL>
+
+<H2><A NAME="basics">1. Getting Started</A></H2>
+
+<H3><A NAME="2">1.2.</A> <A NAME="html-tags">Where can I find a list of all the current HTML tags?</A></H3>
+
+<P>The current W3C Recommendation is HTML 4.0. HTML 4.0 extends HTML 3.2 to
+include support for frames, internationalization, style sheets, advanced
+tables, and more. HTML 4.0 is not well supported by current browsers, but
+many of its features can be used safely in non-supporting browsers.</P>
+
+<P>Recommended materials on HTML 4.0:</P>
+
+<UL>
+<LI><A HREF="http://www.w3.org/TR/REC-html40/">http://www.w3.org/TR/REC-html40/</A>
+-- the official HTML 4.0 Recommendation</LI>
+<LI><A HREF="http://www.htmlhelp.com/reference/html40/">http://www.htmlhelp.com/reference/html40/</A>
+-- a handy reference, with notes on using poorly supported features safely</LI>
+</UL>
+
+<P>Recommended materials on HTML 3.2:</P>
+
+<UL>
+<LI><A HREF="http://www.w3.org/TR/REC-html32">http://www.w3.org/TR/REC-html32</A>
+-- the official HTML 3.2 Recommendation</LI>
+<LI><A HREF="http://www.htmlhelp.com/reference/wilbur/">http://www.htmlhelp.com/reference/wilbur/</A>
+-- a more readable version of the above</LI>
+<LI><A HREF="http://www.hut.fi/~jkorpela/HTML3.2/">http://www.hut.fi/~jkorpela/HTML3.2/</A>
+-- Jukka Korpela's "Learning HTML 3.2 by Examples"</LI>
+</UL>
+
+<P>Some materials on browser-specific versions of HTML:</P>
+
+<UL>
+
+<LI><A HREF="http://www.blooberry.com/html/supportkey/a.htm">http://www.blooberry.com/html/supportkey/a.htm</A>
+-- Brian Wilson's checklist of browser support for HTML tags and attributes</LI>
+
+<LI><A HREF="http://developer.netscape.com/docs/manuals/htmlguid/index.htm">Developer Netscape</A>
+-- a list of all available Netscape HTML tags</LI>
+
+<LI><A HREF="http://www.microsoft.com/workshop/author/html/reference/elements.htm">Microsoft Workshop</A>
+-- a list of all available Microsoft HTML tags</LI>
+
+</UL>
+
+
+<H3><A NAME="31">1.3.</A> <A NAME="special-char">How do I get a so-and-so character in my HTML?</A></H3>
+
+<P>The safest way to do HTML is in (7-bit) US-ASCII, and expressing
+characters from the upper half of the 8-bit code by using HTML entities.
+See the answer to "<A HREF="#entity-or-number">Which should I
+use, &amp;entityname; or &amp;#number; ?</A>"</P>
+
+<P>Working with 8-bit characters can also be successful in many practical
+situations: Unix and MS-Windows (using Latin-1), and also Macs (with
+some reservations).</P>
+
+<P>The available characters are those in ISO-8859-1, listed at
+&lt;URL:<A HREF="http://www.htmlhelp.com/reference/charset/">HTMLHelp</A>&gt;.
+On the Web, these are the only characters widely supported.
+In particular, characters 128 through 159 as used in MS-Windows are not part
+of the ISO-8859-1 code set and will not be displayed as Windows users
+expect. This includes the em dash, en dash, curly quotes, bullet, and TM
+symbol; neither the actual character nor &amp;#nnn; is correct. (See the
+last paragraph of this answer for more about those characters.)</P>
+
+<P>On platforms whose own character code isn't ISO-8859-1, such as MS DOS,
+Macs, there may be problems: you'd have to use text transfer methods that
+convert between the platform's own code and ISO-8859-1 (e.g Fetch for the
+Mac), or convert separately (e.g GNU recode).  Using 7-bit ASCII with
+entities avoids those problems, and this FAQ is too small to cover other
+possibilities in detail.  Mac users - see the notes at the above URL.</P>
+
+<P>If you run a web server (httpd) on a platform whose own character code
+isn't ISO-8859-1, such as a Mac, or IBM mainframe, it's the job of the
+server to convert text documents into ISO-8859-1 code when sending them
+to the network.</P>
+
+<P>If you want to use characters outside of the
+ISO-8859-1 repertoire, you must use HTML 4.0 rather than HTML 3.2.
+See the HTML 4.0 Recommendation at
+&lt;URL:<A HREF="http://www.w3.org/TR/REC-html40/">W3</A>&gt;
+and the Babel site at
+&lt;URL:<A HREF="http://babel.alis.com:8080/">Babel</A>&gt;
+for more details. Another useful resource for internationalization
+issues is at &lt;URL:<A HREF="http://ppewww.ph.gla.ac.uk/%7Eflavell/charset/">flavell</A>&gt;.</P>
+
+
+<H3><A NAME="34">1.4.</A> <A NAME="quotes">Should I put quotes around attribute values?</A></H3>
+
+<P>It depends. It is never wrong to use them, but you
+don't have to if the attribute value consists only of letters (A-Za-z),
+digits, periods and hyphens. This is explained in the HTML
+2.0 specs.</P>
+
+<P>Be careful when your attribute value includes double quotes, for
+instance when you want ALT text like "the "King of Comedy" takes a
+bow" for an image. Humans can parse that to know where the quoted
+material ends, but browsers can't. You have to code the attribute
+value specially so that the first interior quote doesn't terminate the
+value prematurely. There are two main techniques:</P>
+
+<UL>
+<LI>Escape any quotes inside the value with &amp;#34; so you don't
+terminate the value prematurely: ALT="the &amp;#34;King of
+Comedy&amp;#34; takes a bow". (&amp;quot; is not part of the formal
+HTML 3.2 spec, though most current browsers support it.)</LI>
+
+<LI>Use single quotes to enclose the attribute value: ALT='the "King
+of Comedy" takes a bow'.</LI>
+
+</UL>
+
+<P>Both these methods are correct according to the spec and are supported
+by current browsers, but both were poorly supported in some earlier
+browsers. The only truly safe advice is to rewrite the text so that
+the attribute value need not contain quotes, or to change the interior
+double quotes to single quotes, like this: ALT="the 'King of Comedy'
+takes a bow".</P>
+
+
+<H3><A NAME="3">1.5.</A> <A NAME="html-comments">How can I include comments in HTML?</A></H3>
+
+<P>A comment declaration starts with "<CODE>&lt;!</CODE>", followed by zero
+or more comments, followed by "<CODE>&gt;</CODE>". A comment starts and
+ends with "<CODE>--</CODE>", and does not contain any occurrence of
+"<CODE>--</CODE>" between the beginning and ending pairs. This means that
+the following are all legal HTML comments:</P>
+
+<UL>
+<LI><CODE>&lt;!-- Hello --&gt;</CODE></LI>
+<LI><CODE>&lt;!-- Hello -- -- Hello--&gt;</CODE></LI>
+<LI><CODE>&lt;!----&gt;</CODE></LI>
+<LI><CODE>&lt;!------ Hello --&gt;</CODE></LI>
+<LI><CODE>&lt;!&gt;</CODE></LI>
+</UL>
+
+<P>But some browsers do not support the full syntax, so we recommend you
+follow this simple rule to compose valid and accepted comments:</P>
+
+<BLOCKQUOTE><P>An HTML comment begins with "<CODE>&lt;!--</CODE>", ends
+with "<CODE>--&gt;</CODE>" and does not contain "<CODE>--</CODE>" or
+"<CODE>&gt;</CODE>" anywhere in the comment.</P></BLOCKQUOTE>
+
+<P>See &lt;URL:<A HREF="http://www.htmlhelp.com/reference/wilbur/misc/comment.html">HTML Help</A>&gt;
+for a more complete discussion.</P>
+
+
+<H3><A NAME="4">1.6.</A> <A NAME="error-check">How can I check for errors?</A></H3>
+
+<P>The easiest way to catch errors in your HTML is through the use of a
+program called a validator.  A validator is a program which knows all the
+rules in HTML, reads your source document and outputs a list of mistakes.</P>
+
+<P>While checking for errors in the HTML, it is also a good idea to check
+for hypertext links which are no longer valid.  There are several link
+checkers available for various platforms which will follow all links on
+a site and return a list of the ones which are non-functioning.</P>
+
+<P>You can find a list of validators and link checkers at
+&lt;URL:<A HREF="http://www.htmlhelp.com/links/validators.htm">HTML Help</A>&gt;.
+Especially recommended is the use of an SGML-based validator such as the
+WDG HTML Validator &lt;URL:<A HREF="http://www.htmlhelp.com/tools/validator/">HTML Help</A>&gt;
+or W3C HTML Validation Service &lt;URL:<A HREF="http://validator.w3.org/">w3.org</A>&gt;.</P>
+
+
+<H3><A NAME="doctype">1.7. What is a DOCTYPE?  Which one do I use?</A></H3>
+
+<P> According to HTML standards, each HTML document begins with a DOCTYPE
+declaration that specifies which version of HTML the document uses.
+The DOCTYPE declaration is useful primarily to SGML-based tools like HTML
+validators, which must know which version of HTML to use in checking the
+document's syntax.
+Browsers generally ignore DOCTYPE declarations.
+</P>
+
+<P> See
+&lt;URL:<A HREF="http://www.htmlhelp.com/tools/validator/doctype.html">HTML Help</A>&gt;
+for information on choosing an appropriate DOCTYPE declaration.
+</P>
+
+<H2><A NAME="publishing">2. Web Publishing</A></H2>
+
+<H3><A NAME="8">2.1.</A> <A NAME="publish-howto">Where can I put my newly created Web pages?</A></H3>
+
+<P>Many ISPs offer web space to their dial-up customers. Typically this will
+be less than 5MB, and there may be other restrictions; for example, many do
+not allow commercial use of this space.</P>
+
+<P>There are several companies and individuals who offer free web space. This
+usually ranges from 100KB up to 1MB, and again there are often limitations on
+its use. They may also require a link to their home page from your pages. The
+following page has pointers to several lists of free web space providers:
+&lt;URL:<A HREF="http://www.yahoo.com/Business_and_Economy/Companies/Internet_Services/Web_Services/Free_Web_Pages/">Yahoo Free Pages</A>&gt;.</P>
+
+<P>There are also many web space providers (aka presence providers) who will
+sell you space on their servers. Prices will range from as little as $1 per
+month, up to $100 per month or more, depending upon your needs. Non-virtual
+Web space is typically the cheapest, offering a URL like:
+http://www.some-provider.com/yourname/
+For a little more, plus the cost of registering a domain name,
+you can get virtual web space, which will allow you to have a URL like
+http://www.yourname.com/.</P>
+
+<P>If you have some permanent connection to the Internet, perhaps via leased
+line from your ISP then you could install an httpd and operate your own Web
+server. There are several Web servers available for almost all platforms.</P>
+
+<P>If you just wish to share information with other local users, or people on
+a LAN or WAN, you could just place your HTML files on the LAN for everyone to
+access, or alternatively if your LAN supports TCP/IP then install a Web server
+on your computer.</P>
+
+
+<H3><A NAME="9">2.2.</A> <A NAME="announcing">Where can I announce my site?</A></H3>
+<UL>
+
+<LI><A HREF="news:comp.infosystems.www.announce">comp.infosystems.www.announce</A>
+-- a moderated newsgroup specifically geared toward this subject. You need to
+obtain its FAQ list before posting to it.</LI>
+
+<LI><A HREF="http://www.submit-it.com/">http://www.submit-it.com/</A>
+lets you submit site information to 20 different major index
+sites for free.  If you wish to pay you may submit your site to over
+400 sites.</LI>
+
+<LI><A HREF="http://ep.com/faq/webannounce.html">http://ep.com/faq/webannounce.html</A>
+is the How to Announce your New Web Site FAQ.</LI>
+</UL>
+
+
+<H3><A NAME="26">2.3.</A> <A NAME="index-better">Is there a way to get indexed better by the search engines?</A></H3>
+
+<P>Yes. Use a meaningful <CODE>&lt;TITLE&gt;</CODE> and headings
+(<CODE>&lt;H1&gt;</CODE>, <CODE>&lt;H2&gt;</CODE>, and so on).
+The indexing programs of some search engines (including AltaVista and
+Infoseek) will also take into account the following tags in the
+<CODE>&lt;HEAD&gt;</CODE> part of your documents:</P>
+
+<P><CODE>&lt;META NAME="keywords" CONTENT="keyword keyword keyword keyword"&gt;<BR>
+&lt;META NAME="description" CONTENT="description of your site"&gt;</CODE></P>
+
+<P>Both may contain up to 1022 characters, but no markup other than entities.
+If you use a keyword too often in the
+<CODE>&lt;META NAME="keywords"&gt;</CODE> tag, the
+indexing program may ignore your keywords list altogether. At this writing,
+"too often" means "more than 7 times" to some popular engines, but that may
+change in the future as indexing programs are changed to defend against
+"cheaters."</P>
+
+<P>Search Engine Watch at
+&lt;URL:<A HREF="http://searchenginewatch.com/">http://searchenginewatch.com/</A>&gt;
+is a Web site dedicated to search engines and strategies for Web page
+authors.</P>
+
+
+<H3><A NAME="52">2.4.</A> <A NAME="no-index">How do I prevent my site from being indexed by search engines?</A></H3>
+
+<P>See &lt;URL:<A HREF="http://info.webcrawler.com/mak/projects/robots/exclusion.html">WebCrawler</A>&gt;.</P>
+
+
+<H3><A NAME="27">2.5.</A> <A NAME="redirect">How do I redirect someone to my new page?</A></H3>
+
+<P>The most reliable way is to configure the server
+to send out a redirection instruction when the old URL is requested.
+Then the browser will automatically get the new URL. This is the
+fastest and most efficient way, and is the only way described here
+that can convince indexing robots to phase out the old URL.  For
+configuration details consult your server admin or documentation (with
+NCSA or Apache servers, use a Redirect statement in .htaccess).</P>
+
+<P>If you can't set up a redirect, there are other possibilities.
+These are inferior because they tell the search engines that there's
+still a page at the old location, not that the page has moved to a new
+location. But if it's impossible for you to configure redirection at
+your server, here are two alternatives:</P>
+
+<UL>
+
+<LI>Put up a small page with text like "This page has moved to
+http://new.url/ -- please adjust your bookmarks."</LI>
+
+<LI>A Netscape and MSIE solution, which doesn't work on many other browsers
+(and screws up the "back" button in Netscape) is:
+<BR>
+<CODE>&lt;META HTTP-EQUIV="Refresh" CONTENT="x; URL=new.URL"&gt;</CODE>
+<BR>
+which will load the new URL after x seconds. This
+should go in the HEAD of the document. But if you do this, also
+include a short text saying "Document moved to new URL so-and-so"
+for other browsers.
+(The screwing-up bit refers to the fact that if you
+press "Back" after you have been redirected, you will
+be taken to the document with the META refresh. Then the refresh
+will be activated, and so you'll jump to the page you just tried
+to leave.)</LI>
+</UL>
+
+
+<H3><A NAME="54">2.6.</A> <A NAME="password">How do I password protect my web site?</A></H3>
+
+<P>Password protection is done through HTTP authentication.  The
+configuration details vary from server to server, so you should read the
+authentication section of your server documentation.  Contact your server
+administrator if you need help with this.</P>
+
+<P> For example, if your server is Apache, see
+&lt;URL:<A HREF="http://www.apache.org/docs/misc/FAQ.html#user-authentication">Apache</A>&gt;.
+
+
+<H3><A NAME="17">2.7.</A> <A NAME="hide-source">How do I hide my source?</A></H3>
+
+<P>You can't. The source is necessary for the browser to display your
+document. You have to send the complete, unencrypted source to the
+browser. Even if a particular browser doesn't have a "View source"
+option, there are many that do, and you can always retrieve the
+document by hand (using telnet) to get its source. Or check the
+browser's cache.</P>
+
+<P>You can of course put a hundred empty lines above the actual source. Then
+newbies who don't see the scrollbars will think there is nothing there.</P>
+
+
+<H3><A NAME="32">2.8.</A> <A NAME="browser-detect">How do I detect what browser is being used?</A></H3>
+
+<P>Many browsers identify themselves when they request
+a document. A CGI script will have this information available
+in the HTTP_USER_AGENT environment variable, and it can use that
+to send out a version of the document which is optimized for that
+browser.</P>
+
+<P>Keep in mind not all browsers identify themselves
+correctly. Microsoft Internet Explorer, for example, claims to
+be "Mozilla" to get at Netscape enhanced documents.</P>
+
+<P>And of course, if a cache proxy keeps the Netscape
+enhanced document, someone with another browser will also get
+this document if he goes through the cache.</P>
+
+<P>For these reasons and others, it is not a good idea to play the browser
+guessing game.</P>
+
+
+<H3><A NAME="21">2.9.</A> <A NAME="get-address">How do I get my visitors' email addresses?</A></H3>
+
+<P>You can't. Although each request for a document is
+usually logged with the name or address of the remote host, the
+actual username is almost never logged as well. This is mostly
+because of performance reasons, as it would require that the server
+uses the ident protocol to see who is on the other end. This takes
+time. And if a cache proxy is doing the request, you don't get
+anything sensible.</P>
+
+<P>But just stop to think for a minute... would you really want every single
+site you visit to know your email address? Imagine the loads of automated
+thank you's you would be receiving. If you visited 20 sites, you would get
+at least 20 emails that day, plus no doubt they would send you invitations
+to return later. It would be a nightmare as well as an invasion of privacy!</P>
+
+<P>In Netscape 2.0, it was possible to automatically submit a form with a mailto
+as action, using JavaScript. This would send email to the document's
+owner, with the address the visitor configured in the From line. Of course,
+that can be "mickey.mouse@disney.com". This was fixed by Netscape 2.01.</P>
+
+<P>The most reliable way is to put up a form, asking the visitor to fill
+in his email address. To increase the chances that visitors will
+actually do it, offer them something useful in return.</P>
+
+
+<H2><A NAME="design">3. Web Design</A></H2>
+
+<H3><A NAME="15">3.1.</A> <A NAME="include-file">How do I include one file in another?</A></H3>
+
+<P>HTML itself offers no way to <em>seamlessly</em> incorporate the 
+content of one file into another.</P>
+
+<P>True dynamic inclusion of one HTML document (even in a different
+"charset") into another is offered by the <A HREF="/reference/html40/special/object.html">OBJECT</A> element, but due
+to shortcomings of browser versions in current use, it seems unwise 
+to rely on this yet for essential content.  The same can be said for 
+<A HREF="/reference/html40/special/iframe.html">IFRAME</A>.</P>
+
+<P>Two popular ways of including the contents of one file seamlessly into
+another for the WWW are <strong>preprocessing</strong> and <strong>server-side inclusion</strong>.</P>
+
+<P>Preprocessing techniques include the C-preprocessor and other
+generic text manipulation methods, and several HTML-specific
+processors. But beware of making your "source code" non-portable.</P>
+
+<P>The HTML can only be validated after pre-processing, so the typical
+cycle "Edit, Check, Upload" becomes "Edit, Preprocess, Check, Upload"
+(here, "Check" includes whatever steps you use to preview your pages:
+validation, linting, management walk-through etc.; and "upload" 
+means whatever you do to finally publish your new pages to the 
+web server).</P>
+
+<P>A much more powerful and versatile pre-processing technique is to
+use an SGML processor (such as the <A HREF="http://www.jclark.com/sp/">SP package</A>) to generate your HTML;
+this can be self-validating.</P>
+
+
+<P>Examples of server-side inclusion are Server Side Includes "<strong>SSI</strong>" 
+(<A HREF="http://www.apache.org/">Apache</A>, <A HREF="http://hoohoo.ncsa.uiuc.edu/">NCSA</A> and some other web servers) and "<strong><A HREF="http://www.microsoft.com/workshop/server/asp/ASPover.asp">ASP</A></strong>"; processing
+occurs at the time the documents are actually retrieved. A typical
+inclusion looks like</P>
+
+<PRE><CODE>&lt;!--#include virtual="/urlpath/to/myfile.htm" --&gt;</CODE></PRE>
+
+<P>but be sure to consult your own server's documentation, as the
+details vary somewhat between implementations. The whole directive
+gets replaced by the contents of the specified file.</P>
+
+<P>Using server-side inclusion (a potentially powerful tool) merely 
+as a way to insert static files such as standard header/footers
+has implications for perceived access speed and for server load, 
+and is better avoided on heavily loaded servers. If you use it 
+in this way, consider making the result cacheable (e.g., via 
+"<A HREF="http://www.apache.org/docs/mod/mod_include.html#xbithack">XBitHack</A> full" on Apache; setting properties of the "Response" 
+object in ASP).  Details are beyond the scope of this FAQ but you
+may find this useful: <A HREF="http://www.pobox.com/~mnot/cache_docs/">http://www.pobox.com/~mnot/cache_docs/</A></P>
+
+<P>Proper HTML validation of server-side inclusion is only possible 
+after server-side processing is done, e.g. by using an <A HREF="http://www.htmlhelp.com/tools/validator/">on-line 
+validator</A> that retrieves the document from the server.</P>
+
+
+<H3><A NAME="41">3.2.</A> <A NAME="entity-or-number">Which should I use, &amp;entityname; or &amp;#number; ?</A></H3>
+
+<P>In HTML, characters can be represented in three ways:</P>
+
+<OL>
+
+<LI>a properly coded character, in the encoding specified by
+the "charset" attribute of the "Content-type:" header;</LI>
+
+<LI>a character entity (&amp;entityname;), from the appropriate
+  HTML specification (HTML 2.0/3.2, HTML 4.0 etc.);</LI>
+
+<LI>a numeric character reference (&amp;#number;) that specifies 
+  the <em>Unicode</em> reference of the desired character.  We recommend
+  using decimal references; hexadecimal references are less
+  widely supported.</LI>
+
+</OL>
+
+<P>In theory these representations are equally valid. In practice, 
+authoring convenience and limited support by browsers complicate 
+the issue.</P>
+
+<P>HTTP being a guaranteed "8-bit clean" protocol, you can safely
+send out 8-bit or multibyte coded characters, in the various
+codings that are supported by browsers.</P>
+
+<H4>A. HTML 2.0/3.2 (Latin-1)</H4>
+
+<P>By now there seems no convincing reason to choose &amp;entityname; 
+versus &amp;#number;, so use whichever is convenient.</P>
+
+<P>If you can confidently handle 8-bit-coded characters this
+is fine too, probably preferred for writing heavily-accented 
+languages. Take care if authoring on non-ISO-8859-based 
+platforms such as Mac, Psion, IBM mainframes etc., 
+that your upload technique delivers a correctly coded document 
+to the server. Using &amp;-representations avoids such problems.</P>
+
+<H4>B. A single repertoire other than Latin-1</H4>
+
+<P>In such codings as ISO-8859-7 Greek, koi8-r Russian Cyrillic,
+and Chinese, Japanese and Korean (CJK) codings, use of coded
+characters is the most widely supported and used technique.</P>
+
+<P>Although not covered by HTML 3.2, browsers have supported this
+quite widely for some time now; it is a valid option 
+within the HTML 4.0 specification--use a validator such as the
+<A HREF="/tools/validator/">WDG HTML Validator</A> at <A HREF="http://www.htmlhelp.com/tools/validator/">http://www.htmlhelp.com/tools/validator/</A>
+which supports HTML 4.0 and understands different character encodings.</P>
+
+<P>Browser support for coded characters may depend on configuration
+and font resources. In some cases, additional programs called
+"helpers" or "add-ins" supply virtual fonts to browsers.</P>
+
+<P>"Add-in" programs have in the past been used to support numeric
+references to 15-bit or 16-bit code protocols such as Chinese Big5
+or Chinese GB2312.</P>
+
+<P>In theory you should be able to include not only coded characters
+but also Unicode numeric character references, but browser support 
+is generally poor.  Numeric references to the "charset-specified"
+encoding may appear to produce the desired characters on some
+browsers, but this is wrong behavior and should <em>not</em> be used.
+Character entities are also problematical, aside from the
+HTML-significant characters &amp;lt;, &amp;amp; etc.</P>
+
+<H4>C. Internationalization per HTML 4.0</H4>
+
+<P>Recent versions of the popular browsers have support for some
+of these features, but at time of writing it seems unwise
+to rely on this when authoring for a general audience.  If you'd
+like to explore the options, you can find comprehensive
+background documentation and some practical suggestions at</P>
+
+<UL>
+<LI><A HREF="http://www.czyborra.com/">http://www.czyborra.com/</A></LI>
+<LI><A HREF="http://www.hut.fi/u/jkorpela/chars.html">http://www.hut.fi/u/jkorpela/chars.html</A></LI>
+<LI><A HREF="http://ppewww.ph.gla.ac.uk/~flavell/charset/">http://ppewww.ph.gla.ac.uk/~flavell/charset/</A></LI>
+</UL>
+
+
+<H3><A NAME="35">3.3.</A> <A NAME="tag-case">Should I use lower case or upper case for tags?</A></H3>
+
+<P>Tags are case insensitive, so it doesn't matter.
+This is just a matter of style. (You may have noticed that this FAQ is not
+absolutely consistent in capitalization.) Many people prefer upper case,
+as it makes the tags "stand out" better amongst the
+text. </P>
+
+<P>Attribute names can also be upper or lower case, as you prefer. But
+some attribute values are case sensitive. For example,
+<CODE>&lt;OL TYPE=A&gt;</CODE> and <CODE>&lt;OL type=A&gt;</CODE> are the
+same, but <CODE>&lt;OL TYPE=a&gt;</CODE> is different from both of them.
+(For clearer communication, it's worth getting the terminology right. In
+this example, <CODE>OL</CODE> is the element, <CODE>TYPE</CODE> is the
+attribute name, and <CODE>A</CODE> and <CODE>a</CODE> are the attribute values. The tag is <CODE>&lt;OL TYPE=A&gt;</CODE>.)</P>
+
+<P>Entity names like <CODE>&amp;nbsp;</CODE> are sometimes incorrectly
+referred to as tags. They are all case sensitive. For example,
+<CODE>&amp;Eacute;</CODE> and &<CODE>amp;eacute;</CODE> are two different
+and valid entities; <CODE>&amp;NBSP;</CODE> is invalid.</P>
+
+
+<H3><A NAME="20">3.4.</A> <A NAME="screen-size">For what screen size should I write?</A></H3>
+
+<P> HTML does not depend on screen size.
+Normally, the text will be wrapped by the browser when the end of its
+display area is encountered.
+(Note that graphical browsers are often used with windows that are smaller
+than the full area of the screen.)</P>
+
+<P> Preformatted lines (text within <CODE>&lt;PRE&gt;</CODE> elements)
+should only ever exceed 70 characters if the nature of the content makes it
+unavoidable.
+Longer lines will cause ugly line breaks on text-mode browsers, and will
+force horizontal scrolling on graphical browsers.
+Readers strongly dislike horizontal scrolling, except where they can
+realise that the nature of the content made it inevitable.</P>
+
+<P> Images cannot be wrapped, so you have to be careful with them.
+It seems that 400 or 500 pixels is a reasonable width; anything above 600
+will mean a certain percentage of users will have to scroll to see the
+rightmost bit.
+This percentage increases with your image width.
+Keep in mind that not everyone runs his browser at full screen!</P>
+
+<P>(WebTV users have no ability to scroll horizontally, so anything
+beyond 544 pixels will be compressed by their browser.
+Some other devices may be even more limited.)</P>
+
+
+<H3><A NAME="45">3.5.</A> <A NAME="page-inconsistent">Why does my page display fine in browser X but incorrectly or not at all in browser Y?</A></H3>
+
+<P>There are several possibilities.</P>
+
+<P>First, you may have some incorrect HTML. Browsers vary in their
+ability to guess what you meant. For instance, Netscape is much more
+fussy about tables than MS Internet Explorer, so a page with incorrect
+tables may look fine in MSIE but not display at all in Netscape. See the
+answer to "<A HREF="#error-check">How can I check for
+errors?</A>" for tips on finding your HTML errors.
+(In fact, even correct nested tables may not display correctly in
+Netscape. See "<A HREF="#nest-table">Can I nest tables within tables?</A>"
+below for what you can do about that.)</P>
+
+<P>Second, you may have valid HTML that different browsers interpret
+differently. For instance, it is not clear from the spec what should
+be done with a string of &amp;nbsp; characters. Some browsers will
+collapse them for rendering as a single space; others will render one
+space per &amp;nbsp;.</P>
+
+<P>Other possibilities are a bug in one or the other browser, or
+different user option settings.</P>
+
+<P>See also the ansewrs to "<A HREF="#broken-link">Why are my
+hyperlinks coming out all wrong or not loading?</A>" and
+"<A HREF="#broken-image">Why are my images coming out all wrong
+or not loading?</A>"</P>
+
+
+<H3><A NAME="freeze-URL">3.6. How do I freeze the URL displayed in a visitor's browser?</A></H3>
+
+<P> This is a "feature" of using frames:
+The browser displays the URL of the frameset document, rather than that of
+the framed documents.
+(See the answer to the question
+"<A HREF="#frame-address">How do I specify a specific
+combination of frames instead of the default document?</A>").</P>
+
+<P> However, this behavior can be circumvented easily by the user.
+Many browsers allow the user to open links in their own windows, to
+bookmark the document in a specific frame (rather than the frameset
+document), or to bookmark links.
+Thus, there is no reliable way to stop a user from getting the URL of a
+specific document.</P>
+
+<P> Furthermore, preventing users from bookmarking specific documents can
+only antagonize them.
+A bookmark or link that doesn't find the desired document is useless, and
+probably will be ignored or deleted.</P>
+
+
+<H3><A NAME="23">3.7.</A> <A NAME="tables-unsupported">How do I make a table which looks good on non-supporting browsers?</A></H3>
+
+<P>See Alan Flavell's document on tables for a good discussion at
+&lt;URL:<A HREF="http://ppewww.ph.gla.ac.uk/%7Eflavell/www/tablejob.html">Flavell</A>&gt;.</P>
+
+
+<H3><A NAME="49">3.8.</A> <A NAME="nest-table">Can I nest tables within tables?</A></H3>
+
+<P>Yes, a table can be embedded inside a cell in another table.  Here's a
+simple example:</P>
+
+<PRE><CODE>
+    &lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;this is the first cell of the outer table&lt;/td&gt;
+        &lt;td&gt;this is the second cell of the outer table,
+            with the inner table embedded in it&lt;br&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+            &lt;td&gt;this is the first cell of the inner table&lt;/td&gt;
+            &lt;td&gt;this is the second cell of the inner table&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+</CODE></PRE>
+
+<P>The main caveat about nested tables is that Netscape has problems with
+them if you don't close your TD and TR tags meticulously. You're best
+advised to include every <CODE>&lt;/TD&gt;</CODE> and
+<CODE>&lt;/TR&gt;</CODE>, even though the HTML spec doesn't require them;
+otherwise Netscape users may not be able to view your page.</P>
+
+
+<H3><A NAME="24">3.9.</A> <A NAME="center-table">How do I center a table?</A></H3>
+
+<P>The "correct" way of doing it is <CODE>&lt;TABLE
+ALIGN=CENTER&gt;</CODE>, but this doesn't work in several popular browsers.
+Put <CODE>&lt;CENTER&gt</CODE>; around the entire table for these
+browsers.</P>
+
+<P>This causes some problems with browsers that do support
+<CODE>CENTER</CODE> but not tables, such as Lynx. In these browsers, the
+contents of the cells are now displayed centered, which is not what is
+intended.  To avoid this, you can put the cell's contents in <CODE>&lt;P
+ALIGN=left&gt;</CODE> or <CODE>&lt;DIV ALIGN=left&gt;</CODE> depending on
+the amount of text in the cell.</P>
+
+
+<H2><A NAME="links">4. Hyperlinks</A></H2>
+
+<H3><A NAME="39">4.1.</A> <A NAME="url-slash">Should I end my URLs with a slash?</A></H3>
+
+<P>The trailing slash is used to distinguish between directory and file
+URLs. A file URL is an URL for a file, and a directory URL refers to
+a directory. For example, the URL for the WDG's HTML reference is
+  http://www.htmlhelp.com/reference/
+and the URL for the overview of HTML 3.2 elements is
+  http://www.htmlhelp.com/reference/wilbur/overview.html
+</P>
+
+<P>If you request a directory URL without the trailing slash, the browser
+will actually ask for a FILE with that name. This file doesn't
+exist on the server, so the server sends back a message saying that
+the browser should ask for the directory. It uses a redirection message
+for this. The browser then sends another request, this time for the
+directory, and finally gets what was asked for in the first place. This
+wastes time and network resources.</P>
+
+<P>When you write a document, all directory URLs should end with a slash.
+Since you already know you are linking to a directory, why force the
+user to make that second request, when it could have been done using
+only one?</P>
+
+<P>And by the way, it is NOT the browser which appends the slash. The
+browser cannot know if what you are asking for is a file or directory,
+not even when the final part of the URL does not have an extension.
+http://www.somewhere.com/src/something/README is a perfectly valid
+URL, has no extension in the final part, yet refers to a file and not
+a directory.</P>
+
+<P>The only apparent exception is when you refer to an URL with just a hostname.
+Since it is obvious that when you use http://www.htmlhelp.com you
+actually want the main index "/" from our server, you do not have
+to include the / in this case. It is regarded as good style to do so,
+however.</P>
+
+<P>For a full discussion of the proper form of URLs, see RFC 1738 at
+&lt;URL:<A HREF="http://www.cis.ohio-state.edu/htbin/rfc/rfc1738.html">cis</A>&gt;
+and, for relative URLs, RFC 1808 at
+&lt;URL:<A HREF="http://www.cis.ohio-state.edu/htbin/rfc/rfc1808.html">cis</A>&gt;.</P>
+
+
+<H3><A NAME="new-window">4.2. How do I create a link that opens a new window?</A></H3>
+
+<P><CODE>&lt;A TARGET="_blank" HREF=...&gt;</CODE> opens a new, unnamed window.
+
+<P><CODE>&lt;A TARGET="foobar" HREF=...&gt;</CODE> opens a new window named
+"foobar", provided that a window or frame by that name does not already
+exist.
+
+<P> Note that links that open new windows can be annoying to your readers if
+there is not a good reason (from the reader's perspective) for them.
+
+
+<H3><A NAME="37">4.3.</A> <A NAME="button-link">How do I get a button which takes me to a new page?</A></H3>
+
+<P>This is best done with a small form:</P>
+
+<P><CODE>&lt;FORM ACTION="http://url.you.want.to.go.to/" METHOD=GET&gt;
+<BR>&lt;INPUT TYPE=submit VALUE="Text on button" NAME=foo&gt;
+<BR>&lt;/FORM&gt;</CODE></P>
+
+<P>If you want to line up buttons next to each other, you will have to put them in a one-row table, with each button in a separate cell.</P>
+
+<P> Note that search engines might not find the target document unless
+there is a normal link somewhere else on the page.</P>
+
+<P>A go-to-other-page button can also be coded in JavaScript, but the
+above is standard HTML and works for more readers.</P>
+
+
+<H3><A NAME="28">4.4.</A> <A NAME="back-button">How do I get a back button on my page?</A></H3>
+
+<P>In HTML, this is impossible. Going "back"
+means that you go to the previous page in your history. You might
+be able to create a link to the URL specified in the "HTTP_REFERER"
+environment variable in your document, but that only creates a
+link to a new location in your history. Even worse, the information
+in that variable can be plain wrong. Some browsers incorrectly
+send the variable when you use a bookmark or type in an URL manually,
+and some don't send that variable at all. This would result in
+an empty link.</P>
+
+<P>A JavaScript could use "history.back()"
+to do this, but this only works in Netscape 2 or higher and MSIE 3 or
+higher, and even then only if the user has not disabled JavaScript.</P>
+
+<P>For a more detailed explanation, please see Abigail's
+"Simulating the back button" at
+&lt;URL:<A HREF="http://www.foad.org/%7Eabigail/HTML/Misc/back_button.html">Abigail</A>&gt;.</P>
+
+
+<H3><A NAME="mailto-link">4.5. How do I create a link that sends me email?</A></H3>
+
+<P> Use a mailto: link, for example</P>
+
+<P><CODE>Send me email at<BR>
+&lt;A HREF="mailto:me@mydomain.com"&gt;me@mydomain.com&lt;/A&gt;.</CODE></P>
+
+
+<H3><A NAME="44">4.6.</A> <A NAME="mailto-subject">How do I specify a subject for a mailto: link?</A></H3>
+
+<P>You can't, not in any reliable way. The methods that are frequently posted
+don't do the job on all browsers (or even all popular browsers), and
+many of them have an important drawback: if your visitors are using an
+older browser such as Netscape 1.22, their mail will be lost.</P>
+
+<P>If you really need a subject, you can do it by providing a form on
+your page, which submits data to a CGI program that emails the form
+data to you with your desired subject line. However, the form must
+have an input field for the visitor's email address, and you must hope
+that the visitor enters it correctly.</P>
+
+<P>Here are some other ways to transmit subject-type information:</P>
+
+<UL>
+
+<LI>Create email aliases that are used only for certain mailto links,
+so you'll know that anything sent to a given alias is in response to the
+corresponding Web page(s).</LI>
+
+<LI>The mail handlers for many Web browsers include an "X-Url" header that
+specifies the URL of the Web page that contained the mailto link.  If you
+configure your mail reader to display this header, you'll see which Web
+page the sender is responding to much of the time.</LI>
+
+<LI>Use <CODE>&lt;A HREF="mailto:user@site" TITLE="Your Subject"&gt;</CODE>.
+Most browsers will ignore the <CODE>TITLE</CODE> attribute, but some minor
+browsers will use it as a subject for the email message. All browsers will
+send the mail.</LI>
+
+<LI>Use <CODE>&lt;A HREF="mailto:user@site?subject=Your%20Subject"&gt;</CODE>,
+which puts "Your Subject" (the space is encoded as "<CODE>%20</CODE>") in
+the "Subject" header field of the email message in most current browsers.
+The details of this recent RFC can be found at
+&lt;URL:<A HREF="http://info.internet.isi.edu/in-notes/rfc/files/rfc2368.txt">isi</A>&gt;.
+Note however that you will lose mail from users of older browsers, so you
+should consider whether the pre-filled subject is worth lost mail.</LI>
+
+</UL>
+
+
+<H3><A NAME="51">4.7.</A> <A NAME="no-border">How do I eliminate the blue border around linked images?</A></H3>
+
+<P><CODE>&lt;IMG <VAR>...</VAR> BORDER=0&gt;</CODE></P>
+
+
+<H3><A NAME="47">4.8.</A> <A NAME="no-underline">How do I turn off underlining on my links?</A></H3>
+
+<P>If you want to turn off link underlining when you're looking at pages
+in your browser, check your browser's configuration options. In
+Netscape 3, for example, see Options | General Preferences |
+Appearance; in Netscape 4 it's Edit | Preferences | Appearance |
+Colors; in Internet Explorer see View | Options | General.</P>
+
+<P>If you want to prevent links on your page being underlined when your
+visitors see them, there's no way in HTML to accomplish this.
+You can suggest this presentation using style sheets by defining</P>
+
+<P><CODE>a:link, a:visited, a:active {text-decoration: none}</CODE></P>
+
+
+<H3><A NAME="link-2color">4.9. How can I have two sets of links with different colors?</A></H3>
+
+<P> You can suggest this presentation using style sheets.
+In your style sheet, define something like this:</P>
+
+<PRE><CODE>
+a:link        {color: blue;   background: white}
+a:visited     {color: purple; background: white}
+a:active      {color: red;    background: white}
+a.foo:link    {color: yellow; background: black}
+a.foo:visited {color: white;  background: black}
+a.foo:active  {color: red;    background: black}
+</CODE></PRE>
+
+<P>Then use <CODE>CLASS="foo"</CODE> to identify the links of the second
+color in your HTML, like this:</P>
+<P><CODE>&lt;A CLASS="foo" HREF=...&gt;...&lt;/A&gt;</CODE></P>
+
+
+<H3><A NAME="36">4.10.</A> <A NAME="broken-link">Why are my hyperlinks coming out all wrong or not loading?</A></H3>
+
+<P>Most likely you forgot to close a quote at the end
+of the <CODE>HREF</CODE> attribute. Alternatively, perhaps you used a "&gt;"
+character somewhere else inside a tag. Although
+this is legal, several older browsers will think the tag ends
+there, so the rest is displayed as normal text. </P>
+
+<P>This especially happens if you use comment tags to
+"comment out" text with HTML tags. (See the answer to
+"<A HREF="#html-comments">How can I include comments in
+HTML?</A>") Although the correct syntax is <CODE>&lt;!-- --&gt;</CODE>
+(without "<CODE>--</CODE>" occurring anywhere inside the comment), some
+browsers will think the comment ends at the first "<CODE>&gt;</CODE>" they
+see. </P>
+
+<P>Validators will show you any syntax errors in your markup, but
+checkers such as Weblint and HTMLchek can show you where you are
+liable to provoke known browser bugs. See also the answer to
+"<A HREF="#error-check">How can I check for errors?</A>"</P>
+
+
+<H3><A NAME="46">4.11.</A> <A NAME="link-msie-only">Why does my link work in Internet Explorer but not in Netscape?</A></H3>
+
+<P>Is there a space, #, ?, or other special character in the path or
+filename? Spaces are not legal in URLs. If you encode the space by
+replacing it with %20, your link will work.</P>
+
+<P>You can encode any character in a URL as % plus the two-digit hex
+value of the character. (Hex digits A-F can be in upper or lower
+case.) According to the spec, only alphanumerics and the special
+characters $-_.,+!*'() need not be encoded.</P>
+
+<P>You should encode all other characters when they occur in a URL, except
+when they're used for their reserved purposes. For example, if you wanted
+to pass the value "Jack&amp;Jill" to a CGI script, you would need to
+encode the "&amp;" character as "%26", which might give you a URL like the
+following: http://www.foo.com/foo.cgi?rhyme=Jack%26Jill&amp;audience=child.
+Note that the "?" and other "&amp;" character in this URL are not encoded
+since they're used for their reserved purposes.</P>
+
+<P>See section 2.2 of RFC 1738 at
+&lt;URL:<A HREF="http://www.w3.org/Addressing/rfc1738.txt">w3.org</A>&gt;
+for the full story.</P>
+
+
+<H2><A NAME="media">5. Other Media</A></H2>
+
+<H3><A NAME="5">5.1.</A> <A NAME="download-howto">How do I let people download a file from my page?</A></H3>
+
+<P>Once the file is uploaded to the server, you need only use an
+anchor reference tag to link to it.  An example would be:</P>
+<P><CODE>
+&lt;a href="../files/foo.zip"&gt;Download Foo Now! (100kb ZIP)&lt;/a&gt;
+</CODE></P>
+<P>It is possible that the server might need to be configured for some different file types.  (See the next Q&amp;A.)</P>
+
+
+<H3><A NAME="6">5.2.</A> <A NAME="garbled-media">Why did my link to a _______ file only download a bunch of characters instead?</A></H3>
+
+<P>If you are trying to link to a particular type of file and it is
+not returning your desired response, chances are that the server needs
+to have the type configured.  Talk to your
+system administrator about getting them to add the content type.  Here
+is a list of common types that often need configuring:</P>
+
+<CENTER>
+<TABLE ALIGN=center>
+<TR>
+<TH>Content Type</TH>
+<TH>Description</TH>
+</TR>
+<TR>
+<TD>Application/msword</TD>
+<TD>Microsoft Word Document</TD>
+</TR>
+<TR>
+<TD>application/octet-stream</TD>
+<TD>Unclassified binary data (often used for compressed file or executable)</TD>
+</TR>
+<TR>
+<TD>application/pdf</TD>
+<TD>PDF Document</TD>
+</TR>
+<TR>
+<TD>application/wordperfect6.0</TD>
+<TD>WordPerfect 6.0 Document</TD>
+</TR>
+<TR>
+<TD>application/zip</TD>
+<TD>ZIP archive</TD>
+</TR>
+<TR>
+<TD>audio/x-wav</TD>
+<TD>WAV audio format</TD>
+</TR>
+<TR>
+<TD>audio/midi</TD>
+<TD>MIDI audio format</TD>
+</TR>
+<TR>
+<TD> audio/x-pn-realaudio</TD>
+<TD>RealAudio</TD>
+</TR>
+<TR>
+<TD>image/gif</TD>
+<TD>GIF image format</TD>
+</TR>
+<TR>
+<TD>image/jpeg</TD>
+<TD>JPEG image format</TD>
+</TR>
+<TR>
+<TD>image/png</TD>
+<TD>PNG image format</TD>
+</TR>
+<TR>
+<TD>text/html</TD>
+<TD>HTML document</TD>
+</TR>
+<TR>
+<TD>text/plain</TD>
+<TD>Plain text</TD>
+</TR>
+<TR>
+<TD>video/mpeg</TD>
+<TD>MPEG video format</TD>
+</TR>
+<TR>
+<TD>video/quicktime</TD>
+<TD>QuickTime video format</TD>
+</TR>
+<TR>
+<TD>video/x-msvideo</TD>
+<TD>AVI video format</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>Another method of ensuring that your file is properly sent to the client is
+to compress it into a standard compression format.  Virtually all servers are
+set to handle the .zip extension and it is widely
+recognized by users.</P>
+
+<P>Some servers (NCSA, Apache, and others) can be configured to support
+user-configured content types.  Details are server dependent, so
+consult your server admin or documentation.</P>
+
+
+<H3><A NAME="29">5.3.</A> <A NAME="force-download">How do I force a download?</A></H3>
+
+<P>You can't, because the Web doesn't work that way. </P>
+
+<P>Here's the explanation. When someone downloads
+a document, the server tells the browser what type of file it
+is. The browser then displays it or picks the appropriate helper application.
+If the server doesn't know the file type,
+it tells the browser that the file is "text/plain",
+or just plain text (true for most servers).
+You may need to ask your server admin to
+configure this particular file with the MIME type you want.</P>
+
+<P>"Forcing" a download is not what you are
+supposed to do. After all, what is more convenient than having
+the proper application started when I download a particular file?
+Browsing through a download directory can be quite a pain. And
+most browsers allow the user to download to disk if they want
+to.</P>
+
+<P>If the file must be saved to disk, if there is absolutely NO other way to
+handle it, the MIME type should be "application/octet-stream".</P>
+
+
+<H3><A NAME="25">5.4.</A> <A NAME="animated-gif">How do I make animated GIFs?</A></H3>
+
+<P>Check out the following resources:</P>
+
+<UL>
+<LI><A HREF="http://members.aol.com/royalef/gifanim.htm">http://members.aol.com/royalef/gifanim.htm</A></LI>
+<LI><A HREF="http://www.adobe.com/studio/tipstechniques/GIFanimation/main.html">http://www.adobe.com/studio/tipstechniques/GIFanimation/main.html</A></LI>
+<LI><A HREF="http://www.webreference.com/dev/gifanim/">http://www.webreference.com/dev/gifanim/</A></LI>
+</UL>
+
+
+<H3><A NAME="48">5.5.</A> <A NAME="image-whisker">Why am I getting a colored whisker to the left or right of my image?</A></H3>
+
+<P>This is the result of including "white space" (spaces and newlines)
+before or after an IMG inside an anchor. For example:</P>
+
+<P><CODE>&lt;A HREF=...&gt;<BR>
+&lt;IMG SRC=...&gt;<BR>
+&lt;/A&gt;
+</CODE></P>
+
+<P>will have white space to the left and right of the image. Since
+many browsers display anchors with colored underscores by default,
+they will show the spaces to the left and right of the image with
+colored underscores.</P>
+
+<P>Solution: don't leave any white space between the anchor tags and
+the IMG tag.  If the line gets too long, break it inside the tag
+rather than outside it, like this:
+
+<P><CODE>&lt;A HREF=...&gt;&lt;IMG<BR>
+SRC=...&gt;&lt;/A&gt;
+</CODE></P>
+
+<P>Style checkers such as Weblint will call attention to this problem in
+your HTML source.</P>
+
+
+<H3><A NAME="36">5.6.</A> <A NAME="broken-image">Why are my images coming out all wrong or not loading?</A></H3>
+
+<P>Most likely you forgot to close a quote at the end
+of the SRC attribute. Alternatively, perhaps you used a "&gt;"
+character in an ALT text or somewhere else inside a tag. Although
+this is legal, several older browsers will think the tag ends
+there, so the rest is displayed as normal text. </P>
+
+<P>This especially happens if you use comment tags to
+"comment out" text with HTML tags. (See the answer to
+"<A HREF="#html-comments">How can I include comments in
+HTML?</A>") Although the correct syntax is <CODE>&lt;!-- --&gt;</CODE>
+(without "<CODE>--</CODE>" occurring anywhere inside the comment), some
+browsers will think the comment ends at the first "<CODE>&gt;</CODE>" they
+see. </P>
+
+<P>Validators will show you any syntax errors in your markup, but
+checkers such as Weblint and HTMLchek can show you where you are
+liable to provoke known browser bugs. See also the answer to
+"<A HREF="#error-check">How can I check for errors?</A>"</P>
+
+
+<H3><A NAME="14">5.7.</A> <A NAME="alt-markup">Can I put markup in ALT text?</A></H3>
+
+<P>No. Character entities (&amp;copy;, &amp;#nnn; and such) are permitted, though.</P>
+
+<P>If you want to know how to write good ALT texts without markup, please
+see Alan Flavell's essay on choosing ALT texts at
+&lt;URL:<A HREF="http://ppewww.ph.gla.ac.uk/%7Eflavell/alt/alt-text.html">flavell</A>&gt;.</P>
+
+
+<H3><A NAME="33">5.8.</A> <A NAME="bg-sound">How do I get an audio file to play automatically when someone visits my site?</A></H3>
+
+<P>Most browsers support the EMBED element for this, provided that
+the user has a suitable plug-in for the sound file. You can reach a slightly
+wider audience if you use BGSOUND as well. To avoid problems with
+browsers that support both, place the BGSOUND in a NOEMBED container:</P>
+
+<P><CODE>&lt;EMBED SRC="your_sound_file" HIDDEN=true AUTOSTART=true&gt;<BR>
+&lt;NOEMBED&gt;&lt;BGSOUND SRC="your_sound_file"&gt;&lt;/NOEMBED&gt;</CODE></P>
+
+<P>For more on the EMBED element, see &lt;URL:<A HREF="http://developer.netscape.com/docs/manuals/htmlguid/tags14.htm#1286379">Developer Netscape</A>&gt;.
+See &lt;URL:<A HREF="http://msdn.microsoft.com/developer/sdk/inetsdk/help/dhtml/references/html/BGSOUND.htm">MSDN</A>&gt; for more information on BGSOUND. Note that these elements are proprietary and not in any HTML standard. (The HTML standard way of doing this is not well supported.)</P>
+
+<P>Be aware that some users find it annoying for music to automatically
+start playing. They may not have the volume set properly on their speakers,
+or they may be listening to something else. As a courtesy to your users,
+you may prefer to offer the sound file as a link:</P>
+
+<P><CODE>&lt;A HREF="your_sound_file">Listen to my sound! (5 kB MIDI)&lt;/A&gt;</CODE></P>
+
+
+<H3><A NAME="11">5.9.</A> <A NAME="strip-html">How can I strip all the HTML from a document to get plain text?</A></H3>
+
+<P>One of the easiest ways is to open a document in a graphical
+browser such as Internet Explorer or Netscape, select all the text and
+copy it to the clipboard.  Most browsers also have a "save as"
+function which will allow you to save the file as plain text.</P>
+
+<P>Lynx users can use "lynx -dump http://..." on the command line to
+print to file and append a list of referenced URLs as footnotes. If
+you want the output file without the footnotes, use the "p" command to
+"print" to a text file.</P>
+
+You can use 1st Page to strip all HTML tags. Goto Tools -> Strip All Tags from the 1st Page menus. 
+
+<H2><A NAME="presentation">6. Presentational Effects</A></H2>
+
+<H3><A NAME="18">6.1.</A> <A NAME="custom-rule">How can I make a custom rule?</A></H3>
+
+<P>Your best option is likely a centered IMG with a line of "--" characters as
+ALT text:</P>
+
+<P><CODE>&lt;P ALIGN=center&gt;&lt;IMG SRC="custom-line.gif"
+ALT="--------------------"&gt;&lt;/P&gt;</CODE></P>
+
+<P>For an experimental but somewhat more graceful approach, read about CSS1
+and the Decorative HR at
+&lt;URL:<A HREF="http://ppewww.ph.gla.ac.uk/%7Eflavell/www/hrstyle.html">flavell</A>&gt;.</P>
+
+
+<H3><A NAME="18">6.2.</A> <A NAME="custom-bullet">How can I make a list with custom bullets?</A></H3>
+<P>There are several methods, none completely satisfactory:
+
+<UL>
+
+<LI>Use the list-style property of Cascading Style Sheets. This should be
+the preferred method of using custom bullets, but unfortunately it's not
+widely supported by browsers. However, non-supporting browsers will see
+a normal bullet, so using this method today is not a problem. See
+&lt;URL:<A HREF="http://www.htmlhelp.com/reference/css/">HTML Help</A>&gt;
+for more information on style sheets.</LI>
+
+<LI>Use a <CODE>&lt;DL&gt;</CODE> with <CODE>&lt;DD&gt;</CODE> tags with
+preceding images (with <CODE>ALIGN</CODE> and suitable <CODE>ALT</CODE>
+text) and no <CODE>&lt;DT&gt;</CODE>; this won't be as beautiful as a
+"real" list.</LI>
+
+<LI>Use a two-column table, with the bullets in the left
+column and the text in the right. Since browsers show nothing before
+downloading the entire table, this can be slow with long lists.</LI>
+
+<LI>Create the bullet with the indent built in. For example, if you
+use a bullet that is 10 pixels across you can make the background 25
+pixels (transparent) and put the bullet all the way on the right. This
+will create a 15-pixel indent to the left of the bullet. It will add
+slightly to the byte size of the graphic but since it is all one color
+it won't add much. This method doesn't work well with any list items
+that are longer than a line (and remember that you don't know how long
+a line will be on the visitor's screen).</LI>
+
+</UL>
+
+
+<H3><A NAME="7">6.3.</A> <A NAME="hit-counter">Where can I get a "hit counter"?</A></H3>
+
+<P>A hit counter is a small script or program that increases a
+number every time a document is accessed from the server.</P>
+
+<P>Why do you want one?  If you believe that it will tell you how
+many times your documents have been accessed, you are mistaken.
+No counter can keep track of accesses from browser caches or proxy
+caches.  Some counters depend on image-loading to increment; such
+counters ignore accesses from text-mode browsers, or browsers with
+image-loading off, or from users who interrupted the transfer.
+Some counters even require access to a remote site, which may be
+down or overloaded, causing a delay in displaying your documents.</P>
+
+<P>Most web servers log accesses to documents stored on the server
+machine.  These logs may be processed to gain information about the
+*relative* number of accesses over an extended period.  There is no
+reason to display this number to your viewers, since they have no
+reference point to relate this number to.  Not all service providers
+allow access to server logs, but many have scripts that will output
+information about accesses to a given user's documents.  Consult your
+sysadmin or service provider for details.</P>
+
+<P>Counter services and information are available from Yahoo's list of counters: <A HREF="http://www.yahoo.com/computers/world_wide_web/programming/access_counts/">@ Yahoo Access Counts/</A></P>
+
+<P>Log analysis tools and scripts are at
+<A HREF="http://www.yahoo.com/Business_and_Economy/Companies/Computers/Software/Internet/World_Wide_Web/Log_Analysis_Tools/">@Yahoo analysis tools/A></P>
+
+<P>&lt;URL:<A HREF="http://www.markwelch.com/bannerad/baf_counter.htm">Markwelch Counters</A>&gt;
+is another good source for counter information.</P>
+
+
+<H3><A NAME="19">6.4.</A> <A NAME="date-time">How do I display the current date or time in my document?</A></H3>
+
+<P>With server-side includes.  Ask your webmaster if this is supported,
+and what the exact syntax is for your server. But this will display the
+local time on the server, not for the client.  And if the document is
+cached, the date will of course be incorrect after some time.
+JavaScript can be used to display the local time for the client, but again,
+as most people already have one or more clocks on their screen, why display
+another one?</P>
+
+<P>If you plan on putting the current date or time on your pages,
+using a CGI, JavaScript or VBScript, take an extra breath and consider that
+it will take resources, add time to the loading of the page, and
+prevent good caching. If you find that you really have a need to
+use it, for instance to inform readers of the up-times of an FTP
+server, then by all means do so. If, on the other hand, your only
+reason is 'it looks cool!' - then reconsider.</P>
+
+
+<H3><A NAME="16">6.5.</A> <A NAME="status-scroll">How do I get scrolling text in the status bar?</A></H3>
+
+<P>This is not an HTML question; it's done with JavaScript. Check any
+page which has this feature, and copy the script from the source. </P>
+
+<P>This script has two big problems. One, usually it uses the
+decrement operator (<CODE>c--</CODE>) at some point. The "<CODE>--</CODE>"
+sequence in a comment actually closes it on some browsers, so your code may
+"leak" on those browsers. The same goes for "<CODE>&gt;</CODE>".</P>
+
+<P>Second, keep in mind that many people consider this even worse than
+<CODE>&lt;BLINK&gt;</CODE>, and that it also suppresses the status information
+which normally appears there. It prevents people from knowing where a
+link goes to.</P>
+
+
+<H3><A NAME="38">6.6.</A> <A NAME="right-align">How do I right align text or images?</A></H3>
+
+<P>You can use the ALIGN=right attribute on paragraphs, divisions, and
+headers, just as you use ALIGN=center to create centered paragraphs
+and such. This will right align your text (ragged left).</P>
+
+<P>Perhaps what you really want is justified text, in which the left and
+right edges are both aligned so that all lines are the same length.
+(This is sometimes incorrectly called "right justify".) There's no way
+to justify text in HTML 3.2, but it can be done in a CSS1 style sheet
+with "text-align: justify". (Before you do that, a caveat: though
+justified text may look pretty, human factors analysis shows that
+ragged right is actually easier to read and understand.)</P>
+
+<P>For images, you can use <CODE>&lt;IMG ALIGN=right SRC="..."
+ALT="..."&gt;</CODE> before the running text. The image will float at the
+right margin, and the running text will flow around it. Remember to use
+<CODE>&lt;BR CLEAR=right&gt;</CODE> or <CODE>&lt;BR CLEAR=all&gt;</CODE> to
+mark the end of the text that is to be affected in this way.</P>
+
+
+<H3><A NAME="53">6.7.</A> <A NAME="fonts">How can I specify fonts in my Web pages?</A></H3>
+
+<P>If you want others to view your web page with a specific font, the most
+appropriate way is to suggest the font rendering with a style sheet.  See:
+<A HREF="http://www.htmlhelp.com/reference/css/font/font-family.html">http://www.htmlhelp.com/reference/css/font/font-family.html</A></P>
+
+<P>The FONT element can also be used to suggest a specific font.  Use of the FONT
+element brings numerous usability and accessibility problems, see:
+<A HREF="http://www.mcsr.olemiss.edu/%7Emudws/font.html">http://www.mcsr.olemiss.edu/%7Emudws/font.html</A></P>
+
+<P>More information about the FONT element can be found at:
+<A HREF="http://www.htmlhelp.com/reference/html40/special/font.html">http://www.htmlhelp.com/reference/html40/special/font.html</A></P>
+
+<P>Either way, authors run the risk that a reader's system has a font by the same
+name but which is significantly different. (e.g., "Chicago" can be a nice text
+font, or a display font with letters formed by "bullet holes", or a dingbat
+font with building images for creating skylines).</P>
+
+<P>Also, authors are limited to choosing a font (or a group of similar fonts)
+that are commonly available on many systems. If a reader does not have the font
+installed on their system, they will see a default font.   Some browsers may
+use a less legible substitute font than their normal default font in cases where
+"the specified font wasn't found".</P>
+
+
+<H3><A NAME="12">6.8.</A> <A NAME="indent-1stline">How do I indent the first line in my paragraphs?</A></H3>
+
+<P>Use a style sheet with the following ruleset:</P>
+
+<P><CODE>P { text-indent: 5% }</CODE></P>
+
+<P>See &lt;URL:<A HREF="http://www.htmlhelp.com/reference/css/">HTML Help</A>&gt;
+for more information on style sheets.</P>
+
+
+<H3><A NAME="13">6.9.</A> <A NAME="indent-block">How do I indent a lot of text?</A></H3>
+
+<P>Use a style sheet to set a left margin for the whole document or part of it:</P>
+
+<PRE><CODE>
+  /* Entire document */
+  BODY { margin-left: 20% }
+
+  /* Part of a document with CLASS="foo" */
+  .foo { margin-left: 15% }
+</CODE></PRE>
+
+<P>See &lt;URL:<A HREF="http://www.htmlhelp.com/reference/css/">HTML Help</A>&gt;
+for more information on style sheets.</P>
+
+
+<H3><A NAME="22">6.10.</A> <A NAME="page-break">How do I do a page break?</A></H3>
+
+<P>Page breaks are offered in Cascading Style Sheets, Level 2, but they
+are not well supported by browsers.  See
+&lt;URL:<A HREF="http://www.w3.org/TR/REC-CSS2/page.html#page-breaks">w3.org</A>&gt;
+for information on CSS2 page breaks.</P>
+
+<P>In general, page breaks are not appropriate on the Web since what makes
+a nice page break for you with your font and font size may be a poor page
+break for me with my font and font size.</P>
+
+<P>If you need to produce a nicely formatted printed copy of your HTML
+documents, you might also consider using special purpose tools rather than
+your browser's Print function.
+For example, html2ps generates nicely formatted PostScript output from HTML
+documents, and HTML Scissor uses special HTML comments for suggesting page
+breaks.</P>
+
+
+<H3><A NAME="fixed-bg">6.11. How do I have a fixed background image?</A></H3>
+
+<P> Use a style sheet with the following ruleset:</P>
+
+<P><CODE>body { color: black; background: white url(foo.gif) fixed }</CODE></P>
+
+<P> Note that while Internet Explorer 3+ respects the fixed property,
+Netscape does not.</P>
+
+
+<H3><A NAME="no-repeat-bg">6.12. How do I have a non-tiled background image?</A></H3>
+
+<P> Use a style sheet with the following ruleset:</P>
+
+<P><CODE>body { color: black; background: white url(foo.gif) no-repeat }</CODE></P>
+
+
+<H2><A NAME="forms">7. HTML Forms</A></H2>
+
+<H3><A NAME="10">7.1.</A> <A NAME="form-howto">How do I use forms?</A></H3>
+
+<P>Information relating to the use of forms is available at
+&lt;URL:<A HREF="http://www.hut.fi/u/jkorpela/forms/">jkorpela</A>&gt;.</P>
+
+
+<H3><A NAME="mailto-form">7.2. Why won't my form email the user's data to me?</A></H3>
+
+<P> Forms that use <CODE>ACTION="mailto:..."</CODE> are unreliable.
+They may work for some of your users, but they will fail for others who
+have different software configurations.</P>
+
+<P> The only reliable solution is to use a CGI (or other server-side)
+program to process your forms and mail the results to you.
+If you can run CGI programs on your server, see the list of prewritten
+scripts at
+&lt;URL:<A HREF="http://www.cgi-resources.com/Programs_and_Scripts/">CGI Resources</A>&gt;.
+If you can't run CGI programs on your own server, see the list of remotely
+hosted form-to-email services at
+&lt;URL:<A HREF="http://www.cgi-resources.com/Programs_and_Scripts/Remotely_Hosted/Form_Processing/">CGI Resources</A>&gt;.</P>
+
+
+<H3><A NAME="50">7.3.</A> <A NAME="enter-submit">How do I make a form so it can be submitted by hitting ENTER?</A></H3>
+
+<P>The short answer is that the form should just have one
+<CODE>&lt;INPUT TYPE=TEXT&gt;</CODE> and no <CODE>TEXTAREA</CODE>, though
+it can have other form elements like checkboxes and radio buttons. For a
+more detailed answer, see
+&lt;URL:<A HREF="http://ppewww.ph.gla.ac.uk/%7Eflavell/www/formquestion.html">flavell</A>&gt;.</P>
+
+
+<H3><A NAME="30">7.4.</A> <A NAME="custom-button">How can I make a form with custom buttons?</A></H3>
+
+<P> Rather than a normal submit button (<CODE>&lt;INPUT TYPE=submit
+...&gt;</CODE>), you can use an image of a custom submit button.
+Use <CODE>&lt;INPUT NAME=foo TYPE=image
+SRC="http://url.to/image.gif"&gt;</CODE>.
+There is no way to do this for the reset button.</P>
+
+<P>Most browsers will also send the x and
+y coordinates of the location where the user clicked on the image
+to the server. They are available as "foo.x=000&amp;foo.y=000"
+in the CGI input.</P>
+
+
+<H3><A NAME="40">7.5.</A> <A NAME="two-submit">Can I have two or more Submit buttons in the same form?</A></H3>
+
+<P>Sure.  This is part of HTML 2.0 Forms support (some early browsers
+did not support it, but browser coverage is now excellent).</P>
+
+<P>You will need to give your Submit buttons a Name attribute, and,
+optionally, a Value attribute.  In order to determine which button was
+used, you will want to use distinctive Names, or Values, or both.
+Browsers will display the Value, in addition to sending it to the
+server, so choose something that's meaningful to the user.</P>
+
+<P>Example:</P>
+<P><CODE>&lt;INPUT TYPE=SUBMIT NAME=join VALUE="I want to join
+now"&gt;</CODE> -or-<BR>
+<CODE>&lt;INPUT TYPE=SUBMIT NAME=info VALUE="Please send full details"&gt;</CODE></P>
+
+<P>If you're unsure what results you're going to get when you submit your
+form, NCSA has a standard script which you can use.  Code this, for
+example (assuming method "post"):</P>
+
+<P><CODE>&lt;form method="post" action="http://hoohoo.ncsa.uiuc.edu/htbin-post/post-query"&gt;</CODE></P>
+
+<P>and then go through the motions of submitting your form.  The NCSA
+server decodes the form input, and displays the result to you.</P>
+
+
+<H3><A NAME="42">7.6.</A> <A NAME="file-upload">How can I allow file uploads to my web site?</A></H3>
+
+<P>First of all, the RFC for this is located at
+&lt;URL:<A HREF="http://www.ics.uci.edu/pub/ietf/html/rfc1867.txt">ics</A>&gt;.</P>
+
+<P>File upload is handled by the CGI.pm Perl5 library available from
+&lt;URL:<A HREF="http://stein.cshl.org/WWW/software/CGI/cgi_docs.html">cshl</A>&gt;.</P>
+
+<P>These things are necessary for Web-based uploads:</P>
+<UL>
+<LI>An HTTP server that accepts uploads.</LI>
+<LI>Access to the /cgi-bin/ to put the receiving script.</LI>
+<LI>A form implemented something like this:
+    <P><CODE>
+    &lt;form method="POST" enctype="multipart/form-data"
+    action="fup.cgi"&gt;<BR>
+    File to upload: &lt;input type=file name=upfile&gt;&lt;br&gt;<BR>
+    Notes about the file: &lt;input type=text name=note&gt;&lt;br&gt;<BR>
+    &lt;input type=submit value=Press&gt; to upload the file!<BR>
+    &lt;/form&gt;
+    </CODE></P></LI>
+</UL>
+
+<P>Not all browsers support form-based file upload, so try to give
+alternatives where possible.</P>
+
+
+<H2><A NAME="43">8.</A> <A NAME="frames">HTML Frames</A></H2>
+
+<H3><A NAME="frame-update2">8.1. How do I update two frames at once?</A></H3>
+<P> There are two basic techniques for updating multiple frames with a
+single link:
+The HTML-based technique links to a new frameset document that specifies
+the new combination of frames.
+The JavaScript-based solution uses the <CODE>onClick</CODE> attribute of
+the link to update the additional frame (or frames).
+</P>
+<P> The HTML-based technique can link to a new frameset document with
+<CODE>TARGET="_top"</CODE> (replacing the entire frameset), but there is an
+alternative if the frames to be updated are part of a nested frameset.
+In the initial frameset document, use a secondary frameset document to
+define the nested frameset.
+For example:
+</P>
+<PRE><CODE>
+&lt;FRAMESET COLS="*,3*"&gt;                    
+    &lt;FRAME SRC="contents.html" NAME="Contents"&gt;
+    &lt;FRAME SRC="frameset2.html" NAME="Display"&gt;
+&lt;/FRAMESET&gt;                                
+</CODE></PRE>
+<P> A link can now use <CODE>TARGET="Display"</CODE> to replace
+simultaneously all the frames defined by <CODE>frameset2.html</CODE>.
+</P>
+<P> The JavaScript-based solution uses the <CODE>onClick</CODE> attribute
+of the link to perform the secondary update.
+For example:
+</P>
+<PRE><CODE>
+&lt;A HREF="URL1" TARGET=Frame1
+   onClick="top.Frame2.location='URL2';"&gt;Update frames&lt;/A&gt;
+</CODE></PRE>
+<P> The link will update <CODE>Frame1</CODE> with <CODE>URL1</CODE>
+normally.
+If the reader's browser supports JavaScript (and has it enabled), then
+<CODE>Frame2</CODE> will also be updated (with <CODE>URL2</CODE>).
+</P>
+
+
+<H3><A NAME="frame-getout">8.2. How do I get out of a frameset?</A></H3>
+<P> If you are the author, this is easy. You only have to add the
+<CODE>TARGET</CODE> attribute to the link that takes readers to the
+intended 'outside' document. Give it the value of <CODE>_top</CODE>.
+</P>
+<P> It is in current implementations not possible to display a frame in the
+full browser window, at least not very easily. You would have to read
+source to determine the URL of the current frame, and then request that URL
+manually.
+</P>
+<P> I would recommend that authors who want to offer readers this option
+add a link to the document itself in the document, with the
+<CODE>TARGET</CODE> attribute set to <CODE>_top</CODE> so the document
+displays in the full window if the link is followed.
+</P>
+
+
+<H3><A NAME="stop-framing">8.3. Is there a way to prevent getting framed?</A></H3>
+<P> "Getting framed" refers to the technique of using an existing frameset
+to display someone else's document against his wishes into the current
+display.
+This can happen quite easily if one of the documents in the frames uses a
+link that does not use the <CODE>TARGET</CODE> attribute, as the
+destination of that link will be displayed in the current frame.
+</P>
+<P> To avoid "framing" other people's documents, you must add
+<CODE>TARGET="_top"</CODE> to all links that lead to documents outside
+your intended scope.
+</P>
+<P> Unfortunately, there is no way to specify that a particular document
+should be displayed in the full browser window, rather than in the current
+frame.
+The only workaround is to configure the server to send out
+<CODE>Window-Target:&nbsp;_top</CODE> in its HTTP responses, but this is
+not something that all authors can do.
+</P>
+<P> The HTML specifications say that <CODE>META</CODE> can be used to mimic
+HTTP responses in HTML.
+However, inserting <CODE>&lt;META HTTP-EQUIV="Window-target"
+CONTENT="_top"&gt;</CODE> in the document does not work as expected.
+</P>
+<P> Another attempt is to use <CODE>&lt;BASE TARGET="_top"&gt;</CODE>
+in the document, but this only specifies the default target frame for
+<EM>links</EM> in the current document, not for the document itself.
+</P>
+<P> If the reader's browser has JavaScript enabled, the following script
+will automatically remove any existing framesets:
+<PRE><CODE>
+&lt;SCRIPT TYPE="text/javascript"&gt;
+&lt;!--
+if (top.frames.length!=0)
+    top.location=self.document.location;
+// --&gt;
+&lt;/SCRIPT&gt;
+</CODE></PRE>
+<P> An alternative is
+<PRE><CODE>
+&lt;SCRIPT TYPE="text/javascript"&gt;
+&lt;!--
+function breakOut() {
+    if (self != top) 
+        window.open("my URL","_top","");
+}
+// --&gt;
+&lt;/SCRIPT&gt;
+&lt;/HEAD&gt;
+&lt;BODY onLoad="breakOut()"&gt;
+</CODE></PRE>
+
+
+<H3><A NAME="frame-address">8.4. How do I specify a specific combination of frames instead of the default document?</A></H3>
+<P> This is unfortunately not possible.
+When you navigate through a site using frames, the URL will not change as
+the documents in the individual frames change.
+This means that there is no way to indicate the combination of documents
+that make up the current view.
+</P>
+<P> The author can provide and link to multiple frameset documents, one for
+each combination of frame content.
+These frameset documents can be generated automatically, possibly even
+being created on the fly by a CGI program.
+</P>
+
+
+<H3><A NAME="stop-windows">8.5. Why do my links open new windows instead of updating an existing window?</A></H3>
+
+<P> If you use a name that does not point to a currently available frame,
+then a new browser window will be opened, and this window will be assigned
+the name you used.
+</P>
+<P> In HTML 4.0, the <CODE>TARGET</CODE> attribute value is
+case-insensitive, so that <CODE>abc</CODE> and <CODE>ABC</CODE> both refer
+to the same frame/window, and <CODE>_top</CODE> and <CODE>_TOP</CODE> both
+have the same meaning. However, most browsers treat the <CODE>TARGET</CODE>
+attribute value as case-sensitive and do not recognize <CODE>ABC</CODE> as
+being the same as <CODE>abc</CODE>, or <CODE>_TOP</CODE> as having the
+special meaning of <CODE>_top</CODE>.
+</P>
+
+
+<H3><A NAME="frame-noborder">8.6. How do I remove the border around frames?</A></H3>
+
+<P> Removing the border around frames involves both not drawing the frame
+borders and eliminating the space between the frames. The two major
+frames-capable browsers use different proprietary attributes to achieve this.
+</P>
+<P> Netscape 3.0 only recognizes the <CODE>BORDER</CODE> attribute on
+<CODE>FRAMESET</CODE>.  [What about later versions of Netscape?  What do
+they do?]  It can be set to 0, in which case the border will not be shown,
+and the spacing will be set to zero.
+</P>
+<P> Microsoft Internet Explorer recognizes the <CODE>FRAMEBORDER</CODE> and
+<CODE>FRAMESPACING</CODE>
+attributes on <CODE>FRAMESET</CODE>, but in some versions also on
+<CODE>FRAME</CODE> for individual
+frames.  Both attributes must be set to 0.
+</P>
+<P> So, the most widely supported way to display borderless frames is
+<CODE>&lt;FRAMESET ... BORDER=0 FRAMEBORDER=0 FRAMESPACING=0&gt;</CODE>.
+</P>
+<P> Note that these attributes are proprietary and not part of the HTML 4.0
+specification.  Also, removing the border around a frame makes it
+impossible to resize it, as this border is also used in most GUIs to change
+the size of the window.
+</P>
+
+
+<H3><A NAME="frame-title">8.7. How do I change the title of a framed document?</A></H3>
+
+<P> The title displayed is the title of the frameset document - the HTML
+document containing the <CODE>&lt;FRAMESET&gt;</CODE> and
+<CODE>&lt;FRAME&gt;</CODE> elements - rather than the titles of any of the
+pages within frames.
+To change the title displayed, link to a new frameset document using
+<CODE>TARGET="_top"</CODE> (replacing the entire frameset).
+</P>
+
+
+<H3><A NAME="frame-context">8.8. How do I make sure my framed documents are displayed inside their frameset?</A></H3>
+
+<P> When the sub-documents of a frameset state are accessed directly, they
+appear without the context of the surrounding frameset.
+</P>
+<P> If the reader's browser has JavaScript support enabled, the following
+script will restore the frameset:
+</P>
+<PRE><CODE>
+&lt;SCRIPT TYPE="text/javascript"&gt;
+&lt;!--
+if (parent.location.href == self.location.href) {
+    if (window.location.replace)
+        window.location.replace('frameset.html');
+    else
+        // causes problems with back button, but works
+        window.location.href = 'frameset.html';
+}
+//  --&gt;
+&lt;/SCRIPT&gt;
+</CODE></PRE>
+<P> A more universal approach is a "restore frames" link:
+</P>
+<P><CODE>&lt;A HREF="frameset.html" TARGET="_top"&gt;Restore Frames&lt;/A&gt;
+</CODE></P>
+<P> Note that in either case, you must have a separate frameset document
+for every content document.
+If you link to the default frameset document, then your reader will get the
+default content document, rather than the content document he/she was
+trying to access.
+These frameset documents should be generated automatically, to avoid the
+tedium and inaccuracy of creating them by hand.
+</P>
+<P> Note that you can work around the problem with bookmarking frames by
+linking to these separate frameset documents using
+<CODE>TARGET="_top"</CODE>, rather than linking to the individual content
+documents.
+</P>
+
+
+<H3><A NAME="frame-problems">8.9. Are there any problems with using frames?</A></H3>
+
+<P> The fundamental problem with the design of frames is that framesets
+create states in the browser that are not addressable.
+Once any of the frames within a frameset changes from its default content,
+there is no longer a way to address the current state of the frameset.
+It is difficult to bookmark - and impossible to link or index - such a
+frameset state.
+It is impossible to reference such a frameset state in other media.
+When the sub-documents of such a frameset state are accessed directly, they
+appear without the context of the surrounding frameset.
+Basic browser functions (e.g., printing, moving forwards/backwards in the
+browser's history) behave differently with framesets.
+</P>
+<P> Furthermore, frames focus on layout rather than on information structure,
+and many authors of framed sites neglect to provide useful alternative
+content in the <CODE>&lt;NOFRAMES&gt;</CODE> element.
+Both of these factors cause accessibility problems for browsers that differ
+significantly from the author's expectations and for search engines.
+</P>
+<P> For further discussion, see
+&lt;URL:<A HREF="http://www.htmlhelp.com/design/frames/whatswrong.html">HTML Help</A>&gt;
+</P>
+
+
+<H3><A NAME="frame-size">8.10. Why aren't my frames the exact size I specified?</A></H3>
+
+<P> Netscape Navigator seems to round pixel-based frame dimensions to the
+nearest whole percentage, and to use those percentage-based dimensions
+when laying out the frames.
+Thus, frames with pixel-based dimensions will be rendered with a slightly
+different size than that specified in the frameset document.
+There is no way to prevent this behavior.</P>
+
+<P> To accomodate this, you should design your site to accomodate
+variations in the browser's presentation.
+This is a good idea in general, but especially so in this situation.</P>
+
+
+<HR size=1>
+
+<P align=CENTER>For additions or omissions to this FAQ, please contact
+&lt;<a href="mailto:darin@htmlhelp.com">darin@htmlhelp.com</a>&gt;.</p>
+
+<p align=CENTER>All information contained herein was originally compiled by
+members of the Web Design Group, principally
+Arnoud "Galactus" Engelfriet and John Pozadzides.</p>
+
+<P ALIGN=center>Additional input has been provided by
+Lori Atwater, Alex Bell, Stan Brown, Roger Carbol, Alex Chapman, Alan
+Flavell, Tina Marie Holmboe, Nick Kew, Jukka Korpela, Simon Lee, Neal
+McBurnett, Glen McDonald, Darin McGrew, Ken O'Brien, Timothy Prodin, Steve
+Pugh, Liam Quinn, Kai Schätzl, Warren Steel, Peter Thomson,
+and Daniel Tobias.
+
+</P>
+
+<p align=center>Thanks everyone!</p>
+
+<hr width="75%" size=1>
+</td>
+</tr>
+</table>
+<!-- WEB DESIGN GROUP SIGNATURE v2.5 -->
+<p align=center><A HREF="/copyright.html">Copyright &#169;</a> 1996-1999. <img src="wdglogo-small.gif" align="middle" width=105 height=40 alt="Web Design Group"> All rights reserved.</p>
+
+</body>
+</html>
+

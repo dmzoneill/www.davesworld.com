@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://www.textfiles.com/hacking/teleneti.phk -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY><XMP>   Here are instructions for using TELENET.  There are some very basic things,
+which most people already know, and some other things, which even the most
+dedicated hackers have probably never even heard of.  This includes things such
+as international access, etc.  Well, have fun.
+
+
+			THE TELENET CONNECTION
+	INTERNATIONAL ADDRESSING/INTERNATIONAL ACCESS PROCEDURES
+
+
+I.  TELENET INTERNATIONAL ADDRESS FORMAT
+
+    ---------------------------- Data Network
+    |				 Identification Code (DNIC)
+    |
+    |
+    |
+    |	     ------------------- Area Code
+    |	     |
+    |	     |
+    |	     |	   ------------- DTE Address
+    |	     |	   |
+    |	     |	   |	   ----- Port Address
+    |	     |	   |	   |
+    |	     |	   |	   |
+  DDDD	    AAA  HHHHH	  PP
+			   |
+			   ----- Optional Subaddress
+				 Field for Packet Mode DTE
+
+
+Example:  Telenet	   International
+	  -------	   -------------
+	  212 141	   3110 21200141
+	  909  84	   3110 90900084
+
+
+
+II.   ACCESS TO OVERSEAS PUBLIC DATA NETWORKS
+
+1.  Turn on the terminal and coupler.
+2.  Dial the nearest Telenet access number (See Telenet Public Dial listing).
+    When you hear a high-pitched tone, place the telephone
+    receiver in the coupler.
+
+     For Data Sets (Bell 103 or 113 type), depress the data button.
+
+3.  Type Two carriage returns (CR).
+4.  Telenet will give you a port identification number and ask you
+    to identify your terminal type in the two or four
+    character id for your terminal followed by a carriage
+    return (CR) or type carriage return (CR).
+
+      (EX.)	TELENET
+		202 DL9
+		TERMINAL = AJ63(CR)
+
+5.  After Telenet prompts with a '@' type 'ID', skip a space (SP)
+    and type your password followed by a carriage return.  (Contact
+    your GTE Telenet Representative to obtain a required caller
+    paid ID.)
+
+      (EX.)	@ID(SP);INTL(CR)
+
+    Type in your password.
+
+      (EX.)	PASSWORD = 123456(CR)
+
+6.  After Telenet prompts with an @, type a C. skip a space and
+    type the network address of the computer you wish to access,
+    followed by a carriage return (CR).
+
+      (EX.)	@C(SP)023411234567890(CR)
+
+    Note:  Your International address will follow a format such as:
+
+	   020801234567890 for France/Transpac
+	   023421234567890 for United Kingdom/British Telecom
+	   026241234567890 for Germany/Datex-P
+
+7.  Telenet will respond with a connection message.  You are now
+    ready to begin your conversation with the host computer.
+
+      (EX.)	(ADDRESS)CONNECTED
+
+8.  To disconnect from your computer, log off as usual.  Telenet
+    will send you a disconnected message.
+
+      (EX.)	(ADDRESS)DISCONNECTED
+
+    Hang up to disconnect from Telenet.
+
+(CR) = Carriage return
+(SP) = Space
+
+</XMP></BODY></HTML>

@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<TITLE>Using relative URLs</TITLE>
+<LINK REV="made" HREF="mailto:galactus@stack.nl">
+<META NAME="description" CONTENT="An essay on how relative URLs work, and
+how to construct them.">
+</HEAD>
+
+<BODY>
+<H1>Using relative URLs</H1>
+
+URL stands for <I>Uniform Resource Locator</I>. It is a simple way of
+indicating the address of a certain resource, and because of its easy
+format, it doesn't need a program to get parsed.
+<P>
+An URL looks like this:
+<PRE>
+http://me:mypass@www.myhost.org:81/users/galactus/file.html
+^      ^  ^      ^              ^  ^--- local URL part
+|      |  |      |              |------ port number
+|      |  |      ---------------------- hostname of server, or IP address
+|      |  ----------------------------- password (optional)
+|      -------------------------------- username (optional)
+--------------------------------------- protocol name
+</PRE>
+<P>
+In most cases, the username, password and port number are omitted. It
+is also possible that the local URL part ends in a slash, in which case
+it is called a <I>directory URL</I>. 
+<P>
+If the local URL starts with a slash, it is called an <I>absolute local
+URL</I>, otherwise it is called a <I>relative (local) URL</I>.
+
+<H2>What are relative URLs?</H2>
+Put simply, it's an URL which needs some processing before it is valid.
+It is a local URL, from which certain information is left out. Often this
+means some directory names have been left off, or the special sequence
+<TT>../</TT>  is being used.
+<P>
+The "relative" comes from the fact that the URL is only valid relative
+to the URL of the current resource.
+
+<H2>Resolving relative URLs</H2>
+As said, a relative URL needs the URL of the current resource to be
+interpreted correctly. With some simple manipulations, the relative
+URL is transformed into an absolute URL, which is then fetched as
+usual.
+<P>
+A relative URL is always a local URL. The first part is therefore always
+the same as that of the current URL. The relative URL is then turned into
+an absolute local URL with the following simple steps:
+<OL>
+<LI>Omit the filename of the current absolute local URL, if it's not
+a directory URL.
+<LI>For every <TT>../</TT> at the beginning of the relative URL, chop off one
+directory name from the current directory URL.
+<LI>Append the local URL to the current one.
+</OL>
+Here are a few simple examples:
+<P>
+<B>Current document:</B> <TT>http://www.foo.com/users/galactus/index.html</TT>
+<P>
+<B>Relative URL:</B> <TT>myessay.html</TT>.
+<P>
+The full URL for this relative URL is
+<TT>http://www.foo.com/users/galactus/myessay.html</TT>.
+<P>
+<B>Relative URL:</B> <TT>pics/background.gif</TT>.
+<P>
+The full URL for this relative URL is
+<TT>http://www.foo.com/users/galactus/pics/background.gif</TT>.
+<P>
+<B>Relative URL:</B> <TT>../cgi-bin/myscript.pl</TT>.
+<P>
+The full URL for this relative URL is
+<TT>http://www.foo.com/users/cgi-bin/myscript.pl</TT>.
+<P>
+Note that it is <STRONG>not</STRONG> necessarily true that the <TT>../</TT>
+bit in a relative URL refers to going "up" one directory on the server.
+It may <EM>often</EM> be the case, since that's the most simple and
+common way to do it, but the <TT>../</TT> applies to the URL, <STRONG>not</STRONG>
+the actual directory tree on the server.
+<P>
+As you can see in the last example, it is quite possible that <TT>../</TT> ends
+you in a totally different directory on the server.
+
+<P align=center>Author: Arnoud "Galactus" Engelfriet &lt;<A 
+href="mailto:galactus@htmlhelp.com">galactus@htmlhelp.com</A>&gt; </P>
+
+</BODY>
+</HTML>
+

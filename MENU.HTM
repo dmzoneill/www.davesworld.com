@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="DAVID O'NEILL">
+<meta name="description" content="This site contains all sorts of complete bullshit">
+<meta name="keywords" content="Java, Java scripts, htm, html, learning html, software,sex,britney spears,anna kournikova,mandy moore,jessica simpson,melinda messenger">
+<title>Home Page</title>
+<link rel=stylesheet type="text/css" href="style1.css" title="syle1">
+</head>
+<body background="white.jpg" onLoad="StartClock24()" leftmargin="0" topmargin="2">
+
+
+<div align="center">
+<table cellspacing="0" cellpadding="0" width="745" height="35" border="1" bordercolor="#ffffff"><tr><td>
+<div align="center">
+<map name="menu">
+<area alt="Go To Homepage"shape="rect" coords="54,0,146,31" 
+href="index.htm" target="_top">
+<area alt="Go To Javascripts" shape="rect" coords="145,0,256,31" 
+href="java.htm" target="_top">
+<area alt="Go To HTML Help"shape="rect" coords="255,0,406,31" 
+href="htmlp.htm" target="_top">
+<area alt="Go To HTML Learning"shape="rect" coords="405,0,506,31" 
+href="htmll.htm" target="_top">
+<area alt="Go To Software"shape="rect" coords="0,30,91,61" 
+href="software.htm" target="_top">
+<area alt="Go To Other Stuff"shape="rect" coords="90,30,201,61" 
+href="other.htm" target="_top">
+<area alt="Go To Photos"shape="rect" coords="200,31,291,61"
+ href="photos.htm" target="_top">
+<area alt="Go To Sites"shape="rect" coords="290,31,381,61" 
+href="sites.htm" target="_top">
+<area alt="Go To Gueatbook"shape="rect" coords="380,30,471,61" 
+HREF="http://guestbook.cjb.net/cgi-bin/guestbook.cgi?view=aforfucksake"   target="_top">
+<area alt="Go To Contact"shape="rect" coords="470,30,561,61" 
+href="contact.htm" target="_top">
+</map>
+<img src="menu.gif" usemap="#menu" border="0" alt="this is an imagemap" vspace="0"></div></td></tr>
+
+<tr><td bgcolor="#000099" height="30" bordercolor="#000000">
+<div align="center"><b class="my">
+<SCRIPT language="javascript">
+document.write("You are using "+navigator.appName+"&nbsp;&nbsp;&nbsp;")
+today=new Date();
+function isnArray() {
+argnr=isnArray.arguments.length
+for (var i=0;i<argnr;i++) {
+this[i+1] = isnArray.arguments[i];}}
+var DonMonths=new isnArray
+("January","February","March","April","May","June","July",
+"August","September","October","November","December");
+mydate = new Date();
+myday = mydate.getDay();
+if(myday == 0)
+day = " Sunday ";
+else if(myday == 1)
+day = " Monday ";
+else if(myday == 2)
+day = " Tuesday ";
+else if(myday == 3)
+day = " Wednesday ";
+else if(myday == 4)
+day = " Thurday ";
+else if(myday == 5)
+day = " Friday ";
+else if(myday == 6)
+day = " Saturday ";
+document.write( day);
+day=today.getDate()
+if (day==1) end=("st");
+else if (day==2) end=("nd");
+else if (day==3) end=("rd");
+else if (day==21) end=("st");
+else if (day==22) end=("nd");
+else if (day==23) end=("rd");
+else if (day==31) end=("st");
+else end=("th");
+document.write("&nbsp;"+day+end+ "&nbsp;"+DonMonths[today.getMonth()+1]
++"&nbsp;"+today.getYear());
+</script>
+</b></div>
+</td></tr></table>
+
+<div align="center">
+<table cellpadding="0"cellspacing="0"><tr><td>
+<SCRIPT>
+     function StartClock24() {
+     TTime = new Date(); 
+     CurHour = TTime.getHours();            
+     CurMin  = TTime.getMinutes();         
+     CurSec  = TTime.getSeconds();         
+     TheTime  = CurHour;                      
+     TheTime += ((CurMin < 10) ? ':0' : ':') + CurMin;
+     TheTime += ((CurSec < 10) ? ':0' : ':') + CurSec;
+     document.CForm.Clock24.value = TheTime;   
+     setTimeout('StartClock24()',1000);     
+   }
+   </SCRIPT>
+   <FORM NAME="CForm"><INPUT align="left" TYPE="text" NAME="Clock24" SIZE="8"></FORM>
+</td></tr></table>
+</div>
+
+
+</body>
+</html>

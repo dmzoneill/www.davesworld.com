@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT>
+
+x=false;
+old="";
+
+function conmuta() {
+if (x) {
+ document.GIFanim.src=old;
+ document.anim.boton.value="Stop Download";
+ x=false;
+
+ }
+else {
+ old=document.GIFanim.src;
+ document.GIFanim.src="test.gif";
+ document.anim.boton.value="Reactivate Download";
+ x=true;
+ }
+
+
+}
+</SCRIPT>
+<TITLE>Java Goodies</TITLE>
+</HEAD>
+<BODY>
+
+
+
+<!-- here come the image and its button -->
+
+<CENTER><table align=right>
+<tr><td>
+<img name="GIFanim" src="test.gif" alt="animated GIF" width="75" height="50">
+<tr><td>
+<form name="anim">
+<input name="boton" type="button" value="Stop Download" onClick="conmuta()">
+</form>
+</table>
+<BR CLEAR="all">
+</CENTER>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

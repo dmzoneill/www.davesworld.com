@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT>
+<!-- Activate Cloaking Device
+//****************************************************************
+//
+//                       Dynamic Confirmation II
+//
+// Developed by Timothy Wallace,  timothy@essex1.com
+//
+//****************************************************************
+
+// Variables used to transfer elements to dynamically written page.
+   var emailAddress="";
+   var experience_level="No Reply";
+   var your_age="No Reply";
+
+// This function is called by an onLoad and the Reset  button.
+// Puts focus on the e-mail text box.
+function putFocus()
+   {
+   document.forms[0].elements[1].value="";
+   document.forms[0].elements[1].focus();
+   }
+
+// Checks the E-MAIL field.
+function isEmail()
+   {
+   emailAddress=document.forms[0].elements[1].value;
+
+   // Return false if e-mail field is blank.
+   if (document.forms[0].elements[1].value == "") 
+
+
+      {
+
+
+      alert("\nThe E-MAIL field is blank.\n\nPlease enter your e-mail address.")
+
+
+      document.forms[0].elements[1].focus();
+
+
+      return false; 
+
+
+      }
+
+
+   // Return false if e-mail field does not contain a '@' and '.' .
+
+
+   if (document.forms[0].elements[1].value.indexOf ('@',0) == -1 || 
+
+
+       document.forms[0].elements[1].value.indexOf ('.',0) == -1)
+
+
+      {
+
+
+      alert("\nThe E-MAIL field requires a \"@\" and a \".\"be used.\n\nPlease re-enter your e-mail address.")
+
+
+      document.forms[0].elements[1].select();
+
+
+      document.forms[0].elements[1].focus();
+
+
+      return false;
+
+
+      }
+
+
+   else
+
+
+      {
+
+
+      return true;
+
+
+      }
+
+
+   }
+
+
+
+
+
+// Sets variable experience_level equal to option selected.
+
+
+function experienceLevel(form) 
+
+
+   {
+
+
+   var myindex=form.experience.selectedIndex;
+
+
+   experience_level=form.experience.options[myindex].value;
+
+
+   }
+
+
+
+
+
+// Dynamically writes the confirmation page if e-mail address passes validation.
+
+
+function submitForms()
+
+
+   {
+
+
+   if (  (isEmail())  )
+
+
+       {
+
+
+      var doc=window.document;
+
+
+
+
+
+      // Get elements/variables from existing form.
+
+
+      var example = doc.forms[0].elements[0].value;
+
+
+      var emailAddress = doc.forms[0].elements[1].value;
+
+
+      var experience=experience_level;
+
+
+      var age=your_age;
+
+
+      var message = doc.forms[0].elements[10].value;
+
+
+
+
+
+      doc.open();
+
+
+      doc.write("<HTML><HEAD><TITLE>"+"Confirmation Page"+"</TITLE><SCRIPT>");
+
+
+      doc.write(" var thankYou='\\nSubmission is being made.\\n\\n      THANK YOU!!!\\n\\n\\n      (check your mail)';");
+
+
+
+
+
+      // Called by Cancel button.
+
+
+      doc.write("function cancel()  {window.location='http://www.essex1.com/people/timothy/js-con4.htm';}");
+
+
+      //doc.write("function cancel()  { window.location='file:///d|/htmls/htmls/projects/confirm4/js-con4.htm'; }");
+
+
+ 
+
+
+      doc.write("function confirmMessage() {alert(thankYou);} "); 
+
+
+      doc.write("function submitForms() {timerID=setTimeout('confirmMessage()',0); return true;}");                                    doc.write("</SCR"+"IPT>"+"</HEAD>");
+
+
+      doc.write("<BODY BGCOLOR=FFFFFF LINK=FF0000 VLINK=FF0000 ALINK=FF0000>");
+
+
+      doc.write("<CENTER><H1><FONT COLOR=800000>"+"Click button below to make submission."                                                     +"</FONT></H1>");
+
+
+      doc.write("<TABLE>");
+
+
+      doc.write("<TR><TD align=left><FONT COLOR=0000FF><B>"+"EXAMPLE : "+"</B></FONT>"
+
+
+                                                                        +example+"</TR>");
+
+
+      doc.write("<TR><TD align=left><FONT COLOR=0000FF><B>"+"EMAIL : "+"</B></FONT>"
+
+
+                                                                        +emailAddress+"</TR>");
+
+
+      doc.write("<TR><TD align=left><FONT COLOR=0000FF><B>"+"EXPERIENCE : "+"</B></FONT>"
+
+
+                                                                        +experience+"</TR>");
+
+
+      doc.write("<TR><TD align=left><FONT COLOR=0000FF><B>"+"AGE : "+"</B></FONT>"
+
+
+                                                                        +age+"</TR>");
+
+
+      doc.write("<TR><TD align=left><FONT COLOR=0000FF><B>"+"MESSAGE : "+"</B></FONT>"
+
+
+                                                                        +message+"</TR>");
+
+
+      doc.write("</TABLE>");
+
+
+      doc.write("<CENTER><STRONG><FONT COLOR=FF0000 SIZE=+1>");
+
+
+      doc.write("*** Test results will be e-mailed to address provided! ***");
+
+
+      doc.write("</FONT></STRONG></CENTER>");
+
+
+      doc.write("<FORM ENCTYPE='text/plain' METHOD='get' ACTION='mailto:"+emailAddress+"?subject=Dynamic Confirmation test' onSubmit='return submitForms()'>");
+
+
+
+
+
+       // Transfer elements from original form.
+
+
+      doc.write("<INPUT TYPE='hidden' NAME='EXAMPLE' VALUE='"+example+"'>");
+
+
+      doc.write("<INPUT TYPE='hidden' NAME='E-MAIL' VALUE='"+emailAddress+"'>");
+
+
+      doc.write("<INPUT TYPE='hidden' NAME='EXPERIENCE' VALUE='"+experience+"'>");
+
+
+      doc.write("<INPUT TYPE='hidden' NAME='AGE' VALUE='"+age+"'>");
+
+
+      doc.write("<INPUT TYPE='hidden' NAME='MESSAGE' VALUE='"+message+"'>");
+
+
+
+
+
+      doc.write("<TABLE BORDER=0 WIDTH=350><TR>");
+
+
+      doc.write("<TD align='center'><INPUT TYPE='submit' VALUE='Submit'>");
+
+
+      doc.write("<TD align='center'><INPUT TYPE='button' VALUE='Cancel' onClick='cancel()' >");
+
+
+      doc.write("</TR></TABLE>");
+
+
+      doc.write("</FORM>");
+
+
+      doc.write("</CENTER></BODY></HTML>");
+
+
+      doc.close();
+
+
+      }
+
+
+   }
+
+
+// Deactivate Cloaking -->
+
+
+</SCRIPT>
+
+
+</HEAD>
+<BODY onLoad="putFocus()">
+<CENTER><STRONG><EM>
+
+
+<FONT COLOR=0000FF SIZE=+3>D</FONT><FONT COLOR=0000FF SIZE=+2>YNAMICALLY </FONT>
+
+
+<FONT COLOR=0000FF SIZE=+3>W</FONT><FONT COLOR=0000FF SIZE=+2>RITTEN </FONT>
+
+
+<FONT COLOR=0000FF SIZE=+3>C</FONT><FONT COLOR=0000FF SIZE=+2>ONFIRMATION </FONT><FONT COLOR=0000FF SIZE=+3>II</FONT>
+
+
+</EM></STRONG></CENTER>
+
+
+<HR WIDTH=520 ALIGN=center SIZE=2>
+
+
+<BR>
+
+
+<CENTER>
+
+
+<FORM>
+
+
+<INPUT TYPE="hidden" NAME="Example" VALUE="Confirmation IV">
+
+<BR><BR>
+
+<FONT COLOR=800000 SIZE=+1><STRONG>E-mail address:</STRONG></FONT><BR>
+<TABLE  BORDER=3 WIDTH=300>
+<TD align="center"><INPUT TYPE="text" NAME="E-mail" SIZE=30 MAXLENGTH=40 >
+</TABLE>
+<BR>
+<FONT COLOR=800000 SIZE=+1><STRONG>Experience Level:</STRONG></FONT><BR>
+<TABLE  BORDER=3 WIDTH=300>
+<TD align="center"><SELECT NAME="experience" SIZE=1 onChange="experienceLevel(this.form)">
+    <OPTION SELECTED VALUE="No Reply">---------  EXPERIENCE  ----------
+    <OPTION VALUE="Newbie">Newbie
+    <OPTION VALUE="Intermediate">Intermediate
+    <OPTION VALUE="Professional">Professional
+    <OPTION VALUE="Know-It-All">Know-It-All
+</SELECT>
+</TABLE>
+<BR>
+<FONT COLOR=800000 SIZE=+1><STRONG>Your Age:</STRONG></FONT><BR>
+
+
+<TABLE BORDER=3 WIDTH=300>
+
+
+<TR>
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='10-25'}">10-25
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='25-40'}">25-40
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='40-55'}">40-55
+</TR>
+<TR>
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='55-70'}">55-70
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='70-85'}">70-85
+<TD align="center"><INPUT TYPE="radio" NAME="age" onClick="if (this.checked) {your_age='85-99'}">85-99
+</TR>
+</TABLE>
+<INPUT TYPE="hidden" NAME="Message" VALUE="This is a test of Confirmation IV.">
+<BR><BR>
+<TABLE BORDER=0 WIDTH=350>
+<TR>
+<TD align="center"><INPUT TYPE="button"  VALUE="CONTINUE" onClick="submitForms()">
+<TD align="center"><INPUT TYPE="reset"    VALUE="Reset  Form" onClick="putFocus()">
+</TR>
+</TABLE>
+</FORM>
+</CENTER>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

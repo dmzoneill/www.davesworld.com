@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+<!-- START OF SCRIPT -->
+<!-- For more scripts visit http://www.netpedia.com -->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+var i=1
+
+function pop(){
+
+        i++
+
+        if (i<3){
+
+popWindow=window.open("","popWindow","toolbar=no,width=200,height=180,directories=no,menubar=no");
+
+popWindow.document.write("<HTML>");
+
+popWindow.document.write("<SCRIPT LANGUAGE='JavaScript'>"); 
+
+popWindow.document.write("function exitNow(){"); 
+
+popWindow.document.write("opener.document.forms[0].elements")+
+
+popWindow.document.write("[0].value='Open Window';");
+
+popWindow.document.write("opener.i=1 }")
+
+popWindow.document.write("</XMP><PRE><B>&lt;<FONT SIZE=+0 COLOR="#551A8B">/SCRIPT</FONT>&gt;</B>");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">/HEAD</FONT>&gt;</B>");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">BODY</FONT> onUnLoad=</B><FONT SIZE=+0 COLOR="003E98">'exitNow()'</FONT><B>&gt;</B>")
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">center</FONT>&gt;</B>")
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">H2</FONT>&gt;</B>");
+
+popWindow.document.write("This script allows you to close");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">br</FONT>&gt;</B>");
+
+popWindow.document.write("pop-up windows using the same button");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">br</FONT>&gt;</B>");
+
+popWindow.document.write("that opened it!!");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">/H2</FONT>&gt;</B>");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">/BODY</FONT>&gt;</B>");
+
+popWindow.document.write("<B>&lt;<FONT SIZE=+0 COLOR="#551A8B">/HTML</FONT>&gt;</B>");
+
+document.forms[0].elements[0].value="Close Window"
+
+        }
+
+else{
+
+        if (i==3){
+
+        popWindow.close()
+
+        document.forms[0].elements[0].value="Open Window"
+
+        i=1
+
+}
+
+}
+
+}
+
+
+    
+ 
+
+//-->
+</script>
+<FORM>
+<INPUT TYPE="BUTTON" VALUE="Open Window" onClick="pop()">
+</FORM>
+<!-- END OF SCRIPT -->
+
+
+</body>
+</html>

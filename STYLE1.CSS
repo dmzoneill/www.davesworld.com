@@ -1,0 +1,263 @@
+<style type="text/css">
+<!--
+
+BODY  {
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : normal;
+	color : #000000;
+	text-decoration : none;
+	text-align : left;
+	background-color : #FFFFFF;
+	SCROLLBAR-FACE-COLOR: #000099;
+	SCROLLBAR-HIGHLIGHT-COLOR: #0000CC;
+	SCROLLBAR-SHADOW-COLOR: #F5FCDC;
+	SCROLLBAR-3DLIGHT-COLOR: #000099;
+	SCROLLBAR-ARROW-COLOR: #F5FCDC;
+	SCROLLBAR-TRACK-COLOR: #F5FCDC;
+	SCROLLBAR-DARKSHADOW-COLOR: #000099;
+}
+
+P  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : normal;
+	font-color : #00000;
+	line-height : 150%;
+	
+}
+
+B  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	font-color : #000000;
+}
+
+I   {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : italic;
+	font-color : #000000;
+	text-decoration:none;
+}
+
+B.my  {
+	font-size : 10pt;
+	font-family : arial;
+	font-weight : normal;
+	font-style : normal;
+	color : #FFFFFF;
+	text-decoration : none;
+}
+
+B.my1  {
+	font-size : 11pt;
+	font-family : sansserif;
+	font-weight : bold;
+	font-style : normal;
+	color : #000099;
+	line-height : 150%;
+	text-decoration : none;
+}
+
+B.my2  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : normal;
+	color : #003300;
+	line-height : 110%;
+	text-decoration : none;
+}
+
+B.my3  {
+	font-size : 11pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #ff0000;
+	line-height : 110%;
+	text-decoration : none;
+}
+
+B.my5	{
+	font-size :12pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000099;
+	text-decoration : none;
+}
+
+U.my1  {
+	font-size : 11pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000000;
+	text-decoration : overline;
+}			  
+
+H3  {
+	font-size :12pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000099;
+	text-decoration : none;
+}
+
+H4  {
+	font-size :11pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000000;
+	text-decoration : none;
+}
+
+LI	  {
+	font-size :11pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : normal;
+	color : #000000;
+	text-decoration : none;
+}
+
+  LI.my1    {
+	font-size :11pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #FF0000;
+	text-decoration : underline;
+}
+
+/*this is the hyperlink settings*/
+A  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000099;
+	text-decoration : underline;
+}
+
+A.my  {
+	font-size : 12pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #000000;
+	text-decoration : none;
+}
+
+A.my1  {
+	font-size : 12pt;
+	font-family : sansserif; 
+	font-weight : bold;
+	font-style : normal;
+	line-height : 150%;
+	color : #000099;			   
+	text-decoration : underline;
+}
+
+A.my2  {
+	font-size : 10pt;
+	font-family : times new roman; 
+	font-weight : normal;
+	font-style : normal;
+	color : #FFFFFF;			   
+	text-decoration : underline;
+}
+
+A.my3  {
+	font-size : 11pt;
+	font-family : sansserif; 
+	font-weight : bold;
+	font-style : normal;
+	line-height : 150%;
+	color : #FF0000;			   
+	text-decoration : underline;
+}
+
+A.my4  {
+	font-size : 12pt;
+	font-family : sansserif; 
+	font-weight : bold;
+	font-style : normal;
+	line-height : 150%;
+	color : #FF0000;			   
+	text-decoration : underline;
+}
+
+A:Visited  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : normal;
+	color : #FF0000;
+	text-decoration : line-through;
+}
+
+A:Active  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : normal;
+	font-style : bold;
+	color : #FF00FF;
+	text-decoration : underline;
+}
+
+A:Hover  {
+	font-size : 10pt;
+	font-family : times new roman;
+	font-weight : bold;
+	font-style : normal;
+	color : #FF0033;
+	text-decoration : underline;
+}
+
+DIV.clTop{
+	position:absolute; 
+	width:150;
+}
+
+DIV.clSub{
+	position:absolute; 
+	left:5; 
+	width:150;
+}
+
+#divCont{
+	position:relative; 
+	left:5; 
+	top:10; 
+	height:200;
+}
+
+A.clMain{
+	font-family:Arial; font-size:15px; 
+	text-decoration:underline; 
+	font-weight:bold; 
+	color:#000099;
+}
+
+A.clSubb{
+	font-family:Arial; 
+	font-size:14px; 
+	text-decoration:underline; 
+	color:#006699;
+}
+
+#divMain{
+	position:absolute;
+}
+
+-->
+</style>
