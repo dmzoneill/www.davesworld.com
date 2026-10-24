@@ -27,10 +27,10 @@ function decimal(num) {
 string = "" + num;
 if (string.indexOf('.') == -1)
 return string + '.00';
-seperation = string.length - string.indexOf('.');
-if (seperation > 3)
+seperation = string.length - string.indexOf('.');<!-- codespell:ignore seperation -->
+if (seperation > 3)<!-- codespell:ignore seperation -->
 return string.substring(0,string.length-seperation+3);
-else if (seperation == 2)
+else if (seperation == 2)<!-- codespell:ignore seperation -->
 return string + '0';
 return string;
 }
