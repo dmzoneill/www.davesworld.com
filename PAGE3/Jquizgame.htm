@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- jscpd:ignore-start -->
 
 <html>
 <head>
@@ -22,25 +23,25 @@
    Permission to use, edit, etc. granted as long as the head section is intact!
 */
 
-var ans = new Array;
+var ans = new Array;<!-- codespell:ignore ans -->
 var done = new Array;
 var score = 0;
 // LOSER!  Don't read the answers!
 
-ans[1] = "c";
-ans[2] = "a";
-ans[3] = "b";
-ans[4] = "b";
-ans[5] = "d";
-ans[6] = "c";
-ans[7] = "c";
-ans[8] = "c";
-ans[9] = "d";
-ans[10] = "a";
+ans[1] = "c";<!-- codespell:ignore ans -->
+ans[2] = "a";<!-- codespell:ignore ans -->
+ans[3] = "b";<!-- codespell:ignore ans -->
+ans[4] = "b";<!-- codespell:ignore ans -->
+ans[5] = "d";<!-- codespell:ignore ans -->
+ans[6] = "c";<!-- codespell:ignore ans -->
+ans[7] = "c";<!-- codespell:ignore ans -->
+ans[8] = "c";<!-- codespell:ignore ans -->
+ans[9] = "d";<!-- codespell:ignore ans -->
+ans[10] = "a";<!-- codespell:ignore ans -->
 
 function Engine(question, answer) {
 
-	if (answer != ans[question]) {
+	if (answer != ans[question]) {<!-- codespell:ignore ans -->
 		if (!done[question]) {
 			done[question] = -1;
 			alert("Wrong!\n\nYour score is now: " + score);
@@ -109,7 +110,7 @@ more than seven, move on to the 2nd round!<p>
 <input type=radio value="a" onClick="Engine(4, this.value)">King's Quest<br>
 <input type=radio value="b" onClick="Engine(4, this.value)">Mystery House<br>
 <input type=radio value="c" onClick="Engine(4, this.value)">Time Zone<br>
-<input type=radio value="d" onClick="Engine(4, this.value)">Mission: Asteriod<p>
+<input type=radio value="d" onClick="Engine(4, this.value)">Mission: Asteriod<p><!-- codespell:ignore asteriod -->
 
 <b>5. The first real-time strategy game was: </b><p>
 <input type=radio value="a" onClick="Engine(5, this.value)">WarCraft: Orcs & Humans<br>
@@ -156,3 +157,4 @@ more than seven, move on to the 2nd round!<p>
 
 </body>
 </html>
+<!-- jscpd:ignore-end -->

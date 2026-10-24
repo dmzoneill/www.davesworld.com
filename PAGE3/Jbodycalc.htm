@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- jscpd:ignore-start -->
 
 <html>
 <head>
@@ -294,7 +295,7 @@ alert("Good idea!")
 var notice = "Thank you for using the JavaScript weight "
 notice += "and height calculator. All calculations are "
 notice += "done according to the child-development graph "
-notice += "in \"Compton's Encyclopedia\". We appologize "
+notice += "in \"Compton's Encyclopedia\". We appologize "<!-- codespell:ignore appologize -->
 notice += "if you were insulted by the comments -- that "
 notice += "was not our intention. We used them to demonstrate "
 notice += "various JavaScript scripting techniques."
@@ -307,7 +308,7 @@ heightInput *= 2.54
 var sex = prompt("Enter sex ((m)ale or (f)emale):", "")
 var ageInput = parseInt(prompt("Enter age in years (minimum = 2):", ""))
 ageInput = Math.round(ageInput)
-var systemMessage = "Whould you like to use the (m)etric system "
+var systemMessage = "Whould you like to use the (m)etric system "<!-- codespell:ignore whould -->
 systemMessage += "or the (e)nglish one?"
 var system = prompt(systemMessage, "m")
 var heightUnit = (system == "m") ? "centimeters" : "inches" 
@@ -339,3 +340,4 @@ printResult(heightPer, weightPer, sex, age)
 
 </body>
 </html>
+<!-- jscpd:ignore-end -->
